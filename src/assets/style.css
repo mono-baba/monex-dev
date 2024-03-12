@@ -1,0 +1,9 @@
+.test {
+  display: inline;
+}
+.test {
+  color: red;
+> p {
+    font-size: 16px;
+  }
+}

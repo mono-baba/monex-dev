@@ -1,0 +1,60 @@
+.fixed-conversion-button {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+  z-index: 9999;
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  > div {
+    text-align: right;
+    & + div {
+      margin-top: 10px;
+    }
+  }
+  .button {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: #ff943e;
+    text-decoration: none;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding: 16px 16px;
+    border: 3px solid #000;
+    border-right-width: 0;
+    border-bottom-width: 7px;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    transition: padding-block 0.4s ease;
+    &.-nisa {
+      background-color: #8ceb94;
+    }
+    &::after {
+      content: "";
+      display: block;
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      background-image: url(/image/feature/test/arrow_button-right.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      margin-top: 6px;
+    }
+    @media (hover: hover) {
+      &:hover {
+        padding-block: 25px;
+      }
+    }
+  }
+}

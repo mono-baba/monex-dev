@@ -1,23 +1,25 @@
 const navItems = [
   {
-    name: "ホーム",
-    url: "#",
-    isActive: true,
+    name: "4つの新機能",
+    url: "#new-features",
+    isActive: false,
     subItems: [],
   },
   {
-    name: "子ページ(階層有り)",
-    url: "#",
+    name: "マネックス証券の特長",
+    url: "#features-of-monex-securities",
     isActive: false,
-    subItems: [
-      { name: "孫ページ", url: "#" },
-      { name: "孫ページ", url: "#" },
-      // 他の孫ページ...
-    ],
+    subItems: [],
   },
   {
-    name: "子ページ",
-    url: "#",
+    name: "キャンペーン",
+    url: "#campaign",
+    isActive: false,
+    subItems: [],
+  },
+  {
+    name: "口座開設までの流れ",
+    url: "#steps-to-opening-an-account",
     isActive: false,
     subItems: [],
   },
@@ -65,26 +67,22 @@ const GlobalNavigation = () => {
         </ul>
       </nav>
       <div className="buttons js-fixed-button">
-        <div className="button">
-          <a className="conversion" href="#" target="_blank">
-            コンバージョン1
+        <div className="button conversion-button">
+          <h2 className="title">NISAをはじめるなら</h2>
+          <a className="button" href="#" target="_blank">
+            まずは総合口座を開設（無料）
           </a>
         </div>
-        <div className="button">
-          <a className="conversion" href="#" target="_blank">
-            コンバージョン2
-          </a>
-        </div>
-        <div className="button">
-          <a className="conversion -establishment" href="#" target="_blank">
-            口座開設
+        <div className="button conversion-button">
+          <h2 className="title">すでに総合口座をお持ちの方</h2>
+          <a className="button -nisa" href="#" target="_blank">
+            NISA口座を開設する（無料）
           </a>
         </div>
       </div>
       <p className="close js-menuToggle">
         <span>CLOSE</span>
       </p>
-      <div className="l-overlay"></div>
     </div>
   )
 }

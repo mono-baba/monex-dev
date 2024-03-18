@@ -47,6 +47,7 @@ export default function ({ url, title, children }: GlobalProps) {
       <Header />
       {children}
       <Footer />
+      <div className="l-overlay"></div>
     </>
   )
 }

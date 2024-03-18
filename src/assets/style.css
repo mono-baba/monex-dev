@@ -1,9 +1,3 @@
-.test {
-  display: inline;
-}
-.test {
-  color: red;
-> p {
-    font-size: 16px;
-  }
-}
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
+@import url("/src/assets/components/global-navigation.css");
+@import url("/src/assets/components/conversion-button.css");

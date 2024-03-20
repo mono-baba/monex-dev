@@ -43,6 +43,10 @@ export default function ({ url, title, children }: GlobalProps) {
           type="text/javascript"
           src="/javascript/feature/common/main.js"
         ></script>
+        <script
+          type="text/javascript"
+          src="/javascript/feature/test/slider.js"
+        ></script>
       </Head>
       <Header />
       {children}

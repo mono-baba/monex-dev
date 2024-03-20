@@ -1,0 +1,42 @@
+.title-with-speech-bubble {
+  display: inline-flex;
+  flex-direction: column;
+  text-align: center;
+  > .speech-bubble {
+    font-size: 3.4rem;
+    color: #fff;
+    background-image: url("/image/feature/test/speech-bubble_white.svg");
+    background-repeat: no-repeat;
+    background-size: 325px;
+    padding-bottom: 35px;
+    padding-inline: 26px;
+    background-position: bottom;
+    font-weight: bold;
+  }
+  > .title {
+    position: relative;
+    display: inline-block;
+    font-size: 5.4rem;
+    background-color: #fff;
+    padding: 11px 87px;
+    margin-top: 20px;
+    font-weight: 900;
+    &::before,
+    &::after {
+      position: absolute;
+      left: -1px;
+      content: "";
+      display: block;
+      width: calc(100% + 2px);
+      height: 3px;
+      border-radius: 3px;
+      background-color: #000;
+    }
+    &::before {
+      top: 0;
+    }
+    &::after {
+      bottom: 0;
+    }
+  }
+}

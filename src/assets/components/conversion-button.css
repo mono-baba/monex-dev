@@ -2,9 +2,7 @@
   font-family: "Noto Sans JP", sans-serif;
   font-optical-sizing: auto;
   text-align: center;
-  + .conversion-button {
-    margin-top: 20px;
-  }
+  margin-top: 20px;
   .title {
     display: flex;
     align-items: center;

@@ -3,7 +3,7 @@
   flex-direction: column;
   text-align: center;
   > .speech-bubble {
-    font-size: 3.4rem;
+    font-size: clamp(2.2rem, 1.77vw, 3.4rem);
     background-repeat: no-repeat;
     padding-bottom: 35px;
     padding-inline: 26px;

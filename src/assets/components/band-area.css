@@ -1,0 +1,123 @@
+.band-area {
+  position: relative;
+  background-color: #ffc700;
+  margin-inline: -20px;
+  z-index: 1;
+  padding: 50px 20px 56px;
+  margin-top: 60px;
+  @media screen and (max-width: 768px) {
+    padding-top: 30px;
+  }
+  > .circle {
+    position: absolute;
+    z-index: -1;
+    text-align: center;
+    border-radius: 50%;
+    width: 127px;
+    height: 127px;
+    top: -45px;
+    left: 50%;
+    padding-top: 38px;
+    transform: translateX(-50%);
+    background-color: #ffc700;
+    font-size: 2.1rem;
+    font-weight: 900;
+    line-height: 1.5;
+    @media screen and (max-width: 768px) {
+      font-size: 1.6rem;
+      width: 90px;
+      height: 90px;
+      top: -35px;
+      padding-top: 22px;
+    }
+  }
+  > .text {
+    font-size: clamp(1.6rem, 2.5vw, 2.4rem);
+    font-weight: bold;
+    max-width: 971px;
+    margin-inline: auto;
+    line-height: 1.5;
+    @media screen and (max-width: 1180px) {
+      text-align: center;
+    }
+    @media screen and (max-width: 768px) {
+      font-size: 1.6rem;
+      font-weight: 500;
+    }
+    > span {
+      display: block;
+      margin-bottom: -100px;
+      @media screen and (max-width: 1180px) {
+        margin-bottom: 0;
+      }
+    }
+    > strong {
+      display: block;
+      position: relative;
+      font-size: clamp(2rem, 3.4vw, 3rem);
+      font-weight: 900;
+      @media screen and (max-width: 768px) {
+        font-size: 2rem;
+        font-weight: bold;
+      }
+      &::after {
+        position: absolute;
+        z-index: -1;
+        content: "";
+        display: block;
+        bottom: -10px;
+        width: 100%;
+        height: 23px;
+        opacity: 0.5;
+        background-color: #fff;
+      }
+      @media screen and (max-width: 1180px) {
+        &::after {
+          left: 50%;
+          width: 350px;
+          transform: translate(-50%, 0);
+        }
+      }
+      @media screen and (max-width: 767px) {
+        &::after {
+          width: 260px;
+        }
+      }
+      > span:first-child {
+        margin-top: 30px;
+        @media screen and (max-width: 1180px) {
+          margin-top: 10px;
+        }
+      }
+      > .image {
+        display: inline-block;
+        margin-left: 27px;
+        vertical-align: text-bottom;
+        max-width: 328px;
+        font-size: 1.6rem;
+        text-align: center;
+        font-weight: 400;
+        position: relative;
+        @media screen and (max-width: 1180px) {
+          display: block;
+          margin-inline: auto;
+        }
+        @media screen and (max-width: 767px) {
+          max-width: 240px;
+          font-size: 1.2rem;
+        }
+        > span {
+          display: block;
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 100%;
+          bottom: -37px;
+          @media screen and (max-width: 767px) {
+            bottom: -33px;
+          }
+        }
+      }
+    }
+  }
+}

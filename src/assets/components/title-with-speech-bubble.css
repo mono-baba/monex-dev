@@ -4,24 +4,21 @@
   text-align: center;
   > .speech-bubble {
     font-size: 3.4rem;
-    color: #fff;
-    background-image: url("/image/feature/test/speech-bubble_white.svg");
     background-repeat: no-repeat;
-    background-size: 325px;
     padding-bottom: 35px;
     padding-inline: 26px;
     background-position: bottom;
     font-weight: bold;
     @media screen and (max-width: 767px) {
       font-size: 2.2rem;
-      background-size: 228px;
       padding-bottom: 30px;
+      line-height: 1.364;
     }
   }
   > .title {
     position: relative;
     display: inline-block;
-    font-size: 5.4rem;
+    font-size: clamp(3rem, 3.4vw, 5.4rem);
     background-color: #fff;
     padding: 11px 87px;
     margin-top: 20px;
@@ -29,7 +26,8 @@
     @media screen and (max-width: 767px) {
       font-size: 3rem;
       margin-top: 10px;
-      padding: 5px 28px;
+      padding: 10px 28px;
+      line-height: 1.267;
     }
     &::before,
     &::after {

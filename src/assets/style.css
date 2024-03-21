@@ -4,18 +4,34 @@
 @import url("/src/assets/components/fixed-conversion-button.css");
 @import url("/src/assets/components/loop-text.css");
 @import url("/src/assets/components/title-with-speech-bubble.css");
+@import url("/src/assets/components/heading.css");
 @import url("/src/assets/components/label.css");
 @import url("/src/assets/components/vertical-slider.css");
 @import url("/src/assets/components/note-list.css");
+@import url("/src/assets/components/border-box.css");
+@import url("/src/assets/components/two-columns.css");
+@import url("/src/assets/components/band-area.css");
 :root {
   --red: #cc0033;
 }
+
+body {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #000;
+}
+
+a {
+  color: #000;
+}
+
 main {
   font-family: "Noto Sans JP", sans-serif;
   @media screen and (max-width: 767px) {
     margin-top: 50px;
   }
 }
+
 .lead-area {
   border-top: 3px solid #000;
   padding: 60px 60px 70px;
@@ -77,13 +93,22 @@ main {
   /* 奇数 */
   &:nth-of-type(odd) {
     background-color: var(--red);
+    & .title-with-speech-bubble > .speech-bubble {
+      color: #fff;
+    }
   }
   /* 偶数 */
   &:nth-of-type(even) {
     background-color: #ffc700;
+    & .title-with-speech-bubble > .speech-bubble {
+      color: #000;
+    }
   }
   > .inner {
+    position: relative;
+    z-index: 1;
     padding-inline: 60px;
+    padding-top: 90px;
     &::before {
       position: absolute;
       content: "";
@@ -99,10 +124,25 @@ main {
     }
     @media screen and (max-width: 767px) {
       padding-inline: 15px;
+      padding-top: 50px;
       &::before {
         background-size: 636px 56px;
         height: 56px;
         top: 45px;
+      }
+    }
+    > .contents {
+      margin-top: -67px;
+      text-align: left;
+      max-width: 1800px;
+      margin-inline: auto;
+      background-color: #ecf1f7;
+      border-radius: 40px;
+      padding: 190px 20px 120px;
+      @media screen and (max-width: 767px) {
+        margin-top: -32px;
+        padding-top: 90px;
+        padding-bottom: 40px;
       }
     }
   }
@@ -111,6 +151,50 @@ main {
       &::before {
         background-image: url("/image/feature/test/loop-text_new-function.svg");
       }
+    }
+    & .title-with-speech-bubble > .speech-bubble {
+      background-image: url("/image/feature/test/speech-bubble_new-function.svg");
+      background-size: 325px;
+      @media screen and (max-width: 767px) {
+        background-size: 228px;
+      }
+    }
+  }
+  &.features-of-monex {
+    > .inner {
+      &::before {
+        background-image: url("/image/feature/test/loop-text_features-of-monex.svg");
+      }
+      > .contents {
+        @media screen and (max-width: 767px) {
+          margin-top: -50px;
+        }
+      }
+    }
+    & .title-with-speech-bubble > .speech-bubble {
+      background-image: url("/image/feature/test/speech-bubble_features-of-monex.svg");
+      background-size: 567px;
+      @media screen and (max-width: 767px) {
+        background-image: url("/image/feature/test/speech-bubble_features-of-monex_sp.svg");
+        background-size: 229px;
+      }
+    }
+  }
+}
+
+.button-area {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  @media screen and (max-width: 767px) {
+    display: block;
+    margin-top: 20px;
+  }
+  > .conversion-button {
+    margin-inline: 15px;
+    @media screen and (max-width: 767px) {
+      margin-inline: 0;
     }
   }
 }

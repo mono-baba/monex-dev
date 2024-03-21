@@ -7,7 +7,7 @@ $(window).on("load", function () {
   let lastActiveIndex = -1
 
   // スライダーの高さを設定
-  setSliderHeight(sliderItems, verticalSlider, sliderDimensions.windowHeight)
+  // setSliderHeight(sliderItems, verticalSlider, sliderDimensions.windowHeight)
 
   $(window).scroll(function () {
     const { scrollPosition, activeIndex } = calculateScrollMetrics(

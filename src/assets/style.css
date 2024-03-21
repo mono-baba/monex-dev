@@ -22,7 +22,8 @@ main {
   text-align: center;
   position: relative;
   @media screen and (max-width: 767px) {
-    padding-inline: 20px;
+    border-width: 2px;
+    padding: 50px 20px 50px;
   }
   &::before {
     position: absolute;
@@ -68,6 +69,11 @@ main {
 .section-area {
   text-align: center;
   padding-block: 100px;
+  border-top: 3px solid #000;
+  @media screen and (max-width: 767px) {
+    padding-block: 0 60px;
+    border-width: 2px;
+  }
   /* 奇数 */
   &:nth-of-type(odd) {
     background-color: var(--red);
@@ -90,6 +96,14 @@ main {
       background-position: top;
       background-size: 1680px 148px;
       animation: loop 20s linear infinite;
+    }
+    @media screen and (max-width: 767px) {
+      padding-inline: 15px;
+      &::before {
+        background-size: 636px 56px;
+        height: 56px;
+        top: 45px;
+      }
     }
   }
   &.new-features {

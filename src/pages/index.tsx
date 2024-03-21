@@ -80,8 +80,8 @@ const NewFeatures = () => {
             <span className="title">3つの新機能</span>
           </h2>
           <ul className="vertical-slider">
-            <li data-slider className="is-show">
-              <div className="details">
+            <li>
+              <div className="details is-show" data-slider>
                 <img
                   src="/image/feature/test/number_01.svg"
                   alt="01"
@@ -96,24 +96,26 @@ const NewFeatures = () => {
                   <br />
                   dポイントがたまる！
                 </h3>
-                <p>
+                <div className="shadow-box"></div>
+                <p className="text">
                   dカードでの投資信託のクレカ積立が可能になり、
-                  <br />
+                  <br className="only-pc" />
                   投資つみたてのカード決済ご利用金額に応じてdポイントがたまります。
                   <br />
                   ためたdポイントは、ショッピングはもちろん、
-                  <br />
+                  <br className="only-pc" />
                   今後投資信託の購入にもつかえるようになります。
                 </p>
                 <p className="note-list">
                   ※dカード、dカード GOLD&reg;のクレジットカード番号の冒頭4桁が、
-                  <br />
+                  <br className="only-pc" />
                   [4363]、[5344]、[5365]のいずれかから始まるお客様が対象。
                 </p>
               </div>
+              <div className="shadow-box"></div>
             </li>
-            <li data-slider>
-              <div className="details">
+            <li>
+              <div className="details" data-slider>
                 <img
                   src="/image/feature/test/number_02.svg"
                   alt="02"
@@ -128,7 +130,8 @@ const NewFeatures = () => {
                   <br />
                   購入できるように！
                 </h3>
-                <p>
+                <div className="shadow-box"></div>
+                <p className="text">
                   dポイント1ポイントを投資信託の買付代金1円として
                   <br />
                   ご利用いただけるようになります。
@@ -146,9 +149,10 @@ const NewFeatures = () => {
                   </li>
                 </ul>
               </div>
+              <div className="shadow-box"></div>
             </li>
-            <li data-slider>
-              <div className="details">
+            <li>
+              <div className="details" data-slider>
                 <img
                   src="/image/feature/test/number_03.svg"
                   alt="03"
@@ -163,7 +167,8 @@ const NewFeatures = () => {
                   <br />
                   dポイントがたまる！
                 </h3>
-                <p>
+                <div className="shadow-box"></div>
+                <p className="text">
                   マネックスポイントの代わりに、dポイントを貯められるようになります。
                   <br />
                   投資信託を持っているだけで、毎月、dポイントが貯まります。
@@ -171,6 +176,7 @@ const NewFeatures = () => {
                   さらにNISA口座でも貯まります。
                 </p>
               </div>
+              <div className="shadow-box"></div>
             </li>
           </ul>
         </div>

@@ -1,7 +1,7 @@
 const navItems = [
   {
     name: "3つの新機能",
-    url: "#new-features",
+    url: "#new-function",
     isActive: false,
     subItems: [],
   },

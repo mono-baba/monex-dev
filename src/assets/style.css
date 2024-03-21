@@ -106,7 +106,7 @@ main {
       }
     }
   }
-  &.new-features {
+  &.new-function {
     > .inner {
       &::before {
         background-image: url("/image/feature/test/loop-text_new-function.svg");

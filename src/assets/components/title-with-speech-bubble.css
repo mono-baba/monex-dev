@@ -3,7 +3,7 @@
   flex-direction: column;
   text-align: center;
   > .speech-bubble {
-    font-size: clamp(2.2rem, 1.77vw, 3.4rem);
+    font-size: clamp(2.2rem, 2.5vw, 3.4rem);
     background-repeat: no-repeat;
     padding-bottom: 35px;
     padding-inline: 26px;
@@ -16,13 +16,15 @@
     }
   }
   > .title {
+    margin-bottom: -1em;
     position: relative;
     display: inline-block;
-    font-size: clamp(3rem, 3.4vw, 5.4rem);
+    font-size: clamp(3rem, 3.97vw, 5.4rem);
     background-color: #fff;
     padding: 11px 87px;
     margin-top: 20px;
     font-weight: 900;
+    line-height: 1.222;
     @media screen and (max-width: 767px) {
       font-size: 3rem;
       margin-top: 10px;
@@ -45,6 +47,16 @@
     }
     &::after {
       bottom: 0;
+    }
+  }
+}
+
+.campaign .title-with-speech-bubble {
+  > .title {
+    margin-bottom: -1.5em;
+    @media screen and (max-width: 767px) {
+      padding-block: 20px;
+      font-size: 2.4rem;
     }
   }
 }

@@ -11,6 +11,7 @@
 @import url("/src/assets/components/border-box.css");
 @import url("/src/assets/components/two-columns.css");
 @import url("/src/assets/components/band-area.css");
+@import url("/src/assets/components/period-area.css");
 :root {
   --red: #cc0033;
 }
@@ -107,7 +108,7 @@ main {
   > .inner {
     position: relative;
     z-index: 1;
-    padding-inline: 60px;
+    padding-inline: min(4.41vw, 60px);
     /* padding-top: 90px; */
     &::before {
       position: absolute;
@@ -132,19 +133,18 @@ main {
       }
     }
     > .contents {
-      /* margin-top: -67px; */
-      margin-top: clamp(-38px, -3.49vw, -67px);
       text-align: left;
       max-width: 1800px;
       margin-inline: auto;
       background-color: #ecf1f7;
       border-radius: 40px;
       /* padding: 190px 20px 120px; */
-      padding: clamp(90px, 9.9vw, 190px) 20px clamp(40px, 6.25vw, 120px);
+      padding: clamp(90px, 13.97vw, 190px) min(1.47vw, 20px)
+        clamp(40px, 8.82vw, 120px);
       @media screen and (max-width: 767px) {
         margin-top: -32px;
-        padding-top: 90px;
-        padding-bottom: 40px;
+        padding: 90px 20px 40px;
+        border-radius: 20px;
       }
     }
   }
@@ -181,6 +181,65 @@ main {
         background-image: url("/image/feature/test/speech-bubble_features-of-monex_sp.svg");
         background-size: 229px;
       }
+    }
+  }
+  &.campaign {
+    > .inner {
+      &::before {
+        background-image: url("/image/feature/test/loop-text_campaign.svg");
+        background-size: 1230px 159px;
+        height: 159px;
+      }
+      @media screen and (max-width: 767px) {
+        &::before {
+          background-size: 464px 60px;
+          height: 60px;
+        }
+      }
+      > .contents {
+        @media screen and (max-width: 767px) {
+          margin-top: -1.5em;
+        }
+        > .note-list {
+          margin-top: clamp(40px, 5.15vw, 70px);
+          text-align: center;
+          @media screen and (max-width: 767px) {
+            text-align: left;
+          }
+        }
+      }
+    }
+    & .title-with-speech-bubble > .speech-bubble {
+      background-image: url("/image/feature/test/speech-bubble_campaign.svg");
+      background-size: clamp(228px, 47.79vw, 650px);
+      @media screen and (max-width: 767px) {
+        background-image: url("/image/feature/test/speech-bubble_campaign_sp.svg");
+        background-size: 228px;
+      }
+    }
+    & .two-columns {
+      grid-template-columns: minmax(1fr, 530px) minmax(auto, 624px);
+    }
+  }
+}
+
+.campaign-section {
+  & + .campaign-section {
+    margin-top: clamp(60px, 5.88vw, 80px);
+  }
+  /* 偶数 */
+  &:nth-of-type(even) .campaign-images::before {
+    width: min(45.92vw, 624.47px);
+    height: min(30.77vw, 418.44px);
+    left: auto;
+    right: 0;
+    background-image: url("/image/feature/test/campaign-banner_coin_inversion.svg");
+  }
+  @media screen and (max-width: 767px) {
+    &:nth-of-type(even) .campaign-images::before {
+      width: 103%;
+      height: 114%;
+      right: 9px;
     }
   }
 }

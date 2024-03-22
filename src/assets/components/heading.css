@@ -1,10 +1,25 @@
 .heading-normal {
-  font-size: clamp(2.4rem, 3.4vw, 4rem);
-
+  font-size: clamp(2.4rem, 2.94vw, 4rem);
   font-weight: 900;
   line-height: 1.35;
   @media screen and (max-width: 767px) {
-    font-size: 2.4rem;
+    /* font-size: 2.4rem; */
     line-height: 1.5;
+  }
+}
+
+.heading-band {
+  background-color: #cc0033;
+  color: #fff;
+  font-size: clamp(18px, 2.21vw, 3rem);
+  font-weight: bold;
+  text-align: center;
+  padding: clamp(4px, 0.59vw, 8px);
+  border-radius: 15px;
+  @media screen and (max-width: 767px) {
+    border-radius: 10px;
+  }
+  & + .two-columns {
+    margin-top: clamp(15px, 3.68vw, 50px);
   }
 }

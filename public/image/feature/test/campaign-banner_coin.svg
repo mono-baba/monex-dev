@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="619.057" height="410.754" viewBox="0 0 619.057 410.754">
+  <g id="グループ_20607" data-name="グループ 20607" transform="translate(-955 -8050.984)">
+    <rect id="長方形_5822" data-name="長方形 5822" width="582" height="353" rx="40" transform="translate(955 8081.5)" fill="none"/>
+    <g id="グループ_20606" data-name="グループ 20606">
+      <g id="グループ_20259" data-name="グループ 20259" transform="translate(1019.201 8397.862) rotate(16)">
+        <path id="パス_3552" data-name="パス 3552" d="M991.287,561.519l-11-8.039s-9.6-5.805-24.116,14.961c-9.825,14.739-1.563,23.894-1.563,23.894l6.922,5.136s14.948.893,24-14.961S991.287,561.519,991.287,561.519Z" transform="translate(-944.345 -546.805)" fill="#ffc42c"/>
+        <path id="パス_3553" data-name="パス 3553" d="M988.131,558.825s1.3,14.478-8.132,24.238-13.341,10.411-20.823,11.549" transform="translate(-940.666 -543.936)" fill="none" stroke="#231815" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3"/>
+        <ellipse id="楕円形_2308" data-name="楕円形 2308" cx="23.628" cy="12.714" rx="23.628" ry="12.714" transform="matrix(0.64, -0.768, 0.768, 0.64, -0.001, 36.299)" fill="none" stroke="#231815" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3"/>
+        <path id="パス_3554" data-name="パス 3554" d="M976.925,558.534c-5.335-4.951-13.721,3.324-16.837,7.226" transform="translate(-940.236 -544.796)" fill="none" stroke="#231815" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3"/>
+        <path id="パス_3555" data-name="パス 3555" d="M972.68,569.193c-3.448,3.793-7.12,8.531-12.149,10.24a4.845,4.845,0,0,1-5.42-1.212" transform="translate(-942.579 -539.055)" fill="none" stroke="#231815" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3"/>
+      </g>
+      <g id="グループ_20260" data-name="グループ 20260" transform="translate(1560.775 8189.885) rotate(70)">
+        <path id="パス_3552-2" data-name="パス 3552" d="M43.836,9.647,31.763.82S21.22-5.555,5.284,17.247C-5.5,33.431,3.567,43.482,3.567,43.482l7.6,5.639s16.413.98,26.35-16.427S43.836,9.647,43.836,9.647Z" transform="translate(7.706 6.51)" fill="#ffc42c"/>
+        <path id="パス_3553-2" data-name="パス 3553" d="M31.792,0s1.429,15.9-8.929,26.613S8.215,38.044,0,39.294" transform="translate(20.325 16.347)" fill="none" stroke="#231815" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3"/>
+        <ellipse id="楕円形_2308-2" data-name="楕円形 2308" cx="25.943" cy="13.959" rx="25.943" ry="13.959" transform="matrix(0.64, -0.768, 0.768, 0.64, 0, 39.856)" fill="none" stroke="#231815" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3"/>
+        <path id="パス_3554-2" data-name="パス 3554" d="M18.486,1.685C12.629-3.751,3.421,5.335,0,9.619" transform="translate(21.798 13.4)" fill="none" stroke="#231815" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3"/>
+        <path id="パス_3555-2" data-name="パス 3555" d="M19.291,0C15.5,4.165,11.473,9.367,5.951,11.243A5.32,5.32,0,0,1,0,9.913" transform="translate(13.76 33.091)" fill="none" stroke="#231815" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3"/>
+      </g>
+      <g id="グループ_20261" data-name="グループ 20261" transform="matrix(0.956, 0.292, -0.292, 0.956, 1118.946, 8043.687)">
+        <path id="パス_3552-3" data-name="パス 3552" d="M42.306,9.31,30.654.791S20.48-5.361,5.1,16.645C-5.312,32.264,3.443,41.964,3.443,41.964l7.335,5.443s15.84.946,25.43-15.854S42.306,9.31,42.306,9.31Z" transform="translate(7.437 6.282)" fill="#ffc42c"/>
+        <path id="パス_3553-3" data-name="パス 3553" d="M30.682,0s1.379,15.341-8.617,25.684S7.928,36.716,0,37.922" transform="translate(19.615 15.777)" fill="none" stroke="#231815" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3"/>
+        <ellipse id="楕円形_2308-3" data-name="楕円形 2308" cx="25.037" cy="13.472" rx="25.037" ry="13.472" transform="matrix(0.64, -0.768, 0.768, 0.64, 0, 38.464)" fill="none" stroke="#231815" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3"/>
+        <path id="パス_3554-3" data-name="パス 3554" d="M17.841,1.626C12.188-3.62,3.3,5.148,0,9.283" transform="translate(21.037 12.932)" fill="none" stroke="#231815" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3"/>
+        <path id="パス_3555-3" data-name="パス 3555" d="M18.617,0C14.964,4.02,11.072,9.04,5.743,10.851A5.134,5.134,0,0,1,0,9.567" transform="translate(13.28 31.936)" fill="none" stroke="#231815" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3"/>
+      </g>
+    </g>
+  </g>
+</svg>

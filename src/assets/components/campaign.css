@@ -1,0 +1,62 @@
+.campaign {
+  > .inner {
+    &::before {
+      background-image: url("/image/feature/test/loop-text_campaign.svg");
+      background-size: 1230px 159px;
+      height: 159px;
+      animation: campaign_pc 13s linear infinite;
+    }
+    @media screen and (max-width: 767px) {
+      &::before {
+        background-size: 464px 60px;
+        animation: campaign_sp 10s linear infinite;
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      &::before {
+        animation: none;
+      }
+    }
+    > .contents {
+      @media screen and (max-width: 767px) {
+        margin-top: -1.5em;
+      }
+      > .note-list {
+        margin-top: clamp(40px, 5.15vw, 70px);
+        text-align: center;
+        @media screen and (max-width: 767px) {
+          text-align: left;
+        }
+      }
+    }
+  }
+  & .title-with-speech-bubble > .speech-bubble {
+    background-image: url("/image/feature/test/speech-bubble_campaign.svg");
+    background-size: clamp(228px, 47.79vw, 650px);
+    @media screen and (max-width: 767px) {
+      background-image: url("/image/feature/test/speech-bubble_campaign_sp.svg");
+      background-size: 228px;
+    }
+  }
+  & .two-columns {
+    grid-template-columns: minmax(1fr, 530px) minmax(auto, 624px);
+  }
+}
+
+@keyframes campaign_pc {
+  0% {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -1230px 0;
+  }
+}
+
+@keyframes campaign_sp {
+  0% {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -464px 0;
+  }
+}

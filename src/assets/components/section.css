@@ -31,18 +31,15 @@
       left: 0;
       z-index: -1;
       width: 100%;
-      height: 148px;
       background-repeat: repeat-x;
       background-position: top;
-      background-size: 1680px 148px;
-      /* animation: loop 20s linear infinite; */
+      top: -60px;
     }
     @media screen and (max-width: 767px) {
       padding-inline: 15px;
       &::before {
-        background-size: 636px 56px;
-        height: 56px;
-        top: 45px;
+        height: 60px;
+        top: -20px;
       }
     }
     > .contents {
@@ -57,79 +54,6 @@
         padding: 90px 20px 40px;
         border-radius: 20px;
       }
-    }
-  }
-  &.new-function {
-    > .inner {
-      &::before {
-        background-image: url("/image/feature/test/loop-text_new-function.svg");
-      }
-    }
-    & .title-with-speech-bubble > .speech-bubble {
-      background-image: url("/image/feature/test/speech-bubble_new-function.svg");
-      background-size: clamp(228px, 16.93vw, 325px);
-      @media screen and (max-width: 767px) {
-        background-size: 228px;
-      }
-    }
-  }
-  &.features-of-monex {
-    > .inner {
-      &::before {
-        background-image: url("/image/feature/test/loop-text_features-of-monex.svg");
-      }
-      > .contents {
-        @media screen and (max-width: 767px) {
-          margin-top: -50px;
-        }
-      }
-    }
-    & .title-with-speech-bubble > .speech-bubble {
-      background-image: url("/image/feature/test/speech-bubble_features-of-monex.svg");
-      background-size: 567px;
-      background-size: clamp(376px, 29.53vw, 567px);
-      @media screen and (max-width: 767px) {
-        background-image: url("/image/feature/test/speech-bubble_features-of-monex_sp.svg");
-        background-size: 229px;
-      }
-    }
-  }
-  &.campaign {
-    > .inner {
-      &::before {
-        background-image: url("/image/feature/test/loop-text_campaign.svg");
-        background-size: 1230px 159px;
-        height: 159px;
-      }
-      @media screen and (max-width: 767px) {
-        &::before {
-          background-size: 464px 60px;
-          height: 60px;
-        }
-      }
-      > .contents {
-        @media screen and (max-width: 767px) {
-          margin-top: -1.5em;
-        }
-        > .note-list {
-          margin-top: clamp(40px, 5.15vw, 70px);
-          text-align: center;
-          @media screen and (max-width: 767px) {
-            text-align: left;
-          }
-        }
-      }
-    }
-    & .title-with-speech-bubble > .speech-bubble {
-      background-image: url("/image/feature/test/speech-bubble_campaign.svg");
-      background-size: clamp(228px, 47.79vw, 650px);
-      @media screen and (max-width: 767px) {
-        background-image: url("/image/feature/test/speech-bubble_campaign_sp.svg");
-        background-size: 228px;
-      }
-    }
-    & .two-columns {
-      grid-template-columns: minmax(1fr, 530px) minmax(auto, 624px);
     }
   }
 }

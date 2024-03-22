@@ -17,7 +17,9 @@
 @import url("/src/assets/components/step-area.css");
 @import url("/src/assets/components/conversion-area.css");
 @import url("/src/assets/components/conversion-button-area.css");
+@import url("/src/assets/components/new-function.css");
 @import url("/src/assets/components/features-of-monex.css");
+@import url("/src/assets/components/campaign.css");
 @import url("/src/assets/components/step.css");
 :root {
   --red: #cc0033;

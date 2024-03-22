@@ -4,15 +4,17 @@
       background-image: url("/image/feature/test/loop-text_step.svg");
       background-size: 3413.5px 151px;
       height: 151px;
-      animation: step_pc 20s linear infinite;
-      top: -60px;
+      animation: step_pc 30s linear infinite;
     }
     @media screen and (max-width: 767px) {
       &::before {
         background-size: 1370px 60px;
-        height: 60px;
-        top: -20px;
-        animation: step_sp 20s linear infinite;
+        animation: step_sp 25s linear infinite;
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      &::before {
+        animation: none;
       }
     }
     > .contents {

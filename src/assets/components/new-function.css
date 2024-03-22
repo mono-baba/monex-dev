@@ -1,0 +1,46 @@
+.new-function {
+  > .inner {
+    &::before {
+      background-image: url("/image/feature/test/loop-text_new-function.svg");
+      background-size: 1680px 148px;
+      height: 148px;
+      animation: new-function_pc 16s linear infinite;
+    }
+    @media screen and (max-width: 767px) {
+      &::before {
+        background-size: 681px 60px;
+        animation: new-function_sp 16s linear infinite;
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      &::before {
+        animation: none;
+      }
+    }
+  }
+  & .title-with-speech-bubble > .speech-bubble {
+    background-image: url("/image/feature/test/speech-bubble_new-function.svg");
+    background-size: clamp(228px, 16.93vw, 325px);
+    @media screen and (max-width: 767px) {
+      background-size: 228px;
+    }
+  }
+}
+
+@keyframes new-function_pc {
+  0% {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -1680px 0;
+  }
+}
+
+@keyframes new-function_sp {
+  0% {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -681px 0;
+  }
+}

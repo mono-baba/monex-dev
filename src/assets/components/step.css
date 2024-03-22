@@ -23,17 +23,9 @@
     }
   }
   & .title-with-speech-bubble {
-    margin-bottom: -60px;
-    @media screen and (max-width: 767px) {
-      margin-bottom: -35px;
-    }
     > .speech-bubble {
       background-image: url("/image/feature/test/speech-bubble_step.svg");
-      background-size: contain;
       padding-inline: clamp(25px, 2.79vw, 36px);
-      @media screen and (max-width: 767px) {
-        background-size: 229px;
-      }
     }
     @media screen and (max-width: 767px) {
       > .title {

@@ -3,7 +3,7 @@
   padding-block: 145px;
   border-top: 3px solid #000;
   @media screen and (max-width: 767px) {
-    padding-block: 70px 60px;
+    padding-block: 60px 60px;
     border-width: 2px;
   }
   /* 奇数 */

@@ -18,9 +18,6 @@
       }
     }
     > .contents {
-      @media screen and (max-width: 767px) {
-        margin-top: -1.5em;
-      }
       > .note-list {
         margin-top: clamp(40px, 5.15vw, 70px);
         text-align: center;
@@ -30,12 +27,25 @@
       }
     }
   }
-  & .title-with-speech-bubble > .speech-bubble {
-    background-image: url("/image/feature/test/speech-bubble_campaign.svg");
-    background-size: clamp(228px, 47.79vw, 650px);
+  & .title-with-speech-bubble {
+    margin-bottom: clamp(-95px, -6.99vw, -60px);
     @media screen and (max-width: 767px) {
-      background-image: url("/image/feature/test/speech-bubble_campaign_sp.svg");
-      background-size: 228px;
+      margin-bottom: -50px;
+    }
+    > .title {
+      min-height: clamp(120px, 13.97vw, 190px);
+      @media screen and (max-width: 767px) {
+        padding-block: 20px;
+        font-size: 2.4rem;
+        min-height: 100px;
+      }
+    }
+    > .speech-bubble {
+      background-image: url("/image/feature/test/speech-bubble_campaign.svg");
+      @media screen and (max-width: 767px) {
+        background-image: url("/image/feature/test/speech-bubble_campaign_sp.svg");
+        padding-bottom: 40px;
+      }
     }
   }
   & .two-columns {
@@ -58,5 +68,91 @@
   }
   to {
     background-position: -464px 0;
+  }
+}
+
+.campaign-section {
+  & + .campaign-section {
+    margin-top: clamp(60px, 5.88vw, 80px);
+  }
+  /* 偶数 */
+  &:nth-of-type(even) .campaign-images::before {
+    width: min(45.92vw, 624.47px);
+    height: min(30.77vw, 418.44px);
+    left: auto;
+    right: 0;
+    background-image: url("/image/feature/test/campaign-banner_coin_inversion.svg");
+  }
+  @media screen and (max-width: 767px) {
+    &:nth-of-type(even) .campaign-images::before {
+      width: 103%;
+      height: 114%;
+      right: 9px;
+    }
+  }
+}
+
+.campaign .two-columns {
+  grid-template-columns: min(38.97vw, 530px) min(44.49vw, 605px);
+  max-width: 1200px;
+  column-gap: clamp(15px, 3.68vw, 50px);
+  @media screen and (max-width: 767px) {
+    grid-template-columns: 1fr;
+  }
+  > .details {
+    @media screen and (max-width: 767px) {
+      margin-top: 17px;
+    }
+    > .period-area {
+      margin-top: 2rem;
+    }
+    @media screen and (max-width: 767px) {
+      > .button-primary {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  > .campaign-images {
+    grid-area: image;
+    margin-inline: auto;
+    width: 100%;
+    border-radius: 40px;
+    border: 3px solid #000;
+    background-color: #fff;
+    padding: clamp(15px, 2.21vw, 30px);
+    aspect-ratio: 524 / 295;
+    position: relative;
+    @media screen and (max-width: 767px) {
+      margin-top: 20px;
+      border-width: 2px;
+      border-radius: 20px;
+      aspect-ratio: 305 / 185;
+      padding: 15px;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      display: block;
+      width: min(45.92vw, 624.47px);
+      height: min(30.77vw, 418.44px);
+      background-image: url("/image/feature/test/campaign-banner_coin.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    @media screen and (max-width: 767px) {
+      &::before {
+        width: 103%;
+        height: 114%;
+        left: 9px;
+      }
+    }
+    > img {
+      border: 1px solid #707070;
+      aspect-ratio: 524 / 295;
+    }
   }
 }

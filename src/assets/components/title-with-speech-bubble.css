@@ -3,6 +3,11 @@
   flex-direction: column;
   align-items: flex-start;
   row-gap: 20px;
+  margin-bottom: -60px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: -35px;
+    row-gap: 10px;
+  }
   > .speech-bubble {
     display: inline-block;
     align-self: center;
@@ -12,6 +17,7 @@
     padding-inline: 26px;
     background-position: bottom;
     font-weight: bold;
+    background-size: contain;
     @media screen and (max-width: 767px) {
       font-size: 2.2rem;
       padding-bottom: 30px;
@@ -27,22 +33,18 @@
   > .title {
     display: inline-grid;
     place-content: center;
-    /* margin-bottom: -1em; */
     position: relative;
     font-size: clamp(3rem, 3.97vw, 5.4rem);
     background-color: #fff;
     padding: 11px 87px;
     min-height: 120px;
-    /* margin-top: 20px; */
     font-weight: 900;
     line-height: 1.222;
     @media screen and (max-width: 767px) {
       font-size: 3rem;
-      /* margin-top: 0px;
-      margin-bottom: 0; */
       padding: 10px 28px;
       line-height: 1.267;
-      min-height: 65px;
+      min-height: 70px;
     }
     &::before,
     &::after {
@@ -66,16 +68,6 @@
     }
     &::after {
       bottom: 0;
-    }
-  }
-}
-
-.campaign .title-with-speech-bubble {
-  > .title {
-    margin-bottom: -1.5em;
-    @media screen and (max-width: 767px) {
-      padding-block: 20px;
-      font-size: 2.4rem;
     }
   }
 }

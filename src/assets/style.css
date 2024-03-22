@@ -92,27 +92,6 @@ main {
   }
 }
 
-.campaign-section {
-  & + .campaign-section {
-    margin-top: clamp(60px, 5.88vw, 80px);
-  }
-  /* 偶数 */
-  &:nth-of-type(even) .campaign-images::before {
-    width: min(45.92vw, 624.47px);
-    height: min(30.77vw, 418.44px);
-    left: auto;
-    right: 0;
-    background-image: url("/image/feature/test/campaign-banner_coin_inversion.svg");
-  }
-  @media screen and (max-width: 767px) {
-    &:nth-of-type(even) .campaign-images::before {
-      width: 103%;
-      height: 114%;
-      right: 9px;
-    }
-  }
-}
-
 @media screen and (max-width: 767px) {
   .l-gnavi .link {
     text-align: left;

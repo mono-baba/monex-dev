@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="129" height="129" viewBox="0 0 129 129">
+  <g id="グループ_20301" data-name="グループ 20301" transform="translate(-899 -10598)">
+    <circle id="楕円形_2343" data-name="楕円形 2343" cx="64.5" cy="64.5" r="64.5" transform="translate(899 10598)" fill="#f4f8fd"/>
+    <g id="グループ_20300" data-name="グループ 20300">
+      <g id="illust" transform="translate(934.689 10614.465)">
+        <g id="グループ_20149" data-name="グループ 20149" transform="translate(0 0)">
+          <rect id="長方形_5711" data-name="長方形 5711" width="56.621" height="96.071" rx="3.5" transform="translate(1 0)" fill="#fff" stroke="#231815" stroke-miterlimit="10" stroke-width="2"/>
+          <g id="グループ_20150" data-name="グループ 20150" transform="translate(23.466 7.961)">
+            <line id="線_58" data-name="線 58" x2="4.682" transform="translate(6.006)" fill="none" stroke="#231815" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
+            <line id="線_59" data-name="線 59" x2="0.52" fill="none" stroke="#231815" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
+          </g>
+          <rect id="長方形_5712" data-name="長方形 5712" width="48.052" height="70.982" rx="2.835" transform="translate(4.784 12.545)" fill="#fff"/>
+          <g id="グループ_20151" data-name="グループ 20151" transform="translate(5.849 13.192)">
+            <path id="パス_3610" data-name="パス 3610" d="M1186.881-1333.694h-21.435s-2,.825-2,2.12" transform="translate(-1163.444 1333.694)" fill="none" stroke="#231815" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            <path id="パス_3611" data-name="パス 3611" d="M1185.453-1333.694h21.435s2,.825,2,2.12" transform="translate(-1162.016 1333.694)" fill="none" stroke="#231815" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+          <g id="グループ_20152" data-name="グループ 20152" transform="translate(5.849 81.171)">
+            <path id="パス_3612" data-name="パス 3612" d="M1185.453-1250.781h21.435s2-.824,2-2.12" transform="translate(-1162.016 1252.901)" fill="none" stroke="#231815" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            <path id="パス_3613" data-name="パス 3613" d="M1186.881-1250.781h-21.435s-2-.824-2-2.12" transform="translate(-1163.444 1252.901)" fill="none" stroke="#231815" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+          <ellipse id="楕円形_2316" data-name="楕円形 2316" cx="2.619" cy="2.619" rx="2.619" ry="2.619" transform="translate(26.191 86.873)" fill="none" stroke="#231815" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+      </g>
+      <g id="長方形_5851" data-name="長方形 5851" transform="translate(945 10637)" fill="#fff" stroke="#000" stroke-width="2">
+        <rect width="38" height="6" rx="1" stroke="none"/>
+        <rect x="1" y="1" width="36" height="4" fill="none"/>
+      </g>
+      <g id="長方形_5852" data-name="長方形 5852" transform="translate(945 10647)" fill="#fff" stroke="#000" stroke-width="2">
+        <rect width="38" height="6" rx="1" stroke="none"/>
+        <rect x="1" y="1" width="36" height="4" fill="none"/>
+      </g>
+      <g id="長方形_5853" data-name="長方形 5853" transform="translate(945 10657)" fill="#fff" stroke="#000" stroke-width="2">
+        <rect width="38" height="6" rx="1" stroke="none"/>
+        <rect x="1" y="1" width="36" height="4" fill="none"/>
+      </g>
+      <g id="長方形_5854" data-name="長方形 5854" transform="translate(945 10667)" fill="#fff" stroke="#000" stroke-width="2">
+        <rect width="32" height="6" rx="1" stroke="none"/>
+        <rect x="1" y="1" width="30" height="4" fill="none"/>
+      </g>
+      <g id="長方形_5855" data-name="長方形 5855" transform="translate(953 10681)" fill="#ffc700" stroke="#000" stroke-width="2">
+        <rect width="22" height="10" rx="5" stroke="none"/>
+        <rect x="1" y="1" width="20" height="8" rx="4" fill="none"/>
+      </g>
+    </g>
+  </g>
+</svg>

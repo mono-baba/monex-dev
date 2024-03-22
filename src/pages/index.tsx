@@ -15,6 +15,7 @@ export default function () {
         <NewFunction />
         <FeaturesOfMonex />
         <Campaign />
+        <Step />
       </main>
     </>
   )
@@ -425,6 +426,63 @@ const Campaign = () => {
             <p className="note-list">
               ※キャンペーンの内容は、予告なく変更または中止となる場合がございますのであらかじめご了承ください。
             </p>
+          </div>
+        </div>
+      </section>
+    </>
+  )
+}
+
+const Step = () => {
+  return (
+    <>
+      <section className="section-area step">
+        <div className="inner">
+          <h2 className="title-with-speech-bubble">
+            <span className="speech-bubble">
+              カンタン<span>3</span>ステップ
+            </span>
+            <span className="title">口座開設までの流れ</span>
+          </h2>
+          <div className="contents">
+            <ol className="step-area">
+              <li>
+                <div>
+                  <span className="number">1</span>
+                  <h3 className="title">メール登録</h3>
+                  <img src="/image/feature/test/img_step_01.svg" alt="" />
+                  <p>
+                    メールアドレスを登録し、
+                    <br />
+                    案内メールを受け取る
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <span className="number">2</span>
+                  <h3 className="title">申込みフォーム入力</h3>
+                  <img src="/image/feature/test/img_step_02.svg" alt="" />
+                  <p>
+                    案内に従って、
+                    <br />
+                    お客様情報を入力
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <span className="number">3</span>
+                  <h3 className="title">本人確認</h3>
+                  <img src="/image/feature/test/img_step_03.svg" alt="" />
+                  <p>
+                    本人確認書類の撮影、
+                    <br />
+                    本人認証を行う
+                  </p>
+                </div>
+              </li>
+            </ol>
           </div>
         </div>
       </section>

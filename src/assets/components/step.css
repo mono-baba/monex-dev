@@ -1,0 +1,56 @@
+.step {
+  > .inner {
+    &::before {
+      background-image: url("/image/feature/test/loop-text_step.svg");
+      background-size: 3413.5px 151px;
+      height: 151px;
+      animation: step_pc 20s linear infinite;
+      top: -60px;
+    }
+    @media screen and (max-width: 767px) {
+      &::before {
+        background-size: 1370px 60px;
+        height: 60px;
+        top: -20px;
+        animation: step_sp 20s linear infinite;
+      }
+    }
+  }
+  & .title-with-speech-bubble {
+    margin-bottom: -60px;
+    @media screen and (max-width: 767px) {
+      margin-bottom: -35px;
+    }
+    > .speech-bubble {
+      background-image: url("/image/feature/test/speech-bubble_step.svg");
+      background-size: contain;
+      padding-inline: clamp(25px, 2.79vw, 36px);
+      @media screen and (max-width: 767px) {
+        background-size: 229px;
+      }
+    }
+    @media screen and (max-width: 767px) {
+      > .title {
+        font-size: 2.6rem;
+      }
+    }
+  }
+}
+
+@keyframes step_pc {
+  0% {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -3413.5px 0;
+  }
+}
+
+@keyframes step_sp {
+  0% {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -1370px 0;
+  }
+}

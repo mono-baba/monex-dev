@@ -484,6 +484,27 @@ const Step = () => {
               </li>
             </ol>
           </div>
+          <div className="conversion-area">
+            <h3 className="title">
+              最短で申込みの
+              <br className="only-sp" />
+              翌営業日に開設完了！
+            </h3>
+            <div className="button-area">
+              <div className="button conversion-button">
+                <h2 className="title">NISAをはじめるなら</h2>
+                <a className="button" href="#" target="_blank">
+                  まずは総合口座を開設（無料）
+                </a>
+              </div>
+              <div className="button conversion-button">
+                <h2 className="title">すでに総合口座をお持ちの方</h2>
+                <a className="button -nisa" href="#" target="_blank">
+                  NISA口座を開設する（無料）
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </>

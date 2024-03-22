@@ -51,11 +51,9 @@
       margin-inline: auto;
       background-color: #ecf1f7;
       border-radius: 40px;
-      /* padding: 190px 20px 120px; */
       padding: clamp(90px, 13.97vw, 190px) min(1.47vw, 20px)
         clamp(40px, 8.82vw, 120px);
       @media screen and (max-width: 767px) {
-        /* margin-top: -32px; */
         padding: 90px 20px 40px;
         border-radius: 20px;
       }

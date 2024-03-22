@@ -1,0 +1,5 @@
+.features-of-monex {
+  .conversion-button {
+    margin-top: clamp(20px, 3.68vw, 50px);
+  }
+}

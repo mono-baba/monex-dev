@@ -1,0 +1,11 @@
+.conversion-button-area {
+  display: none;
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 9px 15px 14px;
+    gap: 11px;
+    background-color: #f4f8fd;
+  }
+}

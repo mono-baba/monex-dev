@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
 @import url("/src/assets/components/global-navigation.css");
 @import url("/src/assets/components/section.css");
+@import url("/src/assets/components/button.css");
 @import url("/src/assets/components/conversion-button.css");
 @import url("/src/assets/components/fixed-conversion-button.css");
 @import url("/src/assets/components/loop-text.css");
@@ -15,6 +16,8 @@
 @import url("/src/assets/components/period-area.css");
 @import url("/src/assets/components/step-area.css");
 @import url("/src/assets/components/conversion-area.css");
+@import url("/src/assets/components/conversion-button-area.css");
+@import url("/src/assets/components/features-of-monex.css");
 @import url("/src/assets/components/step.css");
 :root {
   --red: #cc0033;
@@ -108,20 +111,9 @@ main {
   }
 }
 
-.button-area {
-  margin-top: 30px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  @media screen and (max-width: 767px) {
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-  }
-  > .conversion-button {
-    margin-inline: 15px;
-    @media screen and (max-width: 767px) {
-      margin-inline: 0;
-    }
+@media screen and (max-width: 767px) {
+  .l-gnavi .link {
+    text-align: left;
+    color: #333333;
   }
 }

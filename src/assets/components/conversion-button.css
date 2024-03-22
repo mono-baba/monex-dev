@@ -2,14 +2,27 @@
   font-family: "Noto Sans JP", sans-serif;
   font-optical-sizing: auto;
   text-align: center;
-  margin-top: 20px;
-  .title {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: clamp(265px, 30.15vw, 410px) clamp(
+      265px,
+      30.15vw,
+      410px
+    );
+  grid-template-rows: auto auto;
+  justify-content: center;
+  column-gap: 30px;
+  row-gap: 10px;
+  @media screen and (max-width: 767px) {
+    display: block;
+  }
+  > .title {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     gap: 13px;
-    font-size: 2rem;
+    font-size: clamp(1.6rem, 1.47vw, 2rem);
     @media screen and (max-width: 767px) {
       font-size: 1.6rem;
     }
@@ -32,84 +45,9 @@
       margin-top: 10px;
     }
   }
-  .button {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 410px;
-    height: 80px;
-    text-align: center;
-    font-size: 2.3rem;
-    font-weight: bold;
-    background-color: #ff943e;
-    text-decoration: none;
-    border-radius: 50px;
-    border: 3px solid #000;
-    box-shadow: 0 5px 0 0 #000;
-    padding-right: 10px;
-    @media screen and (max-width: 767px) {
-      width: 265px;
-      height: 60px;
-      font-size: 1.5rem;
-      border: 2px solid #000;
-      box-shadow: 0 3px 0 0 #000;
-    }
-    &.-nisa {
-      background-color: #8ceb94;
-    }
-    &.-details {
-      width: 300px;
-      height: 60px;
-      font-size: 1.6rem;
-      background-color: #ffc700;
-      @media screen and (max-width: 767px) {
-        width: 220px;
-        height: 40px;
-        font-size: 1.4rem;
-      }
-      &::after {
-        width: 20px;
-        height: 20px;
-      }
-    }
-    &.-campaign {
-      width: 300px;
-      height: 60px;
-      font-size: 1.6rem;
-      background-color: #cc0033;
-      color: #fff;
-      @media screen and (max-width: 767px) {
-        font-size: 1.4rem;
-        width: 250px;
-        height: 50px;
-      }
-      &::after {
-        width: 20px;
-        height: 20px;
-      }
-    }
-    &::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      right: 20px;
-      transform: translateY(-50%);
-      display: block;
-      width: 26px;
-      height: 26px;
-      flex-shrink: 0;
-      background-image: url(/image/feature/test/arrow_button-right.svg);
-      background-repeat: no-repeat;
-      background-size: contain;
-      margin-left: 6px;
-    }
-    @media screen and (max-width: 767px) {
-      &::after {
-        right: 15px;
-        width: 20px;
-        height: 20px;
-      }
+  @media screen and (max-width: 767px) {
+    > .button-primary + .title {
+      margin-top: 2rem;
     }
   }
 }

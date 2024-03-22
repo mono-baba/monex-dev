@@ -26,10 +26,10 @@ const navItems = [
   // 他のナビゲーションアイテム...
 ]
 
-const GlobalNavigation = () => {
+const GlobalNavigationFooter = () => {
   return (
-    <div className="l-gnavi">
-      <nav className="container js-fixedMenu">
+    <div className="l-gnavi -migration">
+      <nav className="container">
         <ul className="list">
           {/* liをnavItemsでmapする */}
           {navItems.map((navItem) => {
@@ -66,23 +66,14 @@ const GlobalNavigation = () => {
           })}
         </ul>
       </nav>
-      <div className="buttons js-fixed-button">
-        <div className="conversion-button">
-          <h2 className="title">NISAをはじめるなら</h2>
-          <a className="button-primary -account" href="#" target="_blank">
-            まずは総合口座を開設（無料）
-          </a>
-          <h2 className="title">すでに総合口座をお持ちの方</h2>
-          <a className="button-primary -nisa" href="#" target="_blank">
-            NISA口座を開設する（無料）
-          </a>
-        </div>
-      </div>
-      <p className="close js-menuToggle">
-        <span>CLOSE</span>
-      </p>
+      <button className="pageTop js-pageTop">
+        <img
+          src="/image/feature/common/btn_pagetop_01.png"
+          alt="トップへ戻る"
+        />
+      </button>
     </div>
   )
 }
 
-export default GlobalNavigation
+export default GlobalNavigationFooter

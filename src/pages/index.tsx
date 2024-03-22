@@ -1,6 +1,8 @@
 import { Head } from "minista"
 import GlobalNavigation from "../components/GlobalNavigation"
+import GlobalNavigationFooter from "../components/GlobalNavigationFooter"
 import FixedConversionButton from "../components/FixedConversionButton"
+import Disclaimer from "../components/Disclaimer"
 
 export default function () {
   return (
@@ -16,7 +18,10 @@ export default function () {
         <FeaturesOfMonex />
         <Campaign />
         <Step />
+        <Conversion />
       </main>
+      <GlobalNavigationFooter />
+      <Disclaimer />
     </>
   )
 }
@@ -223,11 +228,13 @@ const FeaturesOfMonex = () => {
                   <p className="note-list">
                     ※一部キャッシュバックによる実質無料も含みます。
                   </p>
-                  <div className="button conversion-button">
-                    <a className="button -details" href="#" target="_blank">
-                      詳細はこちら
-                    </a>
-                  </div>
+                  <a
+                    className="button-primary -details"
+                    href="#"
+                    target="_blank"
+                  >
+                    詳細はこちら
+                  </a>
                 </div>
               </div>
             </section>
@@ -250,11 +257,13 @@ const FeaturesOfMonex = () => {
                     <br />
                     だからポイントがザクザクたまる！
                   </p>
-                  <div className="button conversion-button">
-                    <a className="button -details" href="#" target="_blank">
-                      詳細はこちら
-                    </a>
-                  </div>
+                  <a
+                    className="button-primary -details"
+                    href="#"
+                    target="_blank"
+                  >
+                    詳細はこちら
+                  </a>
                 </div>
               </div>
               <div className="band-area">
@@ -275,19 +284,19 @@ const FeaturesOfMonex = () => {
                   </strong>
                 </p>
               </div>
-              <div className="button-area">
-                <div className="button conversion-button">
-                  <h2 className="title">NISAをはじめるなら</h2>
-                  <a className="button" href="#" target="_blank">
-                    まずは総合口座を開設（無料）
-                  </a>
-                </div>
-                <div className="button conversion-button">
-                  <h2 className="title">すでに総合口座をお持ちの方</h2>
-                  <a className="button -nisa" href="#" target="_blank">
-                    NISA口座を開設する（無料）
-                  </a>
-                </div>
+              <div className="conversion-button">
+                <h2 className="title">NISAをはじめるなら</h2>
+                <a className="button-primary -account" href="#" target="_blank">
+                  まずは総合口座を開設
+                  <wbr />
+                  （無料）
+                </a>
+                <h2 className="title">すでに総合口座をお持ちの方</h2>
+                <a className="button-primary -nisa" href="#" target="_blank">
+                  NISA口座を開設する
+                  <wbr />
+                  （無料）
+                </a>
               </div>
             </section>
             <section className="border-box">
@@ -304,11 +313,13 @@ const FeaturesOfMonex = () => {
                     <br />
                     さらに1株から株式を購入できるワン株（単元未満株）サービスもご用意。まとまった資金がなくても投資ができて、初心者の方でも始めやすい！
                   </p>
-                  <div className="button conversion-button">
-                    <a className="button -details" href="#" target="_blank">
-                      詳細はこちら
-                    </a>
-                  </div>
+                  <a
+                    className="button-primary -details"
+                    href="#"
+                    target="_blank"
+                  >
+                    詳細はこちら
+                  </a>
                 </div>
               </div>
             </section>
@@ -326,11 +337,13 @@ const FeaturesOfMonex = () => {
                     <br />
                     初心者でも使いやすくAppStoreで4.3の高評価！
                   </p>
-                  <div className="button conversion-button">
-                    <a className="button -details" href="#" target="_blank">
-                      詳細はこちら
-                    </a>
-                  </div>
+                  <a
+                    className="button-primary -details"
+                    href="#"
+                    target="_blank"
+                  >
+                    詳細はこちら
+                  </a>
                 </div>
               </div>
             </section>
@@ -383,11 +396,13 @@ const Campaign = () => {
                     キャンペーン期間：YYYY年<span>MM</span>月<span>DD</span>
                     日（月）まで
                   </p>
-                  <div className="button conversion-button">
-                    <a className="button -campaign" href="#" target="_blank">
-                      キャンペーン詳細はこちら
-                    </a>
-                  </div>
+                  <a
+                    className="button-primary -campaign"
+                    href="#"
+                    target="_blank"
+                  >
+                    キャンペーン詳細はこちら
+                  </a>
                 </div>
               </div>
             </section>
@@ -415,11 +430,13 @@ const Campaign = () => {
                     キャンペーン期間：YYYY年<span>MM</span>月<span>DD</span>
                     日（月）まで
                   </p>
-                  <div className="button conversion-button">
-                    <a className="button -campaign" href="#" target="_blank">
-                      キャンペーン詳細はこちら
-                    </a>
-                  </div>
+                  <a
+                    className="button-primary -campaign"
+                    href="#"
+                    target="_blank"
+                  >
+                    キャンペーン詳細はこちら
+                  </a>
                 </div>
               </div>
             </section>
@@ -490,23 +507,34 @@ const Step = () => {
               <br className="only-sp" />
               翌営業日に開設完了！
             </h3>
-            <div className="button-area">
-              <div className="button conversion-button">
-                <h2 className="title">NISAをはじめるなら</h2>
-                <a className="button" href="#" target="_blank">
-                  まずは総合口座を開設（無料）
-                </a>
-              </div>
-              <div className="button conversion-button">
-                <h2 className="title">すでに総合口座をお持ちの方</h2>
-                <a className="button -nisa" href="#" target="_blank">
-                  NISA口座を開設する（無料）
-                </a>
-              </div>
+            <div className="conversion-button">
+              <h2 className="title">NISAをはじめるなら</h2>
+              <a className="button-primary -account" href="#" target="_blank">
+                まずは総合口座を開設（無料）
+              </a>
+              <h2 className="title">すでに総合口座をお持ちの方</h2>
+              <a className="button-primary -nisa" href="#" target="_blank">
+                NISA口座を開設する（無料）
+              </a>
             </div>
           </div>
         </div>
       </section>
+    </>
+  )
+}
+
+const Conversion = () => {
+  return (
+    <>
+      <aside className="conversion-button-area">
+        <a className="button-primary -account-small" href="#" target="_blank">
+          総合口座を開設する
+        </a>
+        <a className="button-primary -nisa-small" href="#" target="_blank">
+          NISA口座を開設する
+        </a>
+      </aside>
     </>
   )
 }

@@ -1,9 +1,9 @@
 .heading-normal {
-  font-size: clamp(2.4rem, 2.94vw, 4rem);
+  font-size: min(2.94vw, 4rem);
   font-weight: 900;
   line-height: 1.35;
   @media screen and (max-width: 767px) {
-    /* font-size: 2.4rem; */
+    font-size: 2.4rem;
     line-height: 1.5;
   }
 }

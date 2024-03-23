@@ -38,7 +38,7 @@
           transform: translate(-50%, 100%);
           opacity: 0;
         }
-        @media screen and (max-width: 767px) {
+        @media screen and (max-width: 767px), screen and (max-height: 629px) {
           display: none;
         }
       }
@@ -54,9 +54,14 @@
           transform: translate(50%, 100%);
           opacity: 0;
         }
-        @media screen and (max-width: 767px) {
+        @media screen and (max-width: 767px), screen and (max-height: 629px) {
           display: none;
         }
+      }
+    }
+    & .contents {
+      @media screen and (max-width: 767px) {
+        padding: 90px 20px 40px;
       }
     }
   }
@@ -64,20 +69,25 @@
 
 .poinco-area-mini {
   position: relative;
-  max-width: 553px;
-  max-height: 424px;
+  max-width: min(37.36vw, 553px);
+  max-height: min(28.65vw, 424px);
   height: 100%;
   width: 100%;
   aspect-ratio: 553 / 424;
   overflow: hidden;
+  @media screen and (max-width: 767px) {
+    max-width: 100%;
+    max-height: 100%;
+    aspect-ratio: 553 / 424;
+  }
   &::before {
     content: "";
     position: absolute;
     bottom: 0px;
     left: 0;
     display: block;
-    width: 137px;
-    height: 125px;
+    width: min(9.26vw, 137px);
+    height: min(8.45vw, 125px);
     background-image: url("/image/feature/test/poinco-young_mini.png");
     background-repeat: no-repeat;
     background-size: contain;
@@ -85,9 +95,10 @@
     z-index: 1;
     opacity: 0;
   }
-  @media screen and (max-height: 739px), screen and (max-width: 767px) {
+  @media screen and (max-width: 767px) {
     width: 100%;
     aspect-ratio: 310 / 224;
+    margin-inline: auto;
     &::before {
       bottom: 0px;
       width: 91px;
@@ -102,15 +113,15 @@
     bottom: 0px;
     right: 40px;
     display: block;
-    width: 109px;
-    height: 143px;
+    width: min(7.36vw, 109px);
+    height: min(9.66vw, 143px);
     background-image: url("/image/feature/test/poinco-old_mini.png");
     background-repeat: no-repeat;
     background-size: contain;
     transform: translateY(150%);
     opacity: 0;
   }
-  @media screen and (max-height: 739px), screen and (max-width: 767px) {
+  @media screen and (max-width: 767px) {
     &::after {
       bottom: 0px;
       width: 72px;
@@ -125,9 +136,11 @@
 .poinco-old.is-active + .vertical-slider .poinco-area-mini::after {
   animation: poinco-mini 0.5s cubic-bezier(0.86, 0, 0.07, 1) 1s forwards;
 }
-@media screen and (max-height: 739px), screen and (max-width: 767px) {
+@media screen and (max-width: 767px), screen and (max-height: 629px) {
   .poinco-old.is-active + .vertical-slider .poinco-area-mini::before,
-  .poinco-old.is-active + .vertical-slider .poinco-area-mini::after {
+  .poinco-old.is-active + .vertical-slider .poinco-area-mini::after,
+  .poinco-old + .vertical-slider .poinco-area-mini::before,
+  .poinco-old + .vertical-slider .poinco-area-mini::after {
     animation: none;
     transform: translateY(0%);
     opacity: 1;

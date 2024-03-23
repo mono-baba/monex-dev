@@ -17,7 +17,7 @@
         animation: none;
       }
     }
-    > .contents {
+    & .contents {
       > .note-list {
         margin-top: clamp(40px, 5.15vw, 70px);
         text-align: center;

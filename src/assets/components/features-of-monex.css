@@ -34,9 +34,9 @@
         background-image: url("/image/feature/test/speech-bubble_features-of-monex_sp.svg");
       }
     }
-    .conversion-button {
-      margin-top: clamp(20px, 3.68vw, 50px);
-    }
+  }
+  .conversion-button {
+    margin-top: clamp(20px, 3.68vw, 50px);
   }
 }
 

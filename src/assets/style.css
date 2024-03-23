@@ -63,10 +63,12 @@ main {
     background-repeat: no-repeat;
     background-size: contain;
     display: block;
-    @media screen and (max-width: 767px) {
-      width: 145px;
-      height: 97px;
-      background-image: url("/image/feature/test/img_lead_sp.svg");
+  }
+  @media screen and (max-width: 767px) {
+    &::before {
+      width: 90px;
+      height: 62px;
+      top: -31.8px;
     }
   }
   @media screen and (max-width: 767px) {

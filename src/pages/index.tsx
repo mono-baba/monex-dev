@@ -82,108 +82,135 @@ const NewFunction = () => {
         <div className="inner">
           <h2 className="title-with-speech-bubble">
             <span className="speech-bubble">さらにお手軽に！</span>
-            <span className="title">3つの新機能</span>
+            <span className="title">4つの新機能</span>
           </h2>
-          <ul className="vertical-slider contents">
-            <li>
-              <div className="details is-show" data-slider>
-                <img
-                  src="/image/feature/test/number_01.svg"
-                  alt="01"
-                  width={159}
-                  height={117}
-                  decoding="async"
-                  loading="lazy"
-                />
-                <p className="label">2024年夏頃 提供開始予定</p>
-                <h3 className="title heading-normal">
-                  dカード&reg;のクレカ積立で
-                  <br />
-                  dポイントがたまる！
-                </h3>
-                <div className="shadow-box"></div>
-                <p className="text">
-                  dカードでの投資信託のクレカ積立が可能になり、
-                  <br className="only-pc" />
-                  投資つみたてのカード決済ご利用金額に応じてdポイントがたまります。
-                  <br />
-                  ためたdポイントは、ショッピングはもちろん、
-                  <br className="only-pc" />
-                  今後投資信託の購入にもつかえるようになります。
-                </p>
-                <p className="note-list">
-                  ※dカード、dカード GOLD&reg;のクレジットカード番号の冒頭4桁が、
-                  <br className="only-pc" />
-                  [4363]、[5344]、[5365]のいずれかから始まるお客様が対象。
-                </p>
-              </div>
-              <div className="shadow-box"></div>
-            </li>
-            <li>
-              <div className="details" data-slider>
-                <img
-                  src="/image/feature/test/number_02.svg"
-                  alt="02"
-                  width={159}
-                  height={117}
-                  decoding="async"
-                  loading="lazy"
-                />
-                <p className="label">2024年秋頃 提供開始予定</p>
-                <h3 className="title heading-normal">
-                  dポイントで投資信託が
-                  <br />
-                  購入できるように！
-                </h3>
-                <div className="shadow-box"></div>
-                <p className="text">
-                  dポイント1ポイントを投資信託の買付代金1円として
-                  <br />
-                  ご利用いただけるようになります。
-                  <br />
-                  ご自身で貯めたdポイントさえあれば投資信託が購入できるので
-                  <br />
-                  気軽に投資を始められます。
-                </p>
-                <ul>
-                  <li className="note-list">
-                    ※金額指定のみが対象です。口数指定はご利用いただけません。
-                  </li>
-                  <li className="note-list">
-                    ※積立、投資一任口座、iDeCo、コールセンター経由などは対象外です。
-                  </li>
-                </ul>
-              </div>
-              <div className="shadow-box"></div>
-            </li>
-            <li>
-              <div className="details" data-slider>
-                <img
-                  src="/image/feature/test/number_03.svg"
-                  alt="03"
-                  width={159}
-                  height={117}
-                  decoding="async"
-                  loading="lazy"
-                />
-                <p className="label">2024年秋頃 提供開始予定</p>
-                <h3 className="title heading-normal">
-                  投信保有で
-                  <br />
-                  dポイントがたまる！
-                </h3>
-                <div className="shadow-box"></div>
-                <p className="text">
-                  マネックスポイントの代わりに、dポイントを貯められるようになります。
-                  <br />
-                  投資信託を持っているだけで、毎月、dポイントが貯まります。
-                  <br />
-                  さらにNISA口座でも貯まります。
-                </p>
-              </div>
-              <div className="shadow-box"></div>
-            </li>
-          </ul>
+          <div className="poinco">
+            <img
+              src="/image/feature/test/poinco-young.png"
+              alt="ポインコ弟"
+              className="poinco-young"
+              id="js-poinco-young"
+            />
+            <img
+              src="/image/feature/test/poinco-old.png"
+              alt="ポインコ兄"
+              className="poinco-old"
+              id="js-poinco-old"
+            />
+            <ul className="vertical-slider contents">
+              <li>
+                <div className="details is-show" data-slider>
+                  <img
+                    src="/image/feature/test/number_01.svg"
+                    alt="01"
+                    width={159}
+                    height={117}
+                    decoding="async"
+                    loading="lazy"
+                  />
+                  <p className="label">2024年夏頃 提供開始予定</p>
+                  <h3 className="title heading-normal">
+                    dカード&reg;のクレカ積立で
+                    <br />
+                    dポイントがたまる！
+                  </h3>
+                  <div className="poinco-area-mini">
+                    <div className="shadow-box"></div>
+                  </div>
+                  <p className="text">
+                    dカードでの投資信託のクレカ積立が可能になり、
+                    <br className="only-pc" />
+                    投資つみたてのカード決済ご利用金額に応じてdポイントがたまります。
+                    <br />
+                    ためたdポイントは、ショッピングはもちろん、
+                    <br className="only-pc" />
+                    今後投資信託の購入にもつかえるようになります。
+                  </p>
+                  <p className="note-list">
+                    ※dカード、dカード
+                    GOLD&reg;のクレジットカード番号の冒頭4桁が、
+                    <br className="only-pc" />
+                    [4363]、[5344]、[5365]のいずれかから始まるお客様が対象。
+                  </p>
+                </div>
+                <div className="poinco-area-mini">
+                  <div className="shadow-box"></div>
+                </div>
+              </li>
+              <li>
+                <div className="details" data-slider>
+                  <img
+                    src="/image/feature/test/number_02.svg"
+                    alt="02"
+                    width={159}
+                    height={117}
+                    decoding="async"
+                    loading="lazy"
+                  />
+                  <p className="label">2024年秋頃 提供開始予定</p>
+                  <h3 className="title heading-normal">
+                    dポイントで投資信託が
+                    <br />
+                    購入できるように！
+                  </h3>
+                  <div className="poinco-area-mini">
+                    <div className="shadow-box"></div>
+                  </div>
+                  <p className="text">
+                    dポイント1ポイントを投資信託の買付代金1円として
+                    <br />
+                    ご利用いただけるようになります。
+                    <br />
+                    ご自身で貯めたdポイントさえあれば投資信託が購入できるので
+                    <br />
+                    気軽に投資を始められます。
+                  </p>
+                  <ul>
+                    <li className="note-list">
+                      ※金額指定のみが対象です。口数指定はご利用いただけません。
+                    </li>
+                    <li className="note-list">
+                      ※積立、投資一任口座、iDeCo、コールセンター経由などは対象外です。
+                    </li>
+                  </ul>
+                </div>
+                <div className="poinco-area-mini">
+                  <div className="shadow-box"></div>
+                </div>
+              </li>
+              <li>
+                <div className="details" data-slider>
+                  <img
+                    src="/image/feature/test/number_03.svg"
+                    alt="03"
+                    width={159}
+                    height={117}
+                    decoding="async"
+                    loading="lazy"
+                  />
+                  <p className="label">2024年秋頃 提供開始予定</p>
+                  <h3 className="title heading-normal">
+                    投信保有で
+                    <br />
+                    dポイントがたまる！
+                  </h3>
+                  <div className="poinco-area-mini">
+                    <div className="shadow-box"></div>
+                  </div>
+                  <p className="text">
+                    マネックスポイントの代わりに、dポイントを貯められるようになります。
+                    <br />
+                    投資信託を持っているだけで、毎月、dポイントが貯まります。
+                    <br />
+                    さらにNISA口座でも貯まります。
+                  </p>
+                </div>
+                <div className="poinco-area-mini">
+                  <div className="shadow-box"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
     </>

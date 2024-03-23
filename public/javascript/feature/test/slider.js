@@ -5,9 +5,7 @@ $(window).on("load", function () {
   const sliderDimensions = calculateSliderDimensions(verticalSlider)
   let lastScrollTop = 0
   let lastActiveIndex = -1
-
-  // スライダーの高さを設定
-  // setSliderHeight(sliderItems, verticalSlider, sliderDimensions.windowHeight)
+  removePoincoMovement()
 
   $(window).scroll(function () {
     const { scrollPosition, activeIndex } = calculateScrollMetrics(
@@ -24,6 +22,7 @@ $(window).on("load", function () {
       lastActiveIndex = activeIndex
       lastScrollTop = scrollPosition
     }
+    removePoincoMovement()
   })
 })
 
@@ -76,4 +75,48 @@ function updateItemsBasedOnScrollDirection(
       $(this).addClass("is-show").removeClass("is-up is-down")
     }
   })
+}
+
+// ポインコの動きを設定する関数
+function setPoincoMovement() {
+  // 画面の高さの半分を取得
+  var windowHeight = $(window).height() / 2
+  // スクロール位置を取得
+  var scrollPosition = $(window).scrollTop() + windowHeight
+  // 特定の要素の位置（この例では、要素のIDが`js-vertical-slider-title`）
+  var elementPosition = $("#js-vertical-slider-title").offset().top
+
+  // 特定の要素が画面中央に来たかどうかをチェック
+  if (
+    scrollPosition > elementPosition &&
+    scrollPosition <
+      elementPosition + $("#js-vertical-slider-title").outerHeight()
+  ) {
+    // 条件を満たしたら、js-poinco-youngとjs-poinco-oldにクラスを追加
+    $("#js-poinco-young").addClass("is-active")
+    $("#js-poinco-old").addClass("is-active")
+  }
+}
+
+// ポイントミニが画面外に出たら、クラスを削除する関数
+function removePoincoMovement() {
+  var windowHeight = $(window).height()
+  var scrollAmount = $(window).scrollTop()
+  var elementOffset = $(".vertical-slider li").offset().top
+  var elementHeight = $(".vertical-slider li").height()
+  var elementHeightPlus = $(".vertical-slider li").height() + 170
+
+  // 要素の上端がビューポートの下端より上にあり、かつ要素の下端がビューポートの上端より下にあるかチェック
+  if (
+    scrollAmount + windowHeight > elementOffset + elementHeightPlus / 2 &&
+    scrollAmount < elementOffset + elementHeight
+  ) {
+    // 要素がビューポート内にある場合、クラスを追加
+    $("#js-poinco-young").addClass("is-active")
+    $("#js-poinco-old").addClass("is-active")
+  } else {
+    // 要素がビューポート外にある場合、クラスを削除
+    $("#js-poinco-young").removeClass("is-active")
+    $("#js-poinco-old").removeClass("is-active")
+  }
 }

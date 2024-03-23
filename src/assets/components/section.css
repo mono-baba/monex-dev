@@ -42,7 +42,7 @@
         top: -20px;
       }
     }
-    > .contents {
+    & .contents {
       text-align: left;
       max-width: 1800px;
       margin-inline: auto;

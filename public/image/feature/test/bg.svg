@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46">
+  <g id="グループ_20593" data-name="グループ 20593" transform="translate(30 -141)">
+    <g id="コンポーネント_7_7742" data-name="コンポーネント 7 – 7742" transform="translate(-22.73 171)">
+      <path id="パス_3457" data-name="パス 3457" d="M0,.049l9.9,0" transform="translate(7.035 0.037) rotate(135)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3" opacity="0.8"/>
+      <path id="パス_3456" data-name="パス 3456" d="M0,0H.777" transform="translate(0) rotate(45)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3"/>
+      <path id="パス_3458" data-name="パス 3458" d="M0,0H.562" transform="translate(6.603 6.602) rotate(45)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3"/>
+    </g>
+    <g id="コンポーネント_7_8462" data-name="コンポーネント 7 – 8462" transform="translate(0.27 148)">
+      <path id="パス_3457-2" data-name="パス 3457" d="M0,.049l9.9,0" transform="translate(7.035 0.037) rotate(135)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3" opacity="0.8"/>
+      <path id="パス_3456-2" data-name="パス 3456" d="M0,0H.777" transform="translate(0) rotate(45)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3"/>
+      <path id="パス_3458-2" data-name="パス 3458" d="M0,0H.562" transform="translate(6.603 6.602) rotate(45)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3"/>
+    </g>
+    <path id="パス_4009" data-name="パス 4009" d="M0,0H46V46H0Z" transform="translate(-30 141)" fill="none" opacity="0"/>
+  </g>
+</svg>

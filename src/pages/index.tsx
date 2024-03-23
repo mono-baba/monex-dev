@@ -13,6 +13,7 @@ export default function () {
       <GlobalNavigation />
       <FixedConversionButton />
       <main>
+        <MainVisual />
         <Lead />
         <NewFunction />
         <FeaturesOfMonex />
@@ -31,13 +32,17 @@ const MainVisual = () => {
     <>
       <div className="mv">
         <h1 className="title">
-          <img src="/image/feature/test/img_title.png" alt="" />
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
+          <img
+            src="/image/feature/test/img_title.svg"
+            alt="今後のドコモとマネックスの機能連携について"
+          />
         </h1>
+        <span className="mv-image"></span>
+        <span className="mv-image"></span>
+        <span className="mv-image"></span>
+        <span className="mv-image"></span>
+        <span className="mv-image"></span>
+        <span className="mv-image"></span>
       </div>
     </>
   )

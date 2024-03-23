@@ -14,7 +14,7 @@
 }
 .vertical-slider {
   position: relative;
-  z-index: -1;
+  /* z-index: -1; */
   height: 75vh;
   overflow: hidden;
   @media screen and (max-width: 767px), screen and (max-height: 629px) {
@@ -36,7 +36,9 @@
     transform: translate(-50%, -50%);
     padding-inline: clamp(30px, 9.46vw, 140px);
     @media screen and (max-width: 767px), screen and (max-height: 629px) {
-      position: static;
+      position: relative;
+      left: 0;
+      z-index: 1;
       transform: none;
       padding-top: 10px;
       + li {
@@ -60,7 +62,7 @@
       max-width: 530px;
       width: 100%;
       transition: transform 0.8s ease, opacity 0.5s ease;
-      z-index: 1;
+      /* z-index: 1; */
       @media screen and (max-width: 767px) {
         max-width: unset;
         text-align: center;
@@ -141,33 +143,8 @@
         opacity: 1;
       }
     }
-    &::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      right: min(3.11vw, 46px);
-      transform: translateY(-50%);
-      width: 14px;
-      height: 14px;
-      border-radius: 50%;
-      border: 3px solid #000;
-    }
-    &:nth-child(1)::after {
-      top: calc(50% - 34px);
-    }
-    &:nth-child(3)::after {
-      top: calc(50% + 34px);
-    }
-    &.is-show::after {
-      background-color: #cc0033;
-    }
-    @media screen and (max-width: 767px) {
-      > .poinco-area-mini {
-        display: none;
-      }
-    }
-    @media screen and (max-width: 767px), screen and (max-height: 629px) {
-      &::after {
+    > .poinco-area-mini {
+      @media screen and (max-width: 767px) {
         display: none;
       }
     }
@@ -188,5 +165,27 @@
     border-radius: 20px;
     border-width: 2px;
     box-shadow: 10px 10px 0px 0px #cc0033;
+  }
+}
+
+.burette {
+  position: absolute;
+  top: 50%;
+  right: min(3.11vw, 46px);
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  > button {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 3px solid #000;
+    &.is-active {
+      background-color: #cc0033;
+    }
   }
 }

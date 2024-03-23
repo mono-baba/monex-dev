@@ -23,6 +23,15 @@ $(window).on("load", function () {
       lastScrollTop = scrollPosition
     }
     removePoincoMovement()
+    addActiveClass()
+  })
+
+  $("[data-burette]").on("click", function () {
+    var index = $(this).index() + 1 // nth-childは1から始まるので、indexに1を加えます
+    var scrollAmount = ($("#js-vertical-slider").height() / 3) * index
+    $("html, body").animate({ scrollTop: scrollAmount }, 400)
+    $("[data-burette]").removeClass("is-active")
+    $(this).addClass("is-active")
   })
 })
 
@@ -119,4 +128,11 @@ function removePoincoMovement() {
     $("#js-poinco-young").removeClass("is-active")
     $("#js-poinco-old").removeClass("is-active")
   }
+}
+
+// is-showクラスがついているliのindexと同じindexのburetteにis-activeクラスをつける
+function addActiveClass() {
+  var index = $(".vertical-slider li.is-show").index()
+  $("[data-burette]").removeClass("is-active")
+  $("[data-burette]").eq(index).addClass("is-active")
 }

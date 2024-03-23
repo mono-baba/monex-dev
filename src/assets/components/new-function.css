@@ -19,7 +19,7 @@
     }
     > .title-with-speech-bubble {
       position: relative;
-      z-index: 1;
+      /* z-index: 1; */
       > .speech-bubble {
         background-image: url("/image/feature/test/speech-bubble_new-function.svg");
       }
@@ -27,7 +27,7 @@
     > .poinco {
       position: relative;
       > .poinco-young {
-        z-index: -1;
+        /* z-index: -1; */
         position: absolute;
         top: -196px;
         left: clamp(100px, calc(50% - 380px), 50%);
@@ -43,7 +43,7 @@
         }
       }
       > .poinco-old {
-        z-index: -1;
+        /* z-index: -1; */
         position: absolute;
         top: -164px;
         right: clamp(100px, calc(50% - 380px), 50%);

@@ -221,6 +221,15 @@ const NewFunction = () => {
                 </div>
               </li>
             </ul>
+            <div className="burette">
+              <button
+                type="button"
+                className="is-active"
+                data-burette="1"
+              ></button>
+              <button type="button" data-burette="2"></button>
+              <button type="button" data-burette="3"></button>
+            </div>
           </div>
         </div>
       </section>

@@ -2,7 +2,6 @@
   position: relative;
   background-color: #ffc700;
   margin-inline: -20px;
-  z-index: 1;
   padding: 50px 20px 56px;
   margin-top: 60px;
   @media screen and (max-width: 768px) {
@@ -10,7 +9,6 @@
   }
   > .circle {
     position: absolute;
-    z-index: -1;
     text-align: center;
     border-radius: 50%;
     width: 127px;
@@ -32,6 +30,8 @@
     }
   }
   > .text {
+    position: relative;
+    z-index: 1;
     font-size: clamp(1.6rem, 2.5vw, 2.4rem);
     font-weight: bold;
     max-width: 971px;

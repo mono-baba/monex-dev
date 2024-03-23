@@ -17,7 +17,6 @@
     font-size: clamp(2.4rem, 2.94vw, 4rem);
     font-weight: 900;
     position: relative;
-    z-index: 1;
     text-decoration: underline;
     text-decoration-color: #f4f8fd;
     text-decoration-thickness: 30px;

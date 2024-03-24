@@ -120,7 +120,20 @@ const NewFunction = () => {
                     dポイントがたまる！
                   </h3>
                   <div className="poinco-area-mini">
-                    <div className="shadow-box"></div>
+                    <div className="shadow-box">
+                      <img
+                        src="/image/feature/test/img_function_01_monex-card.png"
+                        alt=""
+                      />
+                      <img
+                        src="/image/feature/test/img_function_01_graph.svg"
+                        alt=""
+                      />
+                      <img
+                        src="/image/feature/test/img_function_01_point-01.svg"
+                        alt=""
+                      />
+                    </div>
                   </div>
                   <div className="text">
                     <p>
@@ -141,7 +154,22 @@ const NewFunction = () => {
                   </div>
                 </div>
                 <div className="poinco-area-mini">
-                  <div className="shadow-box"></div>
+                  <div className="shadow-box">
+                    <img
+                      src="/image/feature/test/img_function_01_monex-card.png"
+                      alt=""
+                    />
+                    <img
+                      src="/image/feature/test/img_function_01_graph.svg"
+                      alt=""
+                    />
+                    <div>
+                      <img
+                        src="/image/feature/test/img_function_01_point-01.svg"
+                        alt=""
+                      />
+                    </div>
+                  </div>
                 </div>
               </li>
               <li data-slider>
@@ -161,7 +189,32 @@ const NewFunction = () => {
                     購入できるように！
                   </h3>
                   <div className="poinco-area-mini">
-                    <div className="shadow-box"></div>
+                    <div className="shadow-box">
+                      <img
+                        src="/image/feature/test/img_function_02_read.svg"
+                        alt=""
+                      />
+                      <img
+                        src="/image/feature/test/img_function_02_dpoint.svg"
+                        alt=""
+                      />
+                      <img
+                        src="/image/feature/test/img_function_02_arrow01.svg"
+                        alt=""
+                      />
+                      <img
+                        src="/image/feature/test/img_function_02_yen.svg"
+                        alt=""
+                      />
+                      <img
+                        src="/image/feature/test/img_function_02_arrow02.svg"
+                        alt=""
+                      />
+                      <img
+                        src="/image/feature/test/img_function_02_graph.svg"
+                        alt=""
+                      />
+                    </div>
                   </div>
                   <div className="text">
                     <p>
@@ -184,7 +237,32 @@ const NewFunction = () => {
                   </div>
                 </div>
                 <div className="poinco-area-mini">
-                  <div className="shadow-box"></div>
+                  <div className="shadow-box">
+                    <img
+                      src="/image/feature/test/img_function_02_read.svg"
+                      alt=""
+                    />
+                    <img
+                      src="/image/feature/test/img_function_02_dpoint.svg"
+                      alt=""
+                    />
+                    <img
+                      src="/image/feature/test/img_function_02_arrow01.svg"
+                      alt=""
+                    />
+                    <img
+                      src="/image/feature/test/img_function_02_yen.svg"
+                      alt=""
+                    />
+                    <img
+                      src="/image/feature/test/img_function_02_arrow02.svg"
+                      alt=""
+                    />
+                    <img
+                      src="/image/feature/test/img_function_02_graph.svg"
+                      alt=""
+                    />
+                  </div>
                 </div>
               </li>
               <li data-slider>

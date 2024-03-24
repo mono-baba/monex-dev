@@ -119,7 +119,7 @@ const NewFunction = () => {
                     <br />
                     dポイントがたまる！
                   </h3>
-                  <div className="poinco-area-mini">
+                  <div className="poinco-area-mini" data-poinco>
                     <div className="shadow-box">
                       <img
                         src="/image/feature/test/img_function_01_monex-card.png"
@@ -129,10 +129,12 @@ const NewFunction = () => {
                         src="/image/feature/test/img_function_01_graph.svg"
                         alt=""
                       />
-                      <img
-                        src="/image/feature/test/img_function_01_point-01.svg"
-                        alt=""
-                      />
+                      <div>
+                        <img
+                          src="/image/feature/test/img_function_01_point-01.svg"
+                          alt=""
+                        />
+                      </div>
                     </div>
                   </div>
                   <div className="text">
@@ -188,7 +190,7 @@ const NewFunction = () => {
                     <br />
                     購入できるように！
                   </h3>
-                  <div className="poinco-area-mini">
+                  <div className="poinco-area-mini" data-poinco>
                     <div className="shadow-box">
                       <img
                         src="/image/feature/test/img_function_02_read.svg"
@@ -281,7 +283,7 @@ const NewFunction = () => {
                     <br />
                     dポイントがたまる！
                   </h3>
-                  <div className="poinco-area-mini">
+                  <div className="poinco-area-mini" data-poinco>
                     <div className="shadow-box"></div>
                   </div>
                   <div className="text">

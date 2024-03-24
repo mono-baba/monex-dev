@@ -33,7 +33,7 @@
         left: clamp(100px, calc(50% - 380px), 50%);
         transform: translateX(-50%);
         width: 229px;
-        transition: all 0.5s cubic-bezier(0.86, 0, 0.07, 1) 0.5s;
+        transition: all 0.5s cubic-bezier(0.86, 0, 0.07, 1);
         &.is-active {
           transform: translate(-50%, 100%);
           opacity: 0;
@@ -49,7 +49,7 @@
         right: clamp(100px, calc(50% - 380px), 50%);
         transform: translateX(50%);
         width: 223px;
-        transition: all 0.5s cubic-bezier(0.86, 0, 0.07, 1) 0.5s;
+        transition: all 0.5s cubic-bezier(0.86, 0, 0.07, 1);
         &.is-active {
           transform: translate(50%, 100%);
           opacity: 0;
@@ -101,10 +101,8 @@
     margin-inline: auto;
     &::before {
       bottom: 0px;
-      width: 91px;
-      height: 83px;
-      transform: translateY(0);
-      opacity: 1;
+      width: min(20.8vw, 78px);
+      height: min(18.93vw, 71px);
     }
   }
   &::after {
@@ -124,26 +122,27 @@
   @media screen and (max-width: 767px) {
     &::after {
       bottom: 0px;
-      width: 72px;
-      height: 95px;
-      transform: translateY(0);
-      opacity: 1;
+      right: 20px;
+      width: min(16.53vw, 62px);
+      height: min(21.87vw, 82px);
     }
   }
 }
 
-.poinco-old.is-active + .vertical-slider .poinco-area-mini::before,
-.poinco-old.is-active + .vertical-slider .poinco-area-mini::after {
-  animation: poinco-mini 0.5s cubic-bezier(0.86, 0, 0.07, 1) 1s forwards;
+.poinco-old.is-active + .vertical-slider li > .poinco-area-mini::before,
+.poinco-old.is-active + .vertical-slider li > .poinco-area-mini::after {
+  animation: poinco-mini 0.5s cubic-bezier(0.86, 0, 0.07, 1) forwards;
 }
 @media screen and (max-width: 767px), screen and (max-height: 629px) {
-  .poinco-old.is-active + .vertical-slider .poinco-area-mini::before,
-  .poinco-old.is-active + .vertical-slider .poinco-area-mini::after,
-  .poinco-old + .vertical-slider .poinco-area-mini::before,
-  .poinco-old + .vertical-slider .poinco-area-mini::after {
+  .poinco-old + .vertical-slider li > .poinco-area-mini::before,
+  .poinco-old + .vertical-slider li > .poinco-area-mini::after {
     animation: none;
     transform: translateY(0%);
     opacity: 1;
+  }
+  .poinco-area-mini.is-active::before,
+  .poinco-area-mini.is-active::after {
+    animation: poinco-mini 0.5s cubic-bezier(0.86, 0, 0.07, 1) forwards;
   }
 }
 

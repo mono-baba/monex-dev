@@ -136,3 +136,28 @@ function addActiveClass() {
   $("[data-burette]").removeClass("is-active")
   $("[data-burette]").eq(index).addClass("is-active")
 }
+$(window).on("scroll", function () {
+  $("[data-poinco]").each(function () {
+    var $this = $(this),
+      elementTop = $this.offset().top,
+      elementBottom = elementTop + $this.outerHeight(),
+      viewportTop = $(window).scrollTop(),
+      viewportBottom = viewportTop + $(window).height(),
+      elementCenter = (elementTop + elementBottom) / 2,
+      viewportCenter = (viewportTop + viewportBottom) / 2
+
+    // 要素の中心がビューポートの中心に近い場合、addClass
+    if (
+      Math.abs(viewportCenter - elementCenter) <=
+      (viewportBottom - viewportTop) / 2
+    ) {
+      if (elementCenter >= viewportTop && elementCenter <= viewportBottom) {
+        $this.addClass("is-active")
+      }
+    }
+    // 要素がビューポートから完全に出た場合、removeClass
+    if (elementBottom < viewportTop || elementTop > viewportBottom) {
+      $this.removeClass("is-active")
+    }
+  })
+})

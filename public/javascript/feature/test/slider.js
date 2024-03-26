@@ -137,27 +137,32 @@ function addActiveClass() {
   $("[data-burette]").eq(index).addClass("is-active")
 }
 $(window).on("scroll", function () {
-  $("[data-poinco]").each(function () {
-    var $this = $(this),
-      elementTop = $this.offset().top,
-      elementBottom = elementTop + $this.outerHeight(),
-      viewportTop = $(window).scrollTop(),
-      viewportBottom = viewportTop + $(window).height(),
-      elementCenter = (elementTop + elementBottom) / 2,
-      viewportCenter = (viewportTop + viewportBottom) / 2
+  // 一番中心に近いボックスとその距離を記録する変数
+  let closestBox = null
+  let closestBoxDistanceToCenter = Infinity
 
-    // 要素の中心がビューポートの中心に近い場合、addClass
-    if (
-      Math.abs(viewportCenter - elementCenter) <=
-      (viewportBottom - viewportTop) / 2
-    ) {
-      if (elementCenter >= viewportTop && elementCenter <= viewportBottom) {
-        $this.addClass("is-active")
-      }
-    }
-    // 要素がビューポートから完全に出た場合、removeClass
-    if (elementBottom < viewportTop || elementTop > viewportBottom) {
-      $this.removeClass("is-active")
+  $("[data-poinco]").each(function () {
+    const $this = $(this)
+    const boxTop = $this.offset().top
+    const boxHeight = $this.outerHeight()
+    const windowHeight = $(window).height()
+    const windowTop = $(window).scrollTop()
+    const windowCenter = windowTop + windowHeight / 2
+    const boxCenter = boxTop + boxHeight / 2
+    const distanceToCenter = Math.abs(windowCenter - boxCenter)
+
+    // 中心に最も近いボックスを見つける
+    if (distanceToCenter < closestBoxDistanceToCenter) {
+      closestBox = $this
+      closestBoxDistanceToCenter = distanceToCenter
     }
   })
+
+  // すべてのボックスから`is-active`クラスを削除
+  $("[data-poinco]").removeClass("is-active")
+
+  // 最も中心に近いボックスにだけ`is-active`クラスを追加
+  if (closestBox !== null) {
+    closestBox.addClass("is-active")
+  }
 })

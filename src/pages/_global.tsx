@@ -21,7 +21,10 @@ export default function ({ url, title, children }: GlobalProps) {
         <meta name="twitter:site" content="@MonexJP" />
         <meta property="og:title" content={title} />
         <meta property="og:url" content={url} />
-        <meta property="og:image" content="" />
+        <meta
+          property="og:image"
+          content="https://info.monex.co.jp/image/feature/test/sns_1200-630.png"
+        />
         <meta property="og:site_name" content="" />
         <meta property="og:description" content="" />
 

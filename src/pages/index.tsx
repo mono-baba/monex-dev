@@ -284,7 +284,52 @@ const NewFunction = () => {
                     dポイントがたまる！
                   </h3>
                   <div className="poinco-area-mini" data-poinco>
-                    <div className="shadow-box"></div>
+                    <div className="shadow-box">
+                      <img
+                        src="/image/feature/test/img_function_03_man.svg"
+                        alt=""
+                      />
+                      <img
+                        src="/image/feature/test/img_function_03_z01.svg"
+                        alt=""
+                      />
+                      <img
+                        src="/image/feature/test/img_function_03_z02.svg"
+                        alt=""
+                      />
+                      <img
+                        src="/image/feature/test/img_function_03_z03.svg"
+                        alt=""
+                      />
+                      <img
+                        src="/image/feature/test/img_function_03_sparkling01.svg"
+                        alt=""
+                      />
+                      <img
+                        src="/image/feature/test/img_function_03_sparkling02.svg"
+                        alt=""
+                      />
+                      <img
+                        src="/image/feature/test/img_function_03_sparkling03.svg"
+                        alt=""
+                      />
+                      <img
+                        src="/image/feature/test/img_function_03_sparkling04.svg"
+                        alt=""
+                      />
+                      <img
+                        src="/image/feature/test/img_function_03_coin01.svg"
+                        alt=""
+                      />
+                      <img
+                        src="/image/feature/test/img_function_03_coin02.svg"
+                        alt=""
+                      />
+                      <img
+                        src="/image/feature/test/img_function_03_coin03.svg"
+                        alt=""
+                      />
+                    </div>
                   </div>
                   <div className="text">
                     <p>
@@ -297,7 +342,52 @@ const NewFunction = () => {
                   </div>
                 </div>
                 <div className="poinco-area-mini">
-                  <div className="shadow-box"></div>
+                  <div className="shadow-box">
+                    <img
+                      src="/image/feature/test/img_function_03_man.svg"
+                      alt=""
+                    />
+                    <img
+                      src="/image/feature/test/img_function_03_z01.svg"
+                      alt=""
+                    />
+                    <img
+                      src="/image/feature/test/img_function_03_z02.svg"
+                      alt=""
+                    />
+                    <img
+                      src="/image/feature/test/img_function_03_z03.svg"
+                      alt=""
+                    />
+                    <img
+                      src="/image/feature/test/img_function_03_sparkling01.svg"
+                      alt=""
+                    />
+                    <img
+                      src="/image/feature/test/img_function_03_sparkling02.svg"
+                      alt=""
+                    />
+                    <img
+                      src="/image/feature/test/img_function_03_sparkling03.svg"
+                      alt=""
+                    />
+                    <img
+                      src="/image/feature/test/img_function_03_sparkling04.svg"
+                      alt=""
+                    />
+                    <img
+                      src="/image/feature/test/img_function_03_coin01.svg"
+                      alt=""
+                    />
+                    <img
+                      src="/image/feature/test/img_function_03_coin02.svg"
+                      alt=""
+                    />
+                    <img
+                      src="/image/feature/test/img_function_03_coin03.svg"
+                      alt=""
+                    />
+                  </div>
                 </div>
               </li>
             </ul>

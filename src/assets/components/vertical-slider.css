@@ -216,6 +216,16 @@
         }
       }
     }
+    &:nth-child(3) {
+      .shadow-box {
+        > img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: 0;
+        }
+      }
+    }
   }
 }
 .shadow-box {
@@ -325,6 +335,51 @@
           }
         }
       }
+      &:nth-child(3) {
+        > .poinco-area-mini {
+          > .shadow-box {
+            opacity: 1;
+            > img {
+              &:nth-of-type(1) {
+                opacity: 1;
+              }
+              &:nth-of-type(2) {
+                animation: opacity01 1s ease-in-out infinite;
+              }
+              &:nth-of-type(3) {
+                animation: opacity02 1s ease-in-out infinite;
+              }
+              &:nth-of-type(4) {
+                animation: opacity03 1s ease-in-out infinite;
+              }
+              &:nth-of-type(5) {
+                animation: opacity02 1.2s ease-in-out 0.5s infinite;
+              }
+              &:nth-of-type(6) {
+                animation: opacity02 1.5s ease-in-out 1.5s infinite;
+              }
+              &:nth-of-type(7) {
+                animation: opacity02 2s ease-in-out 2s infinite;
+              }
+              &:nth-of-type(8) {
+                animation: opacity02 2.5s ease-in-out 2.5s infinite;
+              }
+              &:nth-of-type(9) {
+                animation: opacity-01 1s ease-in-out 3s forwards,
+                  coin 1.3s ease-in-out 3.5s infinite;
+              }
+              &:nth-of-type(10) {
+                animation: opacity-01 1s ease-in-out 4s forwards,
+                  coin 1.3s ease-in-out 4.5s infinite;
+              }
+              &:nth-of-type(11) {
+                animation: opacity-01 1s ease-in-out 5s forwards,
+                  coin 1.3s ease-in-out 5.5s infinite;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -386,6 +441,49 @@
           }
           &::after {
             animation: move-illust-down-sp 1.5s ease-in-out 1s infinite;
+          }
+        }
+      }
+    }
+    &:nth-child(3) {
+      .poinco-area-mini.is-active .shadow-box {
+        opacity: 1;
+        > img {
+          &:nth-of-type(1) {
+            opacity: 1;
+          }
+          &:nth-of-type(2) {
+            animation: opacity01 1s ease-in-out infinite;
+          }
+          &:nth-of-type(3) {
+            animation: opacity02 1s ease-in-out infinite;
+          }
+          &:nth-of-type(4) {
+            animation: opacity03 1s ease-in-out infinite;
+          }
+          &:nth-of-type(5) {
+            animation: opacity02 1.2s ease-in-out 0.5s infinite;
+          }
+          &:nth-of-type(6) {
+            animation: opacity02 1.5s ease-in-out 1.5s infinite;
+          }
+          &:nth-of-type(7) {
+            animation: opacity02 2s ease-in-out 2s infinite;
+          }
+          &:nth-of-type(8) {
+            animation: opacity02 2.5s ease-in-out 2.5s infinite;
+          }
+          &:nth-of-type(9) {
+            animation: opacity-01 1s ease-in-out 3s forwards,
+              coin 1.3s ease-in-out 3.5s infinite;
+          }
+          &:nth-of-type(10) {
+            animation: opacity-01 1s ease-in-out 4s forwards,
+              coin 1.3s ease-in-out 4.5s infinite;
+          }
+          &:nth-of-type(11) {
+            animation: opacity-01 1s ease-in-out 5s forwards,
+              coin 1.3s ease-in-out 5.5s infinite;
           }
         }
       }

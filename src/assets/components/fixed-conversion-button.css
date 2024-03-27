@@ -32,7 +32,7 @@
     border-right-width: 0;
     border-bottom-width: 7px;
     text-orientation: upright;
-    transition: padding-block 0.4s ease;
+    transition: transform 0.4s ease;
 
     &.-nisa {
       background-color: #8ceb94;
@@ -40,7 +40,6 @@
     @media (hover: hover) {
       &:hover {
         transform: translate(0, 0);
-        padding-left: 25px;
       }
     }
     &::after {

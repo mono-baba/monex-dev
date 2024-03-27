@@ -1,14 +1,18 @@
 .period-area {
-  display: inline-block;
+  display: block;
+  text-align: center;
   position: relative;
   background-color: #fff;
   color: var(--red);
   padding-inline: min(1.25vw, 17px) min(2.21vw, 30px);
   height: 46px;
+  max-width: 415px;
+  margin-inline: auto;
   line-height: 46px;
   font-size: clamp(1.2rem, 1.18vw, 1.6rem);
   font-weight: 700;
   @media screen and (max-width: 767px) {
+    max-width: 309px;
     height: 34px;
     line-height: 34px;
     padding-inline: 11px;

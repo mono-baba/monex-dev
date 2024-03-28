@@ -87,7 +87,7 @@ const NewFunction = () => {
         <div className="inner">
           <h2 className="title-with-speech-bubble">
             <span className="speech-bubble">さらにお手軽に！</span>
-            <span className="title">4つの新機能</span>
+            <span className="title">3つの新機能</span>
           </h2>
           <div className="poinco">
             <img

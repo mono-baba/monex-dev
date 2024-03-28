@@ -36,7 +36,9 @@ const GlobalNavigation = () => {
             return (
               <li className="item">
                 <a
-                  className={`link ${navItem.isActive ? "is-active" : ""}`}
+                  className={`link js-gnavi-link ${
+                    navItem.isActive ? "is-active" : ""
+                  }`}
                   href={navItem.url}
                 >
                   {navItem.name}

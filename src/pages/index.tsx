@@ -83,7 +83,7 @@ const Lead = () => {
 const NewFunction = () => {
   return (
     <>
-      <section className="new-function section-area" id="js-vertical-slider">
+      <section className="new-function section-area" id="new-function">
         <div className="inner">
           <h2 className="title-with-speech-bubble">
             <span className="speech-bubble">さらにお手軽に！</span>
@@ -410,7 +410,10 @@ const NewFunction = () => {
 const FeaturesOfMonex = () => {
   return (
     <>
-      <section className="section-area features-of-monex">
+      <section
+        className="section-area features-of-monex"
+        id="features-of-monex-securities"
+      >
         <div className="inner">
           <h2 className="title-with-speech-bubble">
             <span className="speech-bubble">
@@ -574,7 +577,7 @@ const FeaturesOfMonex = () => {
 const Campaign = () => {
   return (
     <>
-      <section className="section-area campaign">
+      <section className="section-area campaign" id="campaign">
         <div className="inner">
           <h2 className="title-with-speech-bubble">
             <span className="speech-bubble">
@@ -670,7 +673,7 @@ const Campaign = () => {
 const Step = () => {
   return (
     <>
-      <section className="section-area step">
+      <section className="section-area step" id="steps-to-opening-an-account">
         <div className="inner">
           <h2 className="title-with-speech-bubble">
             <span className="speech-bubble">

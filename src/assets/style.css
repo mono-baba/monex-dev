@@ -24,7 +24,9 @@
 :root {
   --red: #cc0033;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-size: 1.6rem;
   font-weight: 500;

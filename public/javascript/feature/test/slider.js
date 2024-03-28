@@ -1,6 +1,6 @@
 $(window).on("load", function () {
   // スライダーの初期設定
-  const verticalSlider = $("#js-vertical-slider")
+  const verticalSlider = $("#new-function")
   const sliderItems = $("[data-slider]")
   const sliderDimensions = calculateSliderDimensions(verticalSlider)
   let lastScrollTop = 0
@@ -24,11 +24,12 @@ $(window).on("load", function () {
     }
     removePoincoMovement()
     addActiveClass()
+    removeClass()
   })
 
   $("[data-burette]").on("click", function () {
     var index = $(this).index() + 1 // nth-childは1から始まるので、indexに1を加えます
-    var scrollAmount = ($("#js-vertical-slider").height() / 3) * index
+    var scrollAmount = ($("#new-function").height() / 3) * index
     $("html, body").animate({ scrollTop: scrollAmount }, 400)
     $("[data-burette]").removeClass("is-active")
     $(this).addClass("is-active")
@@ -166,3 +167,12 @@ $(window).on("scroll", function () {
     closestBox.addClass("is-active")
   }
 })
+
+// .js-gnavi-linkをクリックしたら、l-headerとl-gnaviのクラス名is-openをremoveする
+function removeClass() {
+  $(".js-gnavi-link").on("click", function () {
+    $(".l-header").removeClass("is-open")
+    $(".l-gnavi").removeClass("is-open")
+    $(".l-overlay").removeClass("is-show")
+  })
+}

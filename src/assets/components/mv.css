@@ -1,6 +1,6 @@
 .mv {
   position: relative;
-  height: 611px;
+  height: clamp(350px, 41.28vw, 611px);
   background-color: #ecf1f7;
   background-image: url(/image/feature/test/bg.svg);
   overflow: hidden;
@@ -12,7 +12,7 @@
     top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: clamp(370px, 38.97vw, 530px);
+    width: clamp(345px, 35.81vw, 530px);
     opacity: 0;
     animation: title 0.5s ease-in-out 0.5s forwards;
     @media screen and (max-width: 767px) {
@@ -29,8 +29,8 @@
     top: -20px;
     left: 50%;
     transform: translate(-50%, 0);
-    width: clamp(768px, 88.24vw, 1200px);
-    height: 652px;
+    width: clamp(728px, 81.08vw, 1200px);
+    height: clamp(390px, 44.05vw, 652px);
     aspect-ratio: 1200 / 652;
     opacity: 0;
     @media screen and (max-width: 767px) {

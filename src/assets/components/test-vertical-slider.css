@@ -1,6 +1,6 @@
 .new-function {
   position: relative;
-  height: 400dvh;
+  height: calc(400dvh + 290px);
   @media screen and (max-width: 767px), screen and (max-height: 629px) {
     height: auto;
   }

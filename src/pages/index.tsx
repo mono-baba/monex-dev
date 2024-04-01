@@ -7,9 +7,6 @@ import Disclaimer from "../components/Disclaimer"
 export default function () {
   return (
     <>
-      <Head>
-        <link rel="stylesheet" href="/src/assets/style.css" media="screen" />
-      </Head>
       <GlobalNavigation />
       <FixedConversionButton />
       <main>
@@ -85,26 +82,32 @@ const NewFunction = () => {
     <>
       <section className="new-function section-area" id="new-function">
         <div className="inner">
-          <h2 className="title-with-speech-bubble">
-            <span className="speech-bubble">さらにお手軽に！</span>
-            <span className="title">3つの新機能</span>
-          </h2>
-          <div className="poinco">
-            <img
-              src="/image/feature/test/poinco-young.png"
-              alt="ポインコ弟"
-              className="poinco-young"
-              id="js-poinco-young"
-            />
-            <img
-              src="/image/feature/test/poinco-old.png"
-              alt="ポインコ兄"
-              className="poinco-old"
-              id="js-poinco-old"
-            />
-            <ul className="vertical-slider contents">
-              <li data-slider className="is-show">
-                <div className="details">
+          <div className="test-vertical-slider-wrapper">
+            <h2 className="title-with-speech-bubble">
+              <span className="speech-bubble">さらにお手軽に！</span>
+              <span className="title">3つの新機能</span>
+            </h2>
+            <div className="test-vertical-slider" id="js-poinco">
+              <input
+                type="radio"
+                name="slideshow"
+                className="test-burette-button"
+                id="slide01"
+              />
+              <input
+                type="radio"
+                name="slideshow"
+                className="test-burette-button"
+                id="slide02"
+              />
+              <input
+                type="radio"
+                name="slideshow"
+                className="test-burette-button"
+                id="slide03"
+              />
+              <div className="test-vertical-slider-panel" data-slider-panel="1">
+                <div className="title-block">
                   <img
                     src="/image/feature/test/number_01.svg"
                     alt="01"
@@ -112,6 +115,7 @@ const NewFunction = () => {
                     height={117}
                     decoding="async"
                     loading="lazy"
+                    className="function-number"
                   />
                   <p className="label">2024年夏頃 提供開始予定</p>
                   <h3 className="title heading-normal">
@@ -119,44 +123,9 @@ const NewFunction = () => {
                     <br />
                     dポイントがたまる！
                   </h3>
-                  <div className="poinco-area-mini" data-poinco>
-                    <div className="shadow-box">
-                      <img
-                        src="/image/feature/test/img_function_01_monex-card.png"
-                        alt=""
-                      />
-                      <img
-                        src="/image/feature/test/img_function_01_graph.svg"
-                        alt=""
-                      />
-                      <div>
-                        <img
-                          src="/image/feature/test/img_function_01_point-01.svg"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="text">
-                    <p>
-                      dカードでの投資信託のクレカ積立が可能になり、
-                      <br className="only-pc" />
-                      投資つみたてのカード決済ご利用金額に応じてdポイントがたまります。
-                      <br />
-                      ためたdポイントは、ショッピングはもちろん、
-                      <br className="only-pc" />
-                      今後投資信託の購入にもつかえるようになります。
-                    </p>
-                    <p className="note-list">
-                      ※dカード、dカード
-                      GOLD&reg;のクレジットカード番号の冒頭4桁が、
-                      <br className="only-pc" />
-                      [4363]、[5344]、[5365]のいずれかから始まるお客様が対象。
-                    </p>
-                  </div>
                 </div>
-                <div className="poinco-area-mini">
-                  <div className="shadow-box">
+                <div className="image-block poinco-area-mini">
+                  <div className="test-shadow-box">
                     <img
                       src="/image/feature/test/img_function_01_monex-card.png"
                       alt=""
@@ -173,9 +142,26 @@ const NewFunction = () => {
                     </div>
                   </div>
                 </div>
-              </li>
-              <li data-slider>
-                <div className="details">
+                <div className="text-block">
+                  <p>
+                    dカードでの投資信託のクレカ積立が可能になり、
+                    <br className="only-pc" />
+                    投資つみたてのカード決済ご利用金額に応じてdポイントがたまります。
+                    <br />
+                    ためたdポイントは、ショッピングはもちろん、
+                    <br className="only-pc" />
+                    今後投資信託の購入にもつかえるようになります。
+                  </p>
+                  <p className="note-list">
+                    ※dカード、dカード
+                    GOLD&reg;のクレジットカード番号の冒頭4桁が、
+                    <br className="only-pc" />
+                    [4363]、[5344]、[5365]のいずれかから始まるお客様が対象。
+                  </p>
+                </div>
+              </div>
+              <div className="test-vertical-slider-panel" data-slider-panel="2">
+                <div className="title-block">
                   <img
                     src="/image/feature/test/number_02.svg"
                     alt="02"
@@ -183,6 +169,7 @@ const NewFunction = () => {
                     height={117}
                     decoding="async"
                     loading="lazy"
+                    className="function-number"
                   />
                   <p className="label">2024年秋頃 提供開始予定</p>
                   <h3 className="title heading-normal">
@@ -190,56 +177,9 @@ const NewFunction = () => {
                     <br />
                     購入できるように！
                   </h3>
-                  <div className="poinco-area-mini" data-poinco>
-                    <div className="shadow-box">
-                      <img
-                        src="/image/feature/test/img_function_02_read.svg"
-                        alt=""
-                      />
-                      <img
-                        src="/image/feature/test/img_function_02_dpoint.svg"
-                        alt=""
-                      />
-                      <img
-                        src="/image/feature/test/img_function_02_arrow01.svg"
-                        alt=""
-                      />
-                      <img
-                        src="/image/feature/test/img_function_02_yen.svg"
-                        alt=""
-                      />
-                      <img
-                        src="/image/feature/test/img_function_02_arrow02.svg"
-                        alt=""
-                      />
-                      <img
-                        src="/image/feature/test/img_function_02_graph.svg"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                  <div className="text">
-                    <p>
-                      dポイント1ポイントを投資信託の買付代金1円として
-                      <br />
-                      ご利用いただけるようになります。
-                      <br />
-                      ご自身で貯めたdポイントさえあれば投資信託が購入できるので
-                      <br />
-                      気軽に投資を始められます。
-                    </p>
-                    <ul>
-                      <li className="note-list">
-                        ※金額指定のみが対象です。口数指定はご利用いただけません。
-                      </li>
-                      <li className="note-list">
-                        ※積立、投資一任口座、iDeCo、コールセンター経由などは対象外です。
-                      </li>
-                    </ul>
-                  </div>
                 </div>
-                <div className="poinco-area-mini">
-                  <div className="shadow-box">
+                <div className="image-block poinco-area-mini">
+                  <div className="test-shadow-box">
                     <img
                       src="/image/feature/test/img_function_02_read.svg"
                       alt=""
@@ -266,9 +206,28 @@ const NewFunction = () => {
                     />
                   </div>
                 </div>
-              </li>
-              <li data-slider>
-                <div className="details">
+                <div className="text-block">
+                  <p>
+                    dポイント1ポイントを投資信託の買付代金1円として
+                    <br />
+                    ご利用いただけるようになります。
+                    <br />
+                    ご自身で貯めたdポイントさえあれば投資信託が購入できるので
+                    <br />
+                    気軽に投資を始められます。
+                  </p>
+                  <ul>
+                    <li className="note-list">
+                      ※金額指定のみが対象です。口数指定はご利用いただけません。
+                    </li>
+                    <li className="note-list">
+                      ※積立、投資一任口座、iDeCo、コールセンター経由などは対象外です。
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="test-vertical-slider-panel" data-slider-panel="3">
+                <div className="title-block">
                   <img
                     src="/image/feature/test/number_03.svg"
                     alt="03"
@@ -276,6 +235,7 @@ const NewFunction = () => {
                     height={117}
                     decoding="async"
                     loading="lazy"
+                    className="function-number"
                   />
                   <p className="label">2024年秋頃 提供開始予定</p>
                   <h3 className="title heading-normal">
@@ -283,66 +243,9 @@ const NewFunction = () => {
                     <br />
                     dポイントがたまる！
                   </h3>
-                  <div className="poinco-area-mini" data-poinco>
-                    <div className="shadow-box">
-                      <img
-                        src="/image/feature/test/img_function_03_man.svg"
-                        alt=""
-                      />
-                      <img
-                        src="/image/feature/test/img_function_03_z01.svg"
-                        alt=""
-                      />
-                      <img
-                        src="/image/feature/test/img_function_03_z02.svg"
-                        alt=""
-                      />
-                      <img
-                        src="/image/feature/test/img_function_03_z03.svg"
-                        alt=""
-                      />
-                      <img
-                        src="/image/feature/test/img_function_03_sparkling01.svg"
-                        alt=""
-                      />
-                      <img
-                        src="/image/feature/test/img_function_03_sparkling02.svg"
-                        alt=""
-                      />
-                      <img
-                        src="/image/feature/test/img_function_03_sparkling03.svg"
-                        alt=""
-                      />
-                      <img
-                        src="/image/feature/test/img_function_03_sparkling04.svg"
-                        alt=""
-                      />
-                      <img
-                        src="/image/feature/test/img_function_03_coin01.svg"
-                        alt=""
-                      />
-                      <img
-                        src="/image/feature/test/img_function_03_coin02.svg"
-                        alt=""
-                      />
-                      <img
-                        src="/image/feature/test/img_function_03_coin03.svg"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                  <div className="text">
-                    <p>
-                      マネックスポイントの代わりに、dポイントを貯められるようになります。
-                      <br />
-                      投資信託を持っているだけで、毎月、dポイントが貯まります。
-                      <br />
-                      さらにNISA口座でも貯まります。
-                    </p>
-                  </div>
                 </div>
-                <div className="poinco-area-mini">
-                  <div className="shadow-box">
+                <div className="image-block poinco-area-mini">
+                  <div className="test-shadow-box">
                     <img
                       src="/image/feature/test/img_function_03_man.svg"
                       alt=""
@@ -389,16 +292,16 @@ const NewFunction = () => {
                     />
                   </div>
                 </div>
-              </li>
-            </ul>
-            <div className="burette">
-              <button
-                type="button"
-                className="is-active"
-                data-burette="1"
-              ></button>
-              <button type="button" data-burette="2"></button>
-              <button type="button" data-burette="3"></button>
+                <div className="text-block">
+                  <p>
+                    マネックスポイントの代わりに、dポイントを貯められるようになります。
+                    <br />
+                    投資信託を持っているだけで、毎月、dポイントが貯まります。
+                    <br />
+                    さらにNISA口座でも貯まります。
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

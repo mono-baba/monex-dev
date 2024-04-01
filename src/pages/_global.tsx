@@ -38,6 +38,7 @@ export default function ({ url, title, children }: GlobalProps) {
           href="/style/feature/common/parts.css"
           media="all"
         />
+        <link rel="stylesheet" href="/src/assets/style.css" media="all" />
         <script
           type="text/javascript"
           src="/javascript/js2_8/common/jquery-3.4.1.min.js"
@@ -48,7 +49,7 @@ export default function ({ url, title, children }: GlobalProps) {
         ></script>
         <script
           type="text/javascript"
-          src="/javascript/feature/test/slider.js"
+          src="/javascript/feature/test/function.js"
         ></script>
       </Head>
       <Header />

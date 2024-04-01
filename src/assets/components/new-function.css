@@ -1,33 +1,8 @@
 .new-function {
   > .inner {
-    &::before {
-      background-image: url("/image/feature/test/loop-text_new-function.svg");
-      background-size: 1680px 148px;
-      height: 148px;
-      animation: new-function_pc 16s linear infinite;
-    }
-    @media screen and (max-width: 767px) {
-      &::before {
-        background-size: 681px 60px;
-        animation: new-function_sp 16s linear infinite;
-      }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      &::before {
-        animation: none;
-      }
-    }
-    > .title-with-speech-bubble {
-      position: relative;
-      /* z-index: 1; */
-      > .speech-bubble {
-        background-image: url("/image/feature/test/speech-bubble_new-function.svg");
-      }
-    }
     > .poinco {
       position: relative;
       > .poinco-young {
-        /* z-index: -1; */
         position: absolute;
         top: -196px;
         left: clamp(100px, calc(50% - 380px), 50%);
@@ -43,7 +18,6 @@
         }
       }
       > .poinco-old {
-        /* z-index: -1; */
         position: absolute;
         top: -164px;
         right: clamp(100px, calc(50% - 380px), 50%);
@@ -60,71 +34,11 @@
       }
     }
     & .contents {
+      position: relative;
+      height: 75vh;
       @media screen and (max-width: 767px) {
         padding: 90px 20px 40px;
       }
-    }
-  }
-}
-
-.poinco-area-mini {
-  position: relative;
-  max-width: min(37.36vw, 553px);
-  max-height: min(28.65vw, 424px);
-  height: 100%;
-  width: 100%;
-  aspect-ratio: 553 / 424;
-  overflow: hidden;
-  @media screen and (max-width: 767px) {
-    max-width: 100%;
-    max-height: 100%;
-    aspect-ratio: 553 / 424;
-  }
-  &::before {
-    content: "";
-    position: absolute;
-    bottom: 0px;
-    left: 0;
-    display: block;
-    width: min(9.26vw, 137px);
-    height: min(8.45vw, 125px);
-    background-image: url("/image/feature/test/poinco-young_mini.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    transform: translateY(150%);
-    z-index: 1;
-    opacity: 0;
-  }
-  @media screen and (max-width: 767px) {
-    width: 100%;
-    aspect-ratio: 310 / 224;
-    margin-inline: auto;
-    &::before {
-      bottom: 0px;
-      width: min(20.8vw, 78px);
-      height: min(18.93vw, 71px);
-    }
-  }
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 0px;
-    right: 40px;
-    display: block;
-    width: min(7.36vw, 109px);
-    height: min(9.66vw, 143px);
-    background-image: url("/image/feature/test/poinco-old_mini.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    transform: translateY(150%);
-    opacity: 0;
-  }
-  @media screen and (max-width: 767px) {
-    &::after {
-      bottom: 0px;
-      right: 20px;
-      width: min(16.53vw, 62px);
-      height: min(21.87vw, 82px);
     }
   }
 }

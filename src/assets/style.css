@@ -21,12 +21,13 @@
 @import url("/src/assets/components/features-of-monex.css");
 @import url("/src/assets/components/campaign.css");
 @import url("/src/assets/components/step.css");
+@import url("/src/assets/components/test-vertical-slider.css");
 :root {
   --red: #cc0033;
 }
-html {
+/* html {
   scroll-behavior: smooth;
-}
+} */
 body {
   font-size: 1.6rem;
   font-weight: 500;

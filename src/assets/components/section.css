@@ -22,7 +22,7 @@
   }
   > .inner {
     position: relative;
-    padding-inline: min(4.41vw, 60px);
+    padding-inline: min(4.39vw, 60px);
     &::before {
       position: absolute;
       content: "";

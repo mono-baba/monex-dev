@@ -1,7 +1,7 @@
 .new-function {
   position: relative;
   height: calc(400dvh + 290px);
-  @media screen and (max-width: 767px), screen and (max-height: 629px) {
+  @media screen and (max-width: 767px) {
     height: auto;
   }
   > .inner {
@@ -10,6 +10,10 @@
     height: 100dvh;
     &::before {
       display: none;
+    }
+    @media screen and (max-width: 767px) {
+      position: static;
+      height: auto;
     }
   }
 }
@@ -20,10 +24,14 @@
   transform: translate(-50%, -50%);
   width: 100%;
   padding-inline: min(4.39vw, 60px);
+  @media screen and (max-width: 767px) {
+    position: static;
+    transform: none;
+    padding: 0;
+  }
   &::before {
     position: absolute;
     content: "";
-    top: 0;
     left: 50%;
     transform: translateX(-50%);
     width: 100vw;
@@ -38,6 +46,9 @@
   }
   @media screen and (max-width: 767px) {
     &::before {
+      z-index: 0;
+      top: 40px;
+      height: 60px;
       background-size: 681px 60px;
       animation: new-function_sp 16s linear infinite;
     }
@@ -59,10 +70,12 @@
   max-width: 1800px;
   margin-inline: auto;
   text-align: left;
-  @media screen and (max-width: 767px), screen and (max-height: 629px) {
+  @media screen and (max-width: 767px) {
     position: static;
     height: auto;
-    padding: 90px 20px 40px;
+    background-color: #ecf1f7;
+    padding: 70px 20px 40px;
+    border-radius: 20px;
   }
   &::before,
   &::after {
@@ -90,21 +103,29 @@
     height: 164px;
     background-image: url(/image/feature/test/poinco-old.png);
   }
-  &.is-active {
-    &::before {
-      transform: translate(-50%, 100%);
-      opacity: 0;
-    }
+  @media screen and (max-width: 767px) {
+    &::before,
     &::after {
-      transform: translate(50%, 100%);
-      opacity: 0;
+      display: none;
     }
-    > .test-vertical-slider-panel {
-      > .poinco-area-mini {
-        &::before,
-        &::after {
-          opacity: 1;
-          transform: translateY(0%);
+  }
+  @media screen and (min-width: 768px) {
+    &.is-active {
+      &::before {
+        transform: translate(-50%, 100%);
+        opacity: 0;
+      }
+      &::after {
+        transform: translate(50%, 100%);
+        opacity: 0;
+      }
+      > .test-vertical-slider-panel {
+        > .poinco-area-mini {
+          &::before,
+          &::after {
+            opacity: 1;
+            transform: translateY(0%);
+          }
         }
       }
     }
@@ -122,9 +143,10 @@
   margin-inline: auto;
   overflow: hidden;
   z-index: 0;
-  @media screen and (max-width: 767px), screen and (max-height: 629px) {
+  @media screen and (max-width: 767px) {
     display: block;
     width: 100%;
+    padding: 0;
   }
   &:first-of-type {
     position: relative;
@@ -136,17 +158,143 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    @media screen and (max-width: 767px), screen and (max-height: 629px) {
+    @media screen and (max-width: 767px) {
       position: relative;
       top: 0;
       left: 0;
       transform: none;
+      margin-top: 40px;
     }
   }
-  &.is-show {
+  @media screen and (min-width: 768px) {
+    &.is-show {
+      &:nth-of-type(1) {
+        > .image-block {
+          > .test-shadow-box {
+            > img {
+              &:nth-child(1) {
+                animation: function01-card 2s ease-in-out 0.3s forwards;
+              }
+              &:nth-child(2) {
+                animation: function01-graph 2s ease-in-out 0.3s forwards;
+              }
+            }
+            > div {
+              animation: function01-point 2s ease-in-out 0.3s forwards;
+              &::before {
+                animation: move-illust-up-sp 1.5s ease-in-out 0.3s infinite;
+              }
+              &::after {
+                animation: move-illust-down-sp 1.5s ease-in-out 0.3s infinite;
+              }
+            }
+          }
+        }
+      }
+      &:nth-of-type(2) {
+        > .image-block {
+          > .test-shadow-box {
+            > img {
+              &:nth-child(1) {
+                animation: opacity 1s ease-in-out forwards;
+              }
+              &:nth-child(2) {
+                animation: opacity 0.5s ease-in-out 0.3s forwards,
+                  wave01 1s ease-in-out 2.6s infinite;
+              }
+              &:nth-child(3) {
+                animation: opacity 0.5s ease-in-out 0.8s forwards,
+                  wave02 1s ease-in-out 2.6s infinite;
+              }
+              &:nth-child(4) {
+                animation: opacity 0.5s ease-in-out 1.3s forwards,
+                  wave03 1s ease-in-out 2.6s infinite;
+              }
+              &:nth-child(5) {
+                animation: opacity 0.5s ease-in-out 1.8s forwards,
+                  wave04 1s ease-in-out 2.6s infinite;
+              }
+              &:nth-child(6) {
+                animation: opacity 0.5s ease-in-out 2.3s forwards,
+                  wave05 1s ease-in-out 2.6s infinite;
+              }
+            }
+          }
+        }
+      }
+      &:nth-of-type(3) {
+        > .image-block {
+          > .test-shadow-box {
+            opacity: 1;
+            > img {
+              &:nth-of-type(1) {
+                animation: opacity 1s ease-in-out forwards;
+              }
+              &:nth-of-type(2) {
+                animation: opacity01 1s ease-in-out infinite;
+              }
+              &:nth-of-type(3) {
+                animation: opacity02 1s ease-in-out infinite;
+              }
+              &:nth-of-type(4) {
+                animation: opacity03 1s ease-in-out infinite;
+              }
+              &:nth-of-type(5) {
+                animation: opacity02 1.2s ease-in-out 0.5s infinite;
+              }
+              &:nth-of-type(6) {
+                animation: opacity02 1.5s ease-in-out 1.5s infinite;
+              }
+              &:nth-of-type(7) {
+                animation: opacity02 2s ease-in-out 2s infinite;
+              }
+              &:nth-of-type(8) {
+                animation: opacity02 2.5s ease-in-out 2.5s infinite;
+              }
+              &:nth-of-type(9) {
+                animation: opacity-01 1s ease-in-out 3s forwards,
+                  coin 1.3s ease-in-out 3.5s infinite;
+              }
+              &:nth-of-type(10) {
+                animation: opacity-01 1s ease-in-out 4s forwards,
+                  coin 1.3s ease-in-out 4.5s infinite;
+              }
+              &:nth-of-type(11) {
+                animation: opacity-01 1s ease-in-out 5s forwards,
+                  coin 1.3s ease-in-out 5.5s infinite;
+              }
+            }
+          }
+        }
+      }
+    }
+    &.is-top:not(.is-show) {
+      &:nth-of-type(1),
+      &:nth-of-type(2),
+      &:nth-of-type(3) {
+        > .title-block,
+        > .text-block {
+          transform: translateY(-100%);
+          opacity: 0;
+        }
+      }
+    }
+    &.is-bottom:not(.is-show) {
+      &:nth-of-type(1),
+      &:nth-of-type(2),
+      &:nth-of-type(3) {
+        > .title-block,
+        > .text-block {
+          transform: translateY(100%);
+          opacity: 0;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 767px) {
     &:nth-of-type(1) {
       > .image-block {
-        > .test-shadow-box {
+        > .test-shadow-box.is-show {
           > img {
             &:nth-child(1) {
               animation: function01-card 2s ease-in-out 0.3s forwards;
@@ -169,7 +317,7 @@
     }
     &:nth-of-type(2) {
       > .image-block {
-        > .test-shadow-box {
+        > .test-shadow-box.is-show {
           > img {
             &:nth-child(1) {
               animation: opacity 1s ease-in-out forwards;
@@ -200,7 +348,7 @@
     }
     &:nth-of-type(3) {
       > .image-block {
-        > .test-shadow-box {
+        > .test-shadow-box.is-show {
           opacity: 1;
           > img {
             &:nth-of-type(1) {
@@ -243,26 +391,11 @@
         }
       }
     }
-  }
-  &.is-top:not(.is-show) {
-    &:nth-of-type(1),
-    &:nth-of-type(2),
-    &:nth-of-type(3) {
-      > .title-block,
-      > .text-block {
-        transform: translateY(-100%);
-        opacity: 0;
-      }
-    }
-  }
-  &.is-bottom:not(.is-show) {
-    &:nth-of-type(1),
-    &:nth-of-type(2),
-    &:nth-of-type(3) {
-      > .title-block,
-      > .text-block {
-        transform: translateY(100%);
-        opacity: 0;
+    .poinco-area-mini.is-show {
+      &::before,
+      &::after {
+        opacity: 1;
+        transform: translateY(0%);
       }
     }
   }
@@ -271,7 +404,7 @@
     opacity: 0;
     transform: translateY(-100%);
     transition: opacity 0.3s ease-in-out, transform 0.5s ease-in-out;
-    @media screen and (max-width: 767px), screen and (max-height: 629px) {
+    @media screen and (max-width: 767px) {
       opacity: 1;
       transform: none;
     }
@@ -285,17 +418,26 @@
       z-index: -1;
       @media screen and (max-width: 767px) {
         left: 50%;
-        top: -20px;
+        top: 0;
         transform: translate(-50%);
+        max-width: 138px;
+      }
+    }
+    @media screen and (max-width: 767px) {
+      > .label {
+        margin-top: 30px;
       }
     }
     > .title {
       margin-top: min(1.35vw, 20px);
+      @media screen and (max-width: 767px) {
+        margin-top: 15px;
+      }
     }
   }
   & > .image-block {
     grid-area: image;
-    @media screen and (max-width: 767px), screen and (max-height: 629px) {
+    @media screen and (max-width: 767px) {
       opacity: 1;
       transform: none;
       margin-top: 15px;
@@ -326,7 +468,7 @@
     padding-top: min(1.01vw, 15px);
     font-weight: 500;
     font-size: clamp(1.2rem, 1.08vw, 1.6rem);
-    @media screen and (max-width: 767px), screen and (max-height: 629px) {
+    @media screen and (max-width: 767px) {
       opacity: 1;
       transform: none;
       padding-top: 20px;
@@ -347,9 +489,6 @@
         }
         > img {
           position: absolute;
-          @media screen and (max-width: 767px), screen and (max-height: 629px) {
-            position: static;
-          }
           &:nth-child(1) {
             width: min(36.17%, 187px);
             height: auto;
@@ -424,6 +563,9 @@
       > .test-shadow-box {
         opacity: 0;
         transition: opacity 1s ease-in-out;
+        @media screen and (max-width: 767px) {
+          opacity: 1;
+        }
         > img {
           position: absolute;
           top: 0;
@@ -448,7 +590,7 @@
   border-radius: 50%;
   border: 3px solid #000;
   cursor: pointer;
-  @media screen and (max-width: 767px), screen and (max-height: 629px) {
+  @media screen and (max-width: 767px) {
     width: 0;
     height: 0;
     border: none;
@@ -522,10 +664,10 @@
     display: block;
     background-repeat: no-repeat;
     background-size: contain;
-    transform: translateY(150%);
     z-index: 1;
-    opacity: 0;
     transition: all 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+    opacity: 0;
+    transform: translateY(150%);
   }
   &::before {
     left: 0;

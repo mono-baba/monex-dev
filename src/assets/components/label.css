@@ -8,7 +8,7 @@
   font-weight: bold;
   color: var(--red);
   @media screen and (max-width: 767px) {
-    padding: 7px 20px;
+    padding: 5px 22px;
     font-size: 1.4rem;
     background-color: transparent;
     border-width: 2px;

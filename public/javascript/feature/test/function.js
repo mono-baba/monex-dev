@@ -44,6 +44,8 @@ function initializePage() {
 window.addEventListener("scroll", function () {
   handlePanelVisibility()
   handlePoincoVisibility()
+  handleScroll()
+  handleScrollPoinco()
 })
 
 function handlePanelVisibility() {
@@ -61,6 +63,9 @@ function handlePanelVisibility() {
   const sectionScrollHeight =
     window.innerHeight + window.innerHeight / panelCount
   panels.forEach(function (panel, index) {
+    // panelの頭が画面に入る前で、data-sp-showの終わりが画面に入ったら
+    var shadowBoxes = document.querySelector("[data-sp-show]")
+    // panelの頭が画面に入ってから、panelの終わりが画面から出るまでの間
     const panelIsVisible =
       newFunctionInnerTop + sectionScrollHeight * index <= window.scrollY &&
       newFunctionInnerTop + sectionScrollHeight * (index + 1) > window.scrollY
@@ -76,6 +81,12 @@ function handlePanelVisibility() {
         panels[index + 1].classList.add("is-bottom")
         panels[index + 1].classList.remove("is-top")
       }
+    } else if (
+      index === 0 &&
+      newFunctionInnerTop + sectionScrollHeight * index > window.scrollY &&
+      isInViewport(shadowBoxes)
+    ) {
+      panel.classList.add("is-show")
     } else {
       panel.classList.remove("is-show")
     }
@@ -85,9 +96,10 @@ function handlePanelVisibility() {
 function handlePoincoVisibility() {
   // 要素を取得する
   const newFunctionInner = document.querySelector("#new-function .inner")
+  var shadowBoxes = document.querySelector("[data-sp-show]")
   // 要素の位置情報を取得する
   const newFunctionInnerRect = newFunctionInner.getBoundingClientRect()
-  if (newFunctionInnerRect.top === 0) {
+  if (isInViewportBottom(shadowBoxes)) {
     document.getElementById("js-poinco").classList.add("is-active")
   } else {
     document.getElementById("js-poinco").classList.remove("is-active")
@@ -99,4 +111,59 @@ function handlePoincoVisibility() {
       document.querySelector("#slide01").checked = true
     }
   }
+}
+
+function isInViewportBottom(element) {
+  var rect = element.getBoundingClientRect()
+  var windowHeight = window.innerHeight || document.documentElement.clientHeight
+  return (
+    rect.bottom <= windowHeight &&
+    rect.right > 0 &&
+    rect.left < (window.innerWidth || document.documentElement.clientWidth) &&
+    rect.top < windowHeight
+  )
+}
+
+function isInViewport(element) {
+  var rect = element.getBoundingClientRect()
+  var windowHeight = window.innerHeight || document.documentElement.clientHeight
+  return (
+    rect.bottom > 0 &&
+    rect.right > 0 &&
+    rect.left < (window.innerWidth || document.documentElement.clientWidth) &&
+    rect.top < windowHeight
+  )
+}
+
+function handleScroll() {
+  var shadowBoxes = document.querySelectorAll("[data-sp-show]")
+  shadowBoxes.forEach(function (box) {
+    if (isInViewport(box)) {
+      box.classList.add("is-show")
+    } else {
+      box.classList.remove("is-show")
+    }
+  })
+}
+
+function isInViewportPoinco(element) {
+  var rect = element.getBoundingClientRect()
+  var windowHeight = window.innerHeight || document.documentElement.clientHeight
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= windowHeight &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  )
+}
+
+function handleScrollPoinco() {
+  var shadowBoxes = document.querySelectorAll("[data-sp-poinco]")
+  shadowBoxes.forEach(function (box) {
+    if (isInViewportPoinco(box)) {
+      box.classList.add("is-show")
+    } else {
+      box.classList.remove("is-show")
+    }
+  })
 }

@@ -93,6 +93,7 @@ const NewFunction = () => {
                 name="slideshow"
                 className="test-burette-button"
                 id="slide01"
+                checked
               />
               <input
                 type="radio"
@@ -106,7 +107,7 @@ const NewFunction = () => {
                 className="test-burette-button"
                 id="slide03"
               />
-              <div className="test-vertical-slider-panel" data-slider-panel="1">
+              <div className="test-vertical-slider-panel" data-slider-panel>
                 <div className="title-block">
                   <img
                     src="/image/feature/test/number_01.svg"
@@ -124,8 +125,8 @@ const NewFunction = () => {
                     dポイントがたまる！
                   </h3>
                 </div>
-                <div className="image-block poinco-area-mini">
-                  <div className="test-shadow-box">
+                <div className="image-block poinco-area-mini" data-sp-poinco>
+                  <div className="test-shadow-box" data-sp-show>
                     <img
                       src="/image/feature/test/img_function_01_monex-card.png"
                       alt=""
@@ -160,7 +161,7 @@ const NewFunction = () => {
                   </p>
                 </div>
               </div>
-              <div className="test-vertical-slider-panel" data-slider-panel="2">
+              <div className="test-vertical-slider-panel" data-slider-panel>
                 <div className="title-block">
                   <img
                     src="/image/feature/test/number_02.svg"
@@ -178,8 +179,8 @@ const NewFunction = () => {
                     購入できるように！
                   </h3>
                 </div>
-                <div className="image-block poinco-area-mini">
-                  <div className="test-shadow-box">
+                <div className="image-block poinco-area-mini" data-sp-poinco>
+                  <div className="test-shadow-box" data-sp-show>
                     <img
                       src="/image/feature/test/img_function_02_read.svg"
                       alt=""
@@ -226,7 +227,7 @@ const NewFunction = () => {
                   </ul>
                 </div>
               </div>
-              <div className="test-vertical-slider-panel" data-slider-panel="3">
+              <div className="test-vertical-slider-panel" data-slider-panel>
                 <div className="title-block">
                   <img
                     src="/image/feature/test/number_03.svg"
@@ -244,8 +245,8 @@ const NewFunction = () => {
                     dポイントがたまる！
                   </h3>
                 </div>
-                <div className="image-block poinco-area-mini">
-                  <div className="test-shadow-box">
+                <div className="image-block poinco-area-mini" data-sp-poinco>
+                  <div className="test-shadow-box" data-sp-show>
                     <img
                       src="/image/feature/test/img_function_03_man.svg"
                       alt=""

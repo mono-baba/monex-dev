@@ -274,7 +274,7 @@
       &:nth-of-type(3) {
         > .title-block,
         > .text-block {
-          transform: translateY(-100%);
+          transform: translateY(-150px);
           opacity: 0;
         }
       }
@@ -285,7 +285,7 @@
       &:nth-of-type(3) {
         > .title-block,
         > .text-block {
-          transform: translateY(100%);
+          transform: translateY(150px);
           opacity: 0;
         }
       }
@@ -402,7 +402,7 @@
   & > .title-block {
     grid-area: title;
     opacity: 0;
-    transform: translateY(-100%);
+    transform: translateY(-150px);
     transition: opacity 0.3s ease-in-out, transform 0.5s ease-in-out;
     @media screen and (max-width: 767px) {
       opacity: 1;
@@ -441,6 +441,7 @@
       opacity: 1;
       transform: none;
       margin-top: 15px;
+      width: min(100%, 553px);
     }
     > .test-shadow-box {
       position: relative;
@@ -448,8 +449,6 @@
       height: calc(100% - min(2.36vw, 35px));
       border-radius: 40px;
       @media screen and (max-width: 767px) {
-        width: calc(100% - 12px);
-        height: calc(100% - 10px);
         margin-right: auto;
         border-radius: 20px;
         border-width: 2px;
@@ -468,6 +467,7 @@
     padding-top: min(1.01vw, 15px);
     font-weight: 500;
     font-size: clamp(1.2rem, 1.08vw, 1.6rem);
+    align-self: flex-start;
     @media screen and (max-width: 767px) {
       opacity: 1;
       transform: none;
@@ -480,12 +480,11 @@
   &:nth-of-type(1) {
     > .image-block {
       > .test-shadow-box {
-        border: 3px solid #000;
-        background-color: #fff;
-        box-shadow: min(2.36vw, 35px) min(2.36vw, 35px) 0px 0px #cc0033;
         overflow: hidden;
-        @media screen and (max-width: 767px) {
-          box-shadow: 10px 10px 0px 0px #cc0033;
+        @media screen and (min-width: 768px) {
+          border: 3px solid #000;
+          background-color: #fff;
+          box-shadow: min(2.36vw, 35px) min(2.36vw, 35px) 0px 0px #cc0033;
         }
         > img {
           position: absolute;

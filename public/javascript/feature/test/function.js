@@ -19,11 +19,19 @@ function scrollToSection(index) {
   const newFunction = document.querySelector("#new-function")
   const newFunctionRect = newFunction.getBoundingClientRect()
   const newFunctionInnerTop = window.scrollY + newFunctionRect.top + 148
-  const sectionScrollHeight = window.innerHeight + window.innerHeight / 3
-  window.scrollTo({
-    top: Math.round(newFunctionInnerTop + sectionScrollHeight * index),
-    behavior: "smooth",
-  })
+
+  const panels = document.querySelectorAll("[data-slider-panel]")
+  const panelCount = panels.length
+
+  if (index >= 0 && index < panelCount) {
+    const sectionScrollHeight = newFunction.offsetHeight / panelCount
+    const scrollTop = newFunctionInnerTop + sectionScrollHeight * index
+
+    window.scrollTo({
+      top: scrollTop,
+      behavior: "smooth",
+    })
+  }
 }
 
 // ハンバーガーメニューのリンクをクリックしたときの処理

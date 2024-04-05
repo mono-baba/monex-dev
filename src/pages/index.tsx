@@ -337,7 +337,7 @@ const FeaturesOfMonex = () => {
                 <h3 className="heading-normal">
                   NISA口座の取引手数料
                   <br className="only-sp" />は<br className="only-pc" />
-                  すべて無料！
+                  すべて無料！※
                 </h3>
                 <img
                   src="/image/feature/test/img_feature_01.png"

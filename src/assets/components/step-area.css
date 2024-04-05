@@ -2,8 +2,8 @@
   display: grid;
   justify-content: center;
   grid-template-columns:
-    min(23.53vw, 320px) min(8.82vw, 120px) min(23.53vw, 320px)
-    min(8.82vw, 120px) min(23.53vw, 320px);
+    min(21.22vw, 314px) min(7.43vw, 120px) min(21.22vw, 314px)
+    min(7.43vw, 120px) min(21.22vw, 314px);
   @media screen and (max-width: 767px) {
     grid-template-columns: 1fr;
     row-gap: 30px;
@@ -14,7 +14,7 @@
       align-self: center;
       content: "";
       display: block;
-      width: min(8.82vw, 120px);
+      width: min(7.43vw, 120px);
       height: 21px;
       background-image: url("/image/feature/test/arrow_line-right.svg");
       background-size: contain;
@@ -32,9 +32,10 @@
       background-color: #fff;
       position: relative;
       text-align: center;
-      padding: clamp(33px, 3.82vw, 52px) 20px clamp(30px, 2.94vw, 40px);
+      padding: min(3.51vw, 52px) min(1.35vw, 20px) min(2.7vw, 40px);
       @media screen and (max-width: 767px) {
         border-width: 2px;
+        padding: min(10.67vw, 40px) min(5.33vw, 20px) min(8vw, 30px);
       }
       > .number {
         position: absolute;
@@ -51,18 +52,23 @@
         font-weight: 900;
       }
       > .title {
-        font-size: clamp(2.4rem, 1.91vw, 2.6rem);
+        font-size: min(1.91vw, 2.6rem);
         font-weight: bold;
         line-height: 1.385;
         @media screen and (max-width: 767px) {
           font-weight: 900;
+          font-size: min(6.4vw, 2.4rem);
         }
       }
       > img {
         margin-top: clamp(10px, 1.47vw, 20px);
       }
       > p {
+        font-size: clamp(1.3rem, 1.08vw, 1.6rem);
         margin-top: clamp(10px, 1.1vw, 15px);
+        @media screen and (max-width: 767px) {
+          font-size: 1.6rem;
+        }
       }
     }
   }

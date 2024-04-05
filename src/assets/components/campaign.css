@@ -36,7 +36,7 @@
       min-height: clamp(120px, 13.97vw, 190px);
       @media screen and (max-width: 767px) {
         padding-block: 20px;
-        font-size: 2.4rem;
+        font-size: min(6.4vw, 2.4rem);
         min-height: 100px;
       }
     }
@@ -47,9 +47,6 @@
         padding-bottom: 40px;
       }
     }
-  }
-  & .two-columns {
-    grid-template-columns: minmax(1fr, 530px) minmax(auto, 624px);
   }
 }
 
@@ -78,9 +75,10 @@
 }
 
 .campaign .two-columns {
-  grid-template-columns: min(38.97vw, 530px) min(44.49vw, 605px);
+  grid-template-columns: min(35.81vw, 530px) min(39.32vw, 582px);
+  column-gap: min(3.38vw, 50px);
   max-width: 1200px;
-  column-gap: clamp(15px, 3.68vw, 50px);
+  justify-content: flex-start;
   @media screen and (max-width: 767px) {
     grid-template-columns: 1fr;
   }
@@ -102,11 +100,12 @@
     grid-area: image;
     margin-inline: auto;
     width: 100%;
+    max-width: 582px;
     border-radius: 40px;
     border: 3px solid #000;
     background-color: #fff;
     padding: clamp(15px, 2.21vw, 30px);
-    aspect-ratio: 524 / 295;
+    aspect-ratio: 582 / 363;
     position: relative;
     @media screen and (max-width: 767px) {
       margin-top: 20px;
@@ -122,8 +121,8 @@
       left: 0;
       transform: translateY(-50%);
       display: block;
-      width: min(45.92vw, 624.47px);
-      height: min(30.77vw, 418.44px);
+      width: min(41.22vw, 610px);
+      height: min(27.7vw, 410px);
       background-image: url("/image/feature/test/campaign-banner_coin.svg");
       background-repeat: no-repeat;
       background-size: contain;
@@ -144,8 +143,8 @@
 
 /* 偶数 */
 .campaign-section:nth-of-type(even) .two-columns .campaign-images::before {
-  width: min(45.92vw, 624.47px);
-  height: min(30.77vw, 418.44px);
+  width: min(40.74vw, 603px);
+  height: min(27.77vw, 411px);
   left: auto;
   right: 0;
   background-image: url("/image/feature/test/campaign-banner_coin_inversion.svg");

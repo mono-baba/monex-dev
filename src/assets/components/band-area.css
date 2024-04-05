@@ -4,6 +4,7 @@
   margin-inline: -20px;
   padding: 50px 20px 56px;
   margin-top: 60px;
+  text-align: center;
   @media screen and (max-width: 768px) {
     padding-top: 30px;
   }
@@ -30,23 +31,25 @@
     }
   }
   > .text {
+    display: inline-block;
+    text-align: left;
     position: relative;
     z-index: 1;
-    font-size: clamp(1.6rem, 2.5vw, 2.4rem);
+    font-size: min(1.62vw, 2.4rem);
     font-weight: bold;
-    max-width: 971px;
+    max-width: 972px;
     margin-inline: auto;
     line-height: 1.5;
     @media screen and (max-width: 1180px) {
       text-align: center;
     }
     @media screen and (max-width: 768px) {
-      font-size: 1.6rem;
+      font-size: min(4.27vw, 1.6rem);
       font-weight: 500;
     }
     > span {
       display: block;
-      margin-bottom: -100px;
+      margin-bottom: clamp(-90px, -6.76vw, -100px);
       @media screen and (max-width: 1180px) {
         margin-bottom: 0;
       }
@@ -54,10 +57,10 @@
     > strong {
       display: block;
       position: relative;
-      font-size: clamp(2rem, 3.4vw, 3rem);
+      font-size: min(2.03vw, 3rem);
       font-weight: 900;
       @media screen and (max-width: 768px) {
-        font-size: 2rem;
+        font-size: min(5.33vw, 2rem);
         font-weight: bold;
       }
       &::after {
@@ -74,13 +77,13 @@
       @media screen and (max-width: 1180px) {
         &::after {
           left: 50%;
-          width: 350px;
+          width: clamp(300px, 22.43vw, 332px);
           transform: translate(-50%, 0);
         }
       }
       @media screen and (max-width: 767px) {
         &::after {
-          width: 260px;
+          width: min(69.33vw, 260px);
         }
       }
       > span:first-child {
@@ -91,9 +94,9 @@
       }
       > .image {
         display: inline-block;
-        margin-left: 23px;
+        margin-left: min(1.82vw, 27px);
         vertical-align: text-bottom;
-        max-width: 329.5px;
+        max-width: clamp(300px, 22.43vw, 332px);
         font-size: 1.6rem;
         text-align: center;
         font-weight: 400;

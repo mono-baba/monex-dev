@@ -4,9 +4,9 @@
     "title image"
     "details image";
   justify-content: center;
-  grid-template-columns: minmax(300px, 1fr) minmax(auto, 430px);
+  grid-template-columns: min(36.36vw, 480px) min(32.58vw, 430px);
   grid-template-rows: auto 1fr;
-  column-gap: 50px;
+  column-gap: clamp(20px, 3.79vw, 50px);
   max-width: 960px;
   margin-inline: auto;
   @media screen and (max-width: 767px) {

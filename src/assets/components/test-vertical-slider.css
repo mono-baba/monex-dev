@@ -59,7 +59,7 @@
     }
   }
   > .title-with-speech-bubble {
-    position: relative;
+    align-items: center;
     > .speech-bubble {
       background-image: url("/image/feature/test/speech-bubble_new-function.svg");
     }
@@ -466,7 +466,7 @@
     transition: opacity 0.3s ease-in-out, transform 0.5s ease-in-out;
     padding-top: min(1.01vw, 15px);
     font-weight: 500;
-    font-size: clamp(1.2rem, 1.08vw, 1.6rem);
+    font-size: 1.6rem;
     align-self: flex-start;
     @media screen and (max-width: 767px) {
       opacity: 1;

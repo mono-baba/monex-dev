@@ -24,7 +24,8 @@
     gap: 13px;
     font-size: clamp(1.6rem, 1.47vw, 2rem);
     @media screen and (max-width: 767px) {
-      font-size: 1.6rem;
+      font-size: min(4.27vw, 1.6rem);
+      gap: min(3.47vw, 13px);
     }
     &::before,
     &::after {

@@ -51,6 +51,12 @@
         margin-top: 15px;
         margin-left: auto;
       }
+      + .button-primary {
+        margin-top: 20px;
+        @media screen and (max-width: 767px) {
+          margin-top: 10px;
+        }
+      }
     }
   }
 }

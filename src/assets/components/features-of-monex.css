@@ -38,6 +38,16 @@
   .conversion-button {
     margin-top: clamp(20px, 3.68vw, 50px);
   }
+  .border-box + ol {
+    max-width: 1200px;
+    margin-inline: auto;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    @media screen and (max-width: 767px) {
+      margin-top: 15px;
+      margin-bottom: 20px;
+    }
+  }
 }
 
 @keyframes features_pc {

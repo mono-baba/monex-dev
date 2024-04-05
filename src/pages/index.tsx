@@ -344,17 +344,14 @@ const FeaturesOfMonex = () => {
                   alt="外国株式売買手数料、国内株式売買手数料、投資信託売買手数料、0円"
                 />
                 <div className="details">
-                  <p>
-                    マネックス証券のNISA口座ならすべての売買手数料が無料！※
+                  <p className="note-list">
+                    ※マネックス証券のNISA口座ならすべての売買手数料が無料、またはキャッシュバックにより実質無料！
                     <br />
                     だから、低コストでNISAデビューができます！
                   </p>
-                  <p className="note-list">
-                    ※一部キャッシュバックによる実質無料も含みます。
-                  </p>
                   <a
                     className="button-primary -details"
-                    href="#"
+                    href="https://info.monex.co.jp/nisa/feefree.html"
                     target="_blank"
                   >
                     詳細はこちら
@@ -375,15 +372,13 @@ const FeaturesOfMonex = () => {
                 />
                 <div className="details">
                   <p>
-                    マネックスは主要ネット証券における
+                    マネックスのクレジットカード積立はポイント還元率が最大1.1%！※1
                     <br className="only-pc" />
-                    クレジットカード積立の還元率は主要ネット証券No.1！※
-                    <br />
                     だからポイントがザクザクたまる！
                   </p>
                   <a
                     className="button-primary -details"
-                    href="#"
+                    href="https://info.monex.co.jp/news/2023/20230928_02.html"
                     target="_blank"
                   >
                     詳細はこちら
@@ -423,6 +418,22 @@ const FeaturesOfMonex = () => {
                 </a>
               </div>
             </section>
+            <ol>
+              <li className="note-list -number">
+                ※1
+                ポイント還元率は、積立金額5万円以下の部分について1.1％、5万円超過～7万円以下の部分について0.6％、7万円超過～10万円以下の部分について0.2％です。
+                <br />
+                なお、1.1%分については、ご利用100円につき1ポイントのほか、1,000円につき1ポイントが加算されて貯まります。
+                <br />
+                0.6%分については1,000円につき6ポイント、0.2%分については1,000円につき2ポイントが加算されて貯まります。（申込みは原則1,000円以上1円単位。毎月100,000円まで）。
+              </li>
+              <li className="note-list -number">
+                ※2
+                積立金額によらず、マネックス証券のNISA口座を2023年10月以降に開設された方は2023年10月2日以降のポイント還元率が2.2％に、
+                <br />
+                2023年9月までに開設された方は2024年1月4日以降のポイント還元率が1.5％になります。適用期間は2024年9月30日までです。
+              </li>
+            </ol>
             <section className="border-box">
               <div className="two-columns">
                 <h3 className="heading-normal">
@@ -433,15 +444,26 @@ const FeaturesOfMonex = () => {
                 <img src="/image/feature/test/img_feature_03.svg" alt="" />
                 <div className="details">
                   <p>
-                    投資信託なら100円から新NISAを始められます！
+                    投信つみたてなら100円から新NISAを始められます！
                     <br />
                     さらに1株から株式を購入できるワン株（単元未満株）サービスもご用意。まとまった資金がなくても投資ができて、初心者の方でも始めやすい！
                   </p>
                   <a
                     className="button-primary -details"
-                    href="#"
+                    href="https://info.monex.co.jp/wankabu/index.html"
                     target="_blank"
                   >
+                    ワン株の
+                    <br className="only-sp" />
+                    詳細はこちら
+                  </a>
+                  <a
+                    className="button-primary -details"
+                    href="https://info.monex.co.jp/fund/tsumitate/merit.html"
+                    target="_blank"
+                  >
+                    投信つみたての
+                    <br className="only-sp" />
                     詳細はこちら
                   </a>
                 </div>
@@ -457,13 +479,14 @@ const FeaturesOfMonex = () => {
                 <img src="/image/feature/test/img_feature_04.svg" alt="" />
                 <div className="details">
                   <p>
-                    アプリならではの便利機能を追加した、マネックス証券サービスをスマートフォンで快適に利用・閲覧できる総合アプリ。
+                    アプリならではの便利機能を追加した、マネックス証券のサービスをスマートフォンで快適に利用・閲覧できる総合アプリ。
                     <br />
-                    初心者でも使いやすくAppStoreで4.3の高評価！
+                    初心者でも使いやすくApp Storeで4.3の高評価！
                   </p>
+                  <p className="note-list">※2024年〇月現在</p>
                   <a
                     className="button-primary -details"
-                    href="#"
+                    href="https://info.monex.co.jp/tradetool/monex-app/index.html"
                     target="_blank"
                   >
                     詳細はこちら
@@ -485,7 +508,7 @@ const Campaign = () => {
         <div className="inner">
           <h2 className="title-with-speech-bubble">
             <span className="speech-bubble">
-              今ならキャンペーンで
+              キャンペーンで
               <br className="only-sp" />
               更におトクに！
             </span>
@@ -497,7 +520,46 @@ const Campaign = () => {
           </h2>
           <div className="contents">
             <section className="campaign-section">
-              <h3 className="heading-band">キャンペーンその1</h3>
+              <h3 className="heading-band">キャンペーン</h3>
+              <div className="two-columns">
+                <h3 className="heading-normal">
+                  【ドコモ提携記念】
+                  <br />
+                  マネックスで新NISAスタートキャンペーン
+                </h3>
+                <div className="campaign-images">
+                  <a
+                    href="https://info.monex.co.jp/lp/2404cp_dpoint_1.html?popup=n"
+                    target="_blank"
+                  >
+                    <img
+                      src="https://info.monex.co.jp/news/image/2024/20240401_01/dc_4campaing.png"
+                      alt="マネックスで新NISAスタートドコモ提携記念dポイント最大4,200ptプレゼント！"
+                      width={792}
+                      height={444}
+                    />
+                  </a>
+                </div>
+                <div className="details">
+                  <p>
+                    クイズに正解＆新規口座開設等でもれなくdポイント4,200ptをプレゼント！
+                  </p>
+                  <p className="period-area">
+                    キャンペーン期間：2024年<span>6</span>月<span>30</span>
+                    日まで
+                  </p>
+                  <a
+                    className="button-primary -campaign"
+                    href="https://info.monex.co.jp/lp/2404cp_dpoint_1.html?popup=n"
+                    target="_blank"
+                  >
+                    キャンペーン詳細はこちら
+                  </a>
+                </div>
+              </div>
+            </section>
+            {/* <section className="campaign-section">
+              <h3 className="heading-band">キャンペーン</h3>
               <div className="two-columns">
                 <h3 className="heading-normal">
                   キャンペーンタイトル
@@ -529,41 +591,7 @@ const Campaign = () => {
                   </a>
                 </div>
               </div>
-            </section>
-            <section className="campaign-section">
-              <h3 className="heading-band">キャンペーンその1</h3>
-              <div className="two-columns">
-                <h3 className="heading-normal">
-                  キャンペーンタイトル
-                  <br />
-                  テキストテキストテキスト
-                </h3>
-                <div className="campaign-images">
-                  <img
-                    src=""
-                    alt="キャンペーンバナー設置予定"
-                    width={524}
-                    height={295}
-                  />
-                </div>
-                <div className="details">
-                  <p>
-                    概要文テキスト概要文テキスト概要文テキスト概要文テキスト概要文テキスト概要文テキスト概要文テキスト概要文テキスト概要文テキスト概要文テキスト概要文テキスト概要文テキスト概要文テキスト
-                  </p>
-                  <p className="period-area">
-                    キャンペーン期間：YYYY年<span>MM</span>月<span>DD</span>
-                    日（月）まで
-                  </p>
-                  <a
-                    className="button-primary -campaign"
-                    href="#"
-                    target="_blank"
-                  >
-                    キャンペーン詳細はこちら
-                  </a>
-                </div>
-              </div>
-            </section>
+            </section> */}
             <p className="note-list">
               ※キャンペーンの内容は、予告なく変更または中止となる場合がございますのであらかじめご了承ください。
             </p>
@@ -624,6 +652,17 @@ const Step = () => {
                 </div>
               </li>
             </ol>
+            <section className="cautionary-section">
+              <h3 className="title">書類の転送は不要です</h3>
+              <p className="note">
+                ※オンラインでお申込みできるのは、個人番号カードまたは運転免許証
+                +
+                マイナンバー通知カードをお持ちの方、日本国籍の成人で日本に納税をされている方です。
+                <br />
+                ※上記に該当しない方は<a href="">郵送での口座開設</a>
+                でお申し込みください。※NISA口座の開設にはお時間がかかる場合があります。
+              </p>
+            </section>
           </div>
           <div className="conversion-area">
             <h3 className="title">

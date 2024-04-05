@@ -4,4 +4,8 @@
   font-size: 1.2rem;
   color: #333;
   font-weight: 400;
+  &.-number {
+    text-indent: -2em;
+    padding-left: 2em;
+  }
 }

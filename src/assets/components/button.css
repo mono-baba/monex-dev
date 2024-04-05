@@ -9,9 +9,10 @@
   border-radius: 50px;
   border: 3px solid #000;
   box-shadow: 0 5px 0 0 #000;
-  padding-right: 10px;
+  padding-right: 15px;
   margin-inline: auto;
   transition: 0.2s ease-out;
+  color: #000;
   @media (hover: hover) {
     &:hover {
       transform: translateY(5px);
@@ -98,7 +99,7 @@
   }
 
   &.-details {
-    width: clamp(220px, 22.06vw, 300px);
+    width: clamp(250px, 22.06vw, 300px);
     height: clamp(40px, 4.41vw, 60px);
     font-size: clamp(1.4rem, 1.18vw, 1.6rem);
     background-color: #ffc700;
@@ -106,6 +107,7 @@
       width: 220px;
       height: 40px;
       font-size: 1.4rem;
+      line-height: 1.2;
     }
     &::after {
       width: 20px;

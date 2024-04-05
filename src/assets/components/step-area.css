@@ -2,8 +2,10 @@
   display: grid;
   justify-content: center;
   grid-template-columns:
-    min(21.22vw, 314px) min(7.43vw, 120px) min(21.22vw, 314px)
-    min(7.43vw, 120px) min(21.22vw, 314px);
+    min(21.22vw, 320px) min(7.43vw, 120px) min(21.22vw, 320px)
+    min(7.43vw, 120px) min(21.22vw, 320px);
+  max-width: 1200px;
+  margin-inline: auto;
   @media screen and (max-width: 767px) {
     grid-template-columns: 1fr;
     row-gap: 30px;

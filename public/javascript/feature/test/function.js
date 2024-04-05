@@ -4,6 +4,38 @@ window.addEventListener("load", function () {
 })
 let count = 0
 
+// ハンバーガーメニューのリンクをクリックしたときの処理
+function initializePage() {
+  var gnaviLinks = document.querySelectorAll(".js-gnavi-link")
+  // .js-gnavi-linkに対するクリックイベントのリスナーを設定
+  gnaviLinks.forEach(function (gnaviLink) {
+    gnaviLink.addEventListener("click", function () {
+      // .l-header, .l-gnavi, .l-overlay, bodyに対してクラス名を削除
+      document
+        .querySelectorAll(".l-header, .l-gnavi, .l-overlay, body")
+        .forEach(function (target) {
+          target.classList.remove("is-open", "is-show", "is-menuOpen") // 'is-open'と'is-show'と'is-menuOpen'を削除
+        })
+      handleClick()
+    })
+  })
+}
+
+function handleClick() {
+  var innerElement = document.querySelector("#new-function")
+  innerElement.classList.add("is-scroll")
+  // クリックしてから初めてスクロールが2秒止まったら、実行する
+  var timer = null
+  window.addEventListener("scroll", function () {
+    if (timer !== null) {
+      clearTimeout(timer)
+    }
+    timer = setTimeout(function () {
+      innerElement.classList.remove("is-scroll")
+    }, 100)
+  })
+}
+
 // ラジオボタンの変更イベントを追加
 function addRadioChangeListeners() {
   const radios = document.querySelectorAll('[name="slideshow"]')
@@ -32,21 +64,6 @@ function scrollToSection(index) {
       behavior: "smooth",
     })
   }
-}
-
-// ハンバーガーメニューのリンクをクリックしたときの処理
-function initializePage() {
-  // .js-gnavi-linkに対するクリックイベントのリスナーを設定
-  document.querySelectorAll(".js-gnavi-link").forEach(function (element) {
-    element.addEventListener("click", function () {
-      // .l-header, .l-gnavi, .l-overlayに対してクラス名を削除
-      document
-        .querySelectorAll(".l-header, .l-gnavi, .l-overlay")
-        .forEach(function (target) {
-          target.classList.remove("is-open", "is-show") // 'is-open'と'is-show'の両方を削除
-        })
-    })
-  })
 }
 
 window.addEventListener("scroll", function () {

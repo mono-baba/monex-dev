@@ -16,6 +16,15 @@
       height: auto;
     }
   }
+  &.is-scroll {
+    height: calc(100dvh + 290px);
+    > .inner {
+      position: static;
+    }
+    @media screen and (max-width: 767px) {
+      height: auto;
+    }
+  }
 }
 .test-vertical-slider-wrapper {
   position: absolute;

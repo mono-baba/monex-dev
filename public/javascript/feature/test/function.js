@@ -3,6 +3,10 @@ window.addEventListener("load", function () {
   const panelScrollHeightValue = panelScrollHeight()
   initializePage()
   addRadioChangeListeners(firstPanelTopValue, panelScrollHeightValue)
+  handlePanelVisibility(firstPanelTopValue, panelScrollHeightValue)
+  handlePoincoVisibility()
+  handleScroll()
+  handleScrollPoinco()
 
   window.addEventListener("scroll", function () {
     handlePanelVisibility(firstPanelTopValue, panelScrollHeightValue)
@@ -46,7 +50,7 @@ function initializePage() {
 }
 
 function handleClick() {
-  var innerElement = document.querySelector("#new-function")
+  var innerElement = document.querySelector("#js-slider")
   innerElement.classList.add("is-scroll")
   // クリックしてから初めてスクロールが2秒止まったら、実行する
   var timer = null
@@ -87,8 +91,8 @@ function scrollToSection(index, firstPanelTopValue, panelScrollHeightValue) {
 
 function firstPanelTop() {
   // 1つ目のpanelのtopの位置を取得
-  const newFunction = document.querySelector("#new-function")
-  const newFunctionInner = document.querySelector("#new-function .inner")
+  const newFunction = document.querySelector("#js-slider")
+  const newFunctionInner = document.querySelector("[data-slider-in]")
   const newFunctionRect = newFunction.getBoundingClientRect()
   const newFunctionpaddingTopValue = parseFloat(
     window.getComputedStyle(newFunction).paddingTop
@@ -109,7 +113,7 @@ function firstPanelTop() {
 }
 
 function panelScrollHeight() {
-  const newFunction = document.querySelector("#new-function")
+  const newFunction = document.querySelector("#js-slider")
   const newFunctionOffsetHeight = newFunction.offsetHeight
   const newFunctionpaddingTopValue = parseFloat(
     window.getComputedStyle(newFunction).paddingTop
@@ -135,19 +139,8 @@ function panelScrollHeight() {
 }
 
 function handlePanelVisibility(firstPanelTopValue, panelScrollHeightValue) {
-  const newFunction = document.querySelector("#new-function")
-  const newFunctionRect = newFunction.getBoundingClientRect()
-  // サイト上部からnewFunctionInnerまでの距離
-  // （newFunctionInnerはabsoluteでtopの高さが0になるため、親要素からpaddingとborderを足してinnerのtopの位置を取得する）
-  const newFunctionInnerTop = window.scrollY + newFunctionRect.top + 148
-  // data-slider-panelをすべて取得
   const panels = document.querySelectorAll("[data-slider-panel]")
-  // data-slider-panelの数を取得
   const panelCount = panels.length
-  // 親要素に対して、panel1枚あたりの高さを取得
-  // (スクロールに余裕を持たせるため親要素はpanelの数+100vhしているため、追加分の100vhをpanel数で引く。)
-  // const sectionScrollHeight =
-  //   window.innerHeight + window.innerHeight / panelCount
   panels.forEach(function (panel, index) {
     // panelの頭が画面に入る前で、data-sp-showの終わりが画面に入ったら
     var shadowBoxes = document.querySelector("[data-sp-show]")
@@ -180,7 +173,7 @@ function handlePanelVisibility(firstPanelTopValue, panelScrollHeightValue) {
 
 function handlePoincoVisibility() {
   // 要素を取得する
-  const newFunctionInner = document.querySelector("#new-function .inner")
+  const newFunctionInner = document.querySelector("[data-slider-in]")
   var shadowBoxes = document.querySelector("[data-sp-show]")
   // 要素の位置情報を取得する
   const newFunctionInnerRect = newFunctionInner.getBoundingClientRect()

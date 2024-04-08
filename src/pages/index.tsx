@@ -82,8 +82,8 @@ const Lead = () => {
 const NewFunction = () => {
   return (
     <>
-      <section className="new-function section-area" id="new-function">
-        <div className="inner">
+      <section className="new-function section-area" id="js-slider">
+        <div className="inner" id="new-function" data-slider-in>
           <div className="vertical-slider-wrapper">
             <h2 className="title-with-speech-bubble">
               <span className="speech-bubble">さらにお手軽に！</span>

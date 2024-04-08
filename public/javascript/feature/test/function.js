@@ -1,6 +1,27 @@
 window.addEventListener("load", function () {
+  const firstPanelTopValue = firstPanelTop()
+  const panelScrollHeightValue = panelScrollHeight()
   initializePage()
-  addRadioChangeListeners()
+  addRadioChangeListeners(firstPanelTopValue, panelScrollHeightValue)
+
+  window.addEventListener("scroll", function () {
+    handlePanelVisibility(firstPanelTopValue, panelScrollHeightValue)
+    handlePoincoVisibility()
+    handleScroll()
+    handleScrollPoinco()
+    var timer = null
+    window.addEventListener("scroll", function () {
+      if (timer !== null) {
+        clearTimeout(timer)
+      }
+      timer = setTimeout(function () {
+        console.log("window.scrollY", window.scrollY)
+        console.log("firstPanelTopValue", firstPanelTopValue)
+        console.log("2つめ", firstPanelTopValue + panelScrollHeightValue)
+        console.log("3つめ", firstPanelTopValue + panelScrollHeightValue * 2)
+      }, 100)
+    })
+  })
 })
 let count = 0
 
@@ -40,27 +61,22 @@ function handleClick() {
 }
 
 // ラジオボタンの変更イベントを追加
-function addRadioChangeListeners() {
+function addRadioChangeListeners(firstPanelTopValue, panelScrollHeightValue) {
   const radios = document.querySelectorAll('[name="slideshow"]')
   radios.forEach(function (radio, index) {
     radio.addEventListener("change", function () {
-      scrollToSection(index)
+      scrollToSection(index, firstPanelTopValue, panelScrollHeightValue)
     })
   })
 }
 
 // スクロールイベントを追加
-function scrollToSection(index) {
-  const newFunction = document.querySelector("#new-function")
-  const newFunctionRect = newFunction.getBoundingClientRect()
-  const newFunctionInnerTop = window.scrollY + newFunctionRect.top + 148
-
+function scrollToSection(index, firstPanelTopValue, panelScrollHeightValue) {
   const panels = document.querySelectorAll("[data-slider-panel]")
   const panelCount = panels.length
 
   if (index >= 0 && index < panelCount) {
-    const sectionScrollHeight = newFunction.offsetHeight / panelCount
-    const scrollTop = newFunctionInnerTop + sectionScrollHeight * index
+    const scrollTop = firstPanelTopValue + panelScrollHeightValue * index
 
     window.scrollTo({
       top: scrollTop,
@@ -69,14 +85,56 @@ function scrollToSection(index) {
   }
 }
 
-window.addEventListener("scroll", function () {
-  handlePanelVisibility()
-  handlePoincoVisibility()
-  handleScroll()
-  handleScrollPoinco()
-})
+function firstPanelTop() {
+  // 1つ目のpanelのtopの位置を取得
+  const newFunction = document.querySelector("#new-function")
+  const newFunctionInner = document.querySelector("#new-function .inner")
+  const newFunctionRect = newFunction.getBoundingClientRect()
+  const newFunctionpaddingTopValue = parseFloat(
+    window.getComputedStyle(newFunction).paddingTop
+  )
+  const newFunctionBorderTopValue = parseFloat(
+    window.getComputedStyle(newFunction).borderTop
+  )
+  const newFunctionInnerTopValue = parseFloat(
+    window.getComputedStyle(newFunctionInner).top
+  )
+  const firstPanelTop =
+    window.scrollY +
+    newFunctionRect.top +
+    newFunctionpaddingTopValue +
+    newFunctionBorderTopValue -
+    newFunctionInnerTopValue
+  return Math.round(firstPanelTop)
+}
 
-function handlePanelVisibility() {
+function panelScrollHeight() {
+  const newFunction = document.querySelector("#new-function")
+  const newFunctionOffsetHeight = newFunction.offsetHeight
+  const newFunctionpaddingTopValue = parseFloat(
+    window.getComputedStyle(newFunction).paddingTop
+  )
+  const newFunctionpaddingBottomValue = parseFloat(
+    window.getComputedStyle(newFunction).paddingBottom
+  )
+  const newFunctionBorderTopValue = parseFloat(
+    window.getComputedStyle(newFunction).borderTop
+  )
+  const newFunctionInHeight =
+    newFunctionOffsetHeight -
+    newFunctionpaddingTopValue -
+    newFunctionpaddingBottomValue -
+    newFunctionBorderTopValue
+  // data-slider-panelをすべて取得
+  const panels = document.querySelectorAll("[data-slider-panel]")
+  // data-slider-panelの数を取得
+  const panelCount = panels.length
+  // ひとつのpanelのスクロール量
+  const panelScrollHeight = newFunctionInHeight / (panelCount + 1)
+  return Math.round(panelScrollHeight)
+}
+
+function handlePanelVisibility(firstPanelTopValue, panelScrollHeightValue) {
   const newFunction = document.querySelector("#new-function")
   const newFunctionRect = newFunction.getBoundingClientRect()
   // サイト上部からnewFunctionInnerまでの距離
@@ -88,15 +146,14 @@ function handlePanelVisibility() {
   const panelCount = panels.length
   // 親要素に対して、panel1枚あたりの高さを取得
   // (スクロールに余裕を持たせるため親要素はpanelの数+100vhしているため、追加分の100vhをpanel数で引く。)
-  const sectionScrollHeight =
-    window.innerHeight + window.innerHeight / panelCount
+  // const sectionScrollHeight =
+  //   window.innerHeight + window.innerHeight / panelCount
   panels.forEach(function (panel, index) {
     // panelの頭が画面に入る前で、data-sp-showの終わりが画面に入ったら
     var shadowBoxes = document.querySelector("[data-sp-show]")
-    // panelの頭が画面に入ってから、panelの終わりが画面から出るまでの間
     const panelIsVisible =
-      newFunctionInnerTop + sectionScrollHeight * index <= window.scrollY &&
-      newFunctionInnerTop + sectionScrollHeight * (index + 1) > window.scrollY
+      firstPanelTopValue + panelScrollHeightValue * index <= window.scrollY &&
+      firstPanelTopValue + panelScrollHeightValue * (index + 1) > window.scrollY
     if (panelIsVisible) {
       count = index + 1
       document.querySelector("#slide0" + (index + 1)).checked = true
@@ -111,7 +168,7 @@ function handlePanelVisibility() {
       }
     } else if (
       index === 0 &&
-      newFunctionInnerTop + sectionScrollHeight * index > window.scrollY &&
+      firstPanelTopValue + panelScrollHeightValue * index > window.scrollY &&
       isInViewport(shadowBoxes)
     ) {
       panel.classList.add("is-show")
@@ -131,13 +188,6 @@ function handlePoincoVisibility() {
     document.getElementById("js-poinco").classList.add("is-active")
   } else {
     document.getElementById("js-poinco").classList.remove("is-active")
-    if (newFunctionInnerRect.top < 0) {
-      count = 4
-      document.querySelector("#slide03").checked = true
-    } else if (newFunctionInnerRect.top > 0) {
-      count = 0
-      document.querySelector("#slide01").checked = true
-    }
   }
 }
 

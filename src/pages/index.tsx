@@ -95,7 +95,6 @@ const NewFunction = () => {
                 name="slideshow"
                 className="burette-button"
                 id="slide01"
-                checked
               />
               <input
                 type="radio"

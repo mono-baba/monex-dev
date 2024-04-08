@@ -13,18 +13,6 @@ window.addEventListener("load", function () {
     handlePoincoVisibility()
     handleScroll()
     handleScrollPoinco()
-    var timer = null
-    window.addEventListener("scroll", function () {
-      if (timer !== null) {
-        clearTimeout(timer)
-      }
-      timer = setTimeout(function () {
-        console.log("window.scrollY", window.scrollY)
-        console.log("firstPanelTopValue", firstPanelTopValue)
-        console.log("2つめ", firstPanelTopValue + panelScrollHeightValue)
-        console.log("3つめ", firstPanelTopValue + panelScrollHeightValue * 2)
-      }, 100)
-    })
   })
 })
 let count = 0
@@ -161,10 +149,20 @@ function handlePanelVisibility(firstPanelTopValue, panelScrollHeightValue) {
       }
     } else if (
       index === 0 &&
-      firstPanelTopValue + panelScrollHeightValue * index > window.scrollY &&
-      isInViewport(shadowBoxes)
+      firstPanelTopValue + panelScrollHeightValue * index > window.scrollY
     ) {
-      panel.classList.add("is-show")
+      document.querySelector("#slide0" + (index + 1)).checked = true
+      if (isInViewport(shadowBoxes)) {
+        panel.classList.add("is-show")
+      }
+    } else if (
+      index === panelCount - 1 &&
+      firstPanelTopValue + panelScrollHeightValue * index < window.scrollY
+    ) {
+      document.querySelector("#slide0" + (index + 1)).checked = true
+      if (isInViewport(shadowBoxes)) {
+        panel.classList.add("is-show")
+      }
     } else {
       panel.classList.remove("is-show")
     }

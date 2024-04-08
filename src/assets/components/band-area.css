@@ -109,6 +109,11 @@
           max-width: 240px;
           font-size: 1.2rem;
         }
+        > sub {
+          position: absolute;
+          right: -2em;
+          bottom: 1em;
+        }
         > span {
           display: block;
           position: absolute;

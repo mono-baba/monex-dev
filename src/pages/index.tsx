@@ -445,6 +445,7 @@ const FeaturesOfMonex = () => {
                         width={659}
                         height={229}
                       />
+                      <sub>※2</sub>
                       <span>（2024年9月30日まで）</span>
                     </span>
                   </strong>

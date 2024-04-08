@@ -95,3 +95,55 @@
     }
   }
 }
+
+.lead-area {
+  border-top: 3px solid var(--black);
+  padding: 60px 60px 70px;
+  text-align: center;
+  position: relative;
+  @media screen and (max-width: 767px) {
+    border-width: 2px;
+    padding: 50px 20px 50px;
+  }
+  &::before {
+    position: absolute;
+    top: -51px;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    width: 145px;
+    height: 97px;
+    background-image: url("/image/feature/test/img_lead.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+  }
+  @media screen and (max-width: 767px) {
+    &::before {
+      width: 90px;
+      height: 62px;
+      top: -31.8px;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    img {
+      width: 77.87vw;
+    }
+  }
+  .lead {
+    margin-top: 25px;
+    font-weight: var(--font-weight-bold);
+    font-size: 2rem;
+    @media screen and (max-width: 767px) {
+      margin-top: 20px;
+      text-align: left;
+      font-size: 1.4rem;
+    }
+    & + .lead {
+      margin-top: 0;
+      @media screen and (max-width: 767px) {
+        margin-top: 20px;
+      }
+    }
+  }
+}

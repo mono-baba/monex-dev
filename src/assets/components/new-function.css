@@ -1,27 +1,30 @@
 .new-function {
   position: relative;
-  height: calc(400dvh + 290px);
+  height: calc(400dvh + 630px);
   @media screen and (max-width: 767px) {
     height: auto;
-  }
-  &.is-scroll {
-    height: calc(100dvh + 290px);
-    > .inner {
-      position: static;
-    }
-    @media screen and (max-width: 767px) {
-      height: auto;
-    }
   }
   > .inner {
     position: sticky;
     top: 0;
-    height: 100dvh;
+    height: max(100dvh, 900px);
     &::before {
       display: none;
     }
+    @media screen and (max-height: 750px) {
+      top: min(-16.84vw, -230px);
+    }
     @media screen and (max-width: 767px) {
       position: static;
+      height: auto;
+    }
+  }
+  &.is-scroll {
+    /* height: max(100dvh + 290px, 1201px); */
+    > .inner {
+      position: static;
+    }
+    @media screen and (max-width: 767px) {
       height: auto;
     }
   }

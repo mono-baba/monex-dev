@@ -3,24 +3,28 @@ const navItems = [
     name: "3つの新機能",
     url: "#new-function",
     isActive: false,
+    isScroll: false,
     subItems: [],
   },
   {
     name: "マネックス証券の特長",
     url: "#features-of-monex-securities",
     isActive: false,
+    isScroll: true,
     subItems: [],
   },
   {
     name: "キャンペーン",
     url: "#campaign",
     isActive: false,
+    isScroll: true,
     subItems: [],
   },
   {
     name: "口座開設までの流れ",
     url: "#steps-to-opening-an-account",
     isActive: false,
+    isScroll: true,
     subItems: [],
   },
   // 他のナビゲーションアイテム...
@@ -36,8 +40,8 @@ const GlobalNavigation = () => {
             return (
               <li className="item">
                 <a
-                  className={`link js-gnavi-link ${
-                    navItem.isActive ? "is-active" : ""
+                  className={`link${navItem.isActive ? " is-active" : ""}${
+                    navItem.isScroll ? " js-gnavi-link" : ""
                   }`}
                   href={navItem.url}
                 >

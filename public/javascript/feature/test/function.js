@@ -6,7 +6,7 @@ let count = 0
 
 // ハンバーガーメニューのリンクをクリックしたときの処理
 function initializePage() {
-  var gnaviLinks = document.querySelectorAll(".js-gnavi-link")
+  var gnaviLinks = document.querySelectorAll(".js-fixedMenu .link")
   // .js-gnavi-linkに対するクリックイベントのリスナーを設定
   gnaviLinks.forEach(function (gnaviLink) {
     gnaviLink.addEventListener("click", function () {
@@ -16,7 +16,10 @@ function initializePage() {
         .forEach(function (target) {
           target.classList.remove("is-open", "is-show", "is-menuOpen") // 'is-open'と'is-show'と'is-menuOpen'を削除
         })
-      handleClick()
+      // クラス名にjs-gnavi-linkがついていたら
+      if (gnaviLink.classList.contains("js-gnavi-link")) {
+        handleClick()
+      }
     })
   })
 }

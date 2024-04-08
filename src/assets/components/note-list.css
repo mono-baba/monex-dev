@@ -4,8 +4,13 @@
   font-size: 1.2rem;
   color: #333;
   font-weight: 400;
-  &.-number {
-    text-indent: -2em;
-    padding-left: 2em;
+}
+.note-list.-multiple {
+  text-indent: 0;
+  padding-left: 0;
+  display: flex;
+  gap: 0.2em;
+  > span {
+    flex-shrink: 0;
   }
 }

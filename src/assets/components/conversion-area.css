@@ -2,7 +2,7 @@
   text-align: center;
   max-width: 1800px;
   margin-inline: auto;
-  background-color: #fff;
+  background-color: var(--white);
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
   padding: clamp(40px, 5.88vw, 80px) min(1.47vw, 20px)
@@ -15,10 +15,10 @@
   > .title {
     display: inline-block;
     font-size: clamp(2.4rem, 2.94vw, 4rem);
-    font-weight: 900;
+    font-weight: var(--font-weight-strong);
     position: relative;
     text-decoration: underline;
-    text-decoration-color: #f4f8fd;
+    text-decoration-color: var(--marker);
     text-decoration-thickness: 30px;
     text-decoration-skip-ink: none;
     text-underline-offset: -12px;

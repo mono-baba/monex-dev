@@ -1,5 +1,5 @@
 .conversion-button {
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: var(--font-family);
   font-optical-sizing: auto;
   text-align: center;
   display: grid;
@@ -33,7 +33,7 @@
       display: block;
       width: 2px;
       height: 1.3em;
-      background-color: #000;
+      background-color: var(--black);
       border-radius: 3px;
     }
     &::before {

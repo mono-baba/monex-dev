@@ -8,7 +8,6 @@
 @import url("/src/assets/components/title-with-speech-bubble.css");
 @import url("/src/assets/components/heading.css");
 @import url("/src/assets/components/label.css");
-@import url("/src/assets/components/vertical-slider.css");
 @import url("/src/assets/components/note-list.css");
 @import url("/src/assets/components/border-box.css");
 @import url("/src/assets/components/two-columns.css");
@@ -21,32 +20,49 @@
 @import url("/src/assets/components/features-of-monex.css");
 @import url("/src/assets/components/campaign.css");
 @import url("/src/assets/components/step.css");
-@import url("/src/assets/components/test-vertical-slider.css");
+@import url("/src/assets/components/keyframe.css");
 :root {
   --red: #cc0033;
+  --black: #000;
+  --text-link: #1155cc;
+  --white: #fff;
+  --yellow: #ffc700;
+  --account: #ff943e;
+  --nisa: #8ceb94;
+  --border: #707070;
+  --marker: #f4f8fd;
+  --text: #333;
+  --content: #ecf1f7;
+  --font-family: "Noto Sans JP", "Roboto Condensed", "Roboto", "游ゴシック体",
+    yugothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic",
+    sans-serif;
+  --font-weight-thin: 400;
+  --font-weight-normal: 500;
+  --font-weight-bold: 700;
+  --font-weight-strong: 900;
 }
 html {
   scroll-behavior: smooth;
 }
 body {
   font-size: 1.6rem;
-  font-weight: 500;
-  color: #000;
+  font-weight: var(--font-weight-normal);
+  color: var(--black);
 }
 
 a {
-  color: #1155cc;
+  color: var(--black);
 }
 
 main {
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: var(--font-family);
   @media screen and (max-width: 767px) {
     margin-top: 50px;
   }
 }
 
 .lead-area {
-  border-top: 3px solid #000;
+  border-top: 3px solid var(--black);
   padding: 60px 60px 70px;
   text-align: center;
   position: relative;
@@ -81,7 +97,7 @@ main {
   }
   .lead {
     margin-top: 25px;
-    font-weight: bold;
+    font-weight: var(--font-weight-bold);
     font-size: 2rem;
     @media screen and (max-width: 767px) {
       margin-top: 20px;

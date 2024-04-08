@@ -41,7 +41,7 @@
 .cautionary-section {
   display: flex;
   align-items: center;
-  background-color: #fff;
+  background-color: var(--white);
   border-radius: 10px;
   padding: min(2.03vw, 30px);
   margin-top: min(3.38vw, 50px);
@@ -57,7 +57,7 @@
     display: flex;
     align-items: center;
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: var(--font-weight-bold);
     margin-right: 25px;
     @media screen and (max-width: 767px) {
       margin-right: 0;
@@ -76,28 +76,10 @@
   }
   > .note {
     font-size: 1.2rem;
-    color: #333;
-    font-weight: 400;
+    color: var(--text);
+    font-weight: var(--font-weight-thin);
     @media screen and (max-width: 767px) {
       margin-top: 15px;
     }
-  }
-}
-
-@keyframes step_pc {
-  0% {
-    background-position: 0 0;
-  }
-  to {
-    background-position: -3413.5px 0;
-  }
-}
-
-@keyframes step_sp {
-  0% {
-    background-position: 0 0;
-  }
-  to {
-    background-position: -1370px 0;
   }
 }

@@ -1,7 +1,7 @@
 .mv {
   position: relative;
   height: clamp(350px, 41.28vw, 611px);
-  background-color: #ecf1f7;
+  background-color: var(--content);
   background-image: url(/image/feature/test/bg.svg);
   overflow: hidden;
   @media screen and (max-width: 767px) {
@@ -93,67 +93,5 @@
     @media screen and (max-width: 767px) {
       background-image: none;
     }
-  }
-}
-@keyframes move-illust-down {
-  0% {
-    transform: translate(-50%, 0%);
-  }
-  50% {
-    transform: translate(-50%, 2%);
-  }
-  100% {
-    transform: translate(-50%, 0%);
-  }
-}
-@keyframes move-illust-up {
-  0% {
-    transform: translate(-50%, 0%);
-  }
-  50% {
-    transform: translate(-50%, -2%);
-  }
-  100% {
-    transform: translate(-50%, 0%);
-  }
-}
-@keyframes move-illust-down-sp {
-  0% {
-    transform: translate(-50%, 0%);
-  }
-  50% {
-    transform: translate(-50%, 3px);
-  }
-  100% {
-    transform: translate(-50%, 0%);
-  }
-}
-@keyframes move-illust-up-sp {
-  0% {
-    transform: translate(-50%, 0%);
-  }
-  50% {
-    transform: translate(-50%, -3px);
-  }
-  100% {
-    transform: translate(-50%, 0%);
-  }
-}
-@keyframes opacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes title {
-  0% {
-    top: 55%;
-    opacity: 0;
-  }
-  100% {
-    top: 50%;
-    opacity: 1;
   }
 }

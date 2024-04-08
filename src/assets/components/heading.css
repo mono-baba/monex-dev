@@ -1,6 +1,6 @@
 .heading-normal {
   font-size: min(2.94vw, 4rem);
-  font-weight: 900;
+  font-weight: var(--font-weight-strong);
   line-height: 1.35;
   font-feature-settings: "palt";
   @media screen and (max-width: 767px) {
@@ -10,10 +10,10 @@
 }
 
 .heading-band {
-  background-color: #cc0033;
-  color: #fff;
+  background-color: var(--red);
+  color: var(--white);
   font-size: clamp(18px, 2.21vw, 3rem);
-  font-weight: bold;
+  font-weight: var(--font-weight-bold);
   text-align: center;
   padding: clamp(4px, 0.59vw, 8px);
   border-radius: 15px;

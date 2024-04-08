@@ -32,6 +32,8 @@ const MainVisual = () => {
           <img
             src="/image/feature/test/img_title.svg"
             alt="今後のドコモとマネックスの機能連携について"
+            width={532}
+            height={341}
           />
         </h1>
         <span className="mv-image"></span>
@@ -82,32 +84,32 @@ const NewFunction = () => {
     <>
       <section className="new-function section-area" id="new-function">
         <div className="inner">
-          <div className="test-vertical-slider-wrapper">
+          <div className="vertical-slider-wrapper">
             <h2 className="title-with-speech-bubble">
               <span className="speech-bubble">さらにお手軽に！</span>
               <span className="title">3つの新機能</span>
             </h2>
-            <div className="test-vertical-slider" id="js-poinco">
+            <div className="vertical-slider" id="js-poinco">
               <input
                 type="radio"
                 name="slideshow"
-                className="test-burette-button"
+                className="burette-button"
                 id="slide01"
                 checked
               />
               <input
                 type="radio"
                 name="slideshow"
-                className="test-burette-button"
+                className="burette-button"
                 id="slide02"
               />
               <input
                 type="radio"
                 name="slideshow"
-                className="test-burette-button"
+                className="burette-button"
                 id="slide03"
               />
-              <div className="test-vertical-slider-panel" data-slider-panel>
+              <div className="vertical-slider-panel" data-slider-panel>
                 <div className="title-block">
                   <img
                     src="/image/feature/test/number_01.svg"
@@ -126,19 +128,25 @@ const NewFunction = () => {
                   </h3>
                 </div>
                 <div className="image-block poinco-area-mini" data-sp-poinco>
-                  <div className="test-shadow-box" data-sp-show>
+                  <div className="shadow-box" data-sp-show>
                     <img
                       src="/image/feature/test/img_function_01_monex-card.webp"
                       alt=""
+                      width={436}
+                      height={288}
                     />
                     <img
                       src="/image/feature/test/img_function_01_graph.svg"
                       alt=""
+                      width={167}
+                      height={130}
                     />
                     <div>
                       <img
                         src="/image/feature/test/img_function_01_point-01.svg"
                         alt=""
+                        width={512}
+                        height={382}
                       />
                     </div>
                   </div>
@@ -161,7 +169,7 @@ const NewFunction = () => {
                   </p>
                 </div>
               </div>
-              <div className="test-vertical-slider-panel" data-slider-panel>
+              <div className="vertical-slider-panel" data-slider-panel>
                 <div className="title-block">
                   <img
                     src="/image/feature/test/number_02.svg"
@@ -180,30 +188,42 @@ const NewFunction = () => {
                   </h3>
                 </div>
                 <div className="image-block poinco-area-mini" data-sp-poinco>
-                  <div className="test-shadow-box" data-sp-show>
+                  <div className="shadow-box" data-sp-show>
                     <img
                       src="/image/feature/test/img_function_02_read.svg"
                       alt=""
+                      width={512}
+                      height={382}
                     />
                     <img
                       src="/image/feature/test/img_function_02_dpoint.svg"
                       alt=""
+                      width={512}
+                      height={382}
                     />
                     <img
                       src="/image/feature/test/img_function_02_arrow01.svg"
                       alt=""
+                      width={512}
+                      height={382}
                     />
                     <img
                       src="/image/feature/test/img_function_02_yen.svg"
                       alt=""
+                      width={512}
+                      height={382}
                     />
                     <img
                       src="/image/feature/test/img_function_02_arrow02.svg"
                       alt=""
+                      width={512}
+                      height={382}
                     />
                     <img
                       src="/image/feature/test/img_function_02_graph.svg"
                       alt=""
+                      width={512}
+                      height={382}
                     />
                   </div>
                 </div>
@@ -227,7 +247,7 @@ const NewFunction = () => {
                   </ul>
                 </div>
               </div>
-              <div className="test-vertical-slider-panel" data-slider-panel>
+              <div className="vertical-slider-panel" data-slider-panel>
                 <div className="title-block">
                   <img
                     src="/image/feature/test/number_03.svg"
@@ -246,50 +266,72 @@ const NewFunction = () => {
                   </h3>
                 </div>
                 <div className="image-block poinco-area-mini" data-sp-poinco>
-                  <div className="test-shadow-box" data-sp-show>
+                  <div className="shadow-box" data-sp-show>
                     <img
                       src="/image/feature/test/img_function_03_man.svg"
                       alt=""
+                      width={512}
+                      height={382}
                     />
                     <img
                       src="/image/feature/test/img_function_03_z01.svg"
                       alt=""
+                      width={512}
+                      height={382}
                     />
                     <img
                       src="/image/feature/test/img_function_03_z02.svg"
                       alt=""
+                      width={512}
+                      height={382}
                     />
                     <img
                       src="/image/feature/test/img_function_03_z03.svg"
                       alt=""
+                      width={512}
+                      height={382}
                     />
                     <img
                       src="/image/feature/test/img_function_03_sparkling01.svg"
                       alt=""
+                      width={512}
+                      height={382}
                     />
                     <img
                       src="/image/feature/test/img_function_03_sparkling02.svg"
                       alt=""
+                      width={512}
+                      height={382}
                     />
                     <img
                       src="/image/feature/test/img_function_03_sparkling03.svg"
                       alt=""
+                      width={512}
+                      height={382}
                     />
                     <img
                       src="/image/feature/test/img_function_03_sparkling04.svg"
                       alt=""
+                      width={512}
+                      height={382}
                     />
                     <img
                       src="/image/feature/test/img_function_03_coin01.svg"
                       alt=""
+                      width={512}
+                      height={382}
                     />
                     <img
                       src="/image/feature/test/img_function_03_coin02.svg"
                       alt=""
+                      width={512}
+                      height={382}
                     />
                     <img
                       src="/image/feature/test/img_function_03_coin03.svg"
                       alt=""
+                      width={512}
+                      height={382}
                     />
                   </div>
                 </div>
@@ -342,6 +384,8 @@ const FeaturesOfMonex = () => {
                 <img
                   src="/image/feature/test/img_feature_01.webp"
                   alt="外国株式売買手数料、国内株式売買手数料、投資信託売買手数料、0円"
+                  width={860}
+                  height={692}
                 />
                 <div className="details">
                   <p className="note-list">
@@ -369,6 +413,8 @@ const FeaturesOfMonex = () => {
                 <img
                   src="/image/feature/test/img_feature_02.webp"
                   alt="貯まったポイントの使い道は色々！他のポイントに交換、投資信託購入など"
+                  width={860}
+                  height={844}
                 />
                 <div className="details">
                   <p>
@@ -397,6 +443,8 @@ const FeaturesOfMonex = () => {
                       <img
                         src="/image/feature/test/img_feature_max-point.webp"
                         alt="最大2.2％！"
+                        width={659}
+                        height={229}
                       />
                       <span>（2024年9月30日まで）</span>
                     </span>
@@ -420,14 +468,16 @@ const FeaturesOfMonex = () => {
             </section>
             <ol>
               <li className="note-list -multiple">
-                <span>※1</span>ポイント還元率は、積立金額5万円以下の部分について1.1％、5万円超過～7万円以下の部分について0.6％、7万円超過～10万円以下の部分について0.2％です。
+                <span>※1</span>
+                ポイント還元率は、積立金額5万円以下の部分について1.1％、5万円超過～7万円以下の部分について0.6％、7万円超過～10万円以下の部分について0.2％です。
                 <br />
                 なお、1.1%分については、ご利用100円につき1ポイントのほか、1,000円につき1ポイントが加算されて貯まります。
                 <br />
                 0.6%分については1,000円につき6ポイント、0.2%分については1,000円につき2ポイントが加算されて貯まります。（申込みは原則1,000円以上1円単位。毎月100,000円まで）。
               </li>
               <li className="note-list -multiple">
-              <span>※2</span>積立金額によらず、マネックス証券のNISA口座を2023年10月以降に開設された方は2023年10月2日以降のポイント還元率が2.2％に、
+                <span>※2</span>
+                積立金額によらず、マネックス証券のNISA口座を2023年10月以降に開設された方は2023年10月2日以降のポイント還元率が2.2％に、
                 <br />
                 2023年9月までに開設された方は2024年1月4日以降のポイント還元率が1.5％になります。適用期間は2024年9月30日までです。
               </li>
@@ -439,7 +489,12 @@ const FeaturesOfMonex = () => {
                   <br />
                   気軽にスタートできる！
                 </h3>
-                <img src="/image/feature/test/img_feature_03.svg" alt="" />
+                <img
+                  src="/image/feature/test/img_feature_03.svg"
+                  alt=""
+                  width={430}
+                  height={320}
+                />
                 <div className="details">
                   <p>
                     投信つみたてなら100円から新NISAを始められます！
@@ -474,7 +529,12 @@ const FeaturesOfMonex = () => {
                   <br />
                   アプリの利用も可能！
                 </h3>
-                <img src="/image/feature/test/img_feature_04.svg" alt="" />
+                <img
+                  src="/image/feature/test/img_feature_04.svg"
+                  alt=""
+                  width={430}
+                  height={332}
+                />
                 <div className="details">
                   <p>
                     アプリならではの便利機能を追加した、マネックス証券のサービスをスマートフォンで快適に利用・閲覧できる総合アプリ。
@@ -617,7 +677,12 @@ const Step = () => {
                 <div>
                   <span className="number">1</span>
                   <h3 className="title">メール登録</h3>
-                  <img src="/image/feature/test/img_step_01.svg" alt="" />
+                  <img
+                    src="/image/feature/test/img_step_01.svg"
+                    alt=""
+                    width={129}
+                    height={129}
+                  />
                   <p>
                     メールアドレスを登録し、
                     <br />
@@ -629,7 +694,12 @@ const Step = () => {
                 <div>
                   <span className="number">2</span>
                   <h3 className="title">申込みフォーム入力</h3>
-                  <img src="/image/feature/test/img_step_02.svg" alt="" />
+                  <img
+                    src="/image/feature/test/img_step_02.svg"
+                    alt=""
+                    width={129}
+                    height={129}
+                  />
                   <p>
                     案内に従って、
                     <br />
@@ -641,7 +711,12 @@ const Step = () => {
                 <div>
                   <span className="number">3</span>
                   <h3 className="title">本人確認</h3>
-                  <img src="/image/feature/test/img_step_03.svg" alt="" />
+                  <img
+                    src="/image/feature/test/img_step_03.svg"
+                    alt=""
+                    width={129}
+                    height={129}
+                  />
                   <p>
                     本人確認書類の撮影、
                     <br />

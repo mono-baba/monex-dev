@@ -2,13 +2,13 @@
   display: inline-block;
   text-align: center;
   position: relative;
-  background-color: #fff;
+  background-color: var(--white);
   color: var(--red);
   padding-inline: min(1.01vw, 15px) min(2.21vw, 30px);
   height: 46px;
   line-height: 46px;
   font-size: clamp(1.1rem, 1.18vw, 1.6rem);
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   @media screen and (max-width: 767px) {
     display: block;
     max-width: 309px;
@@ -34,7 +34,7 @@
     top: 0;
     right: 0;
     border-width: 23px 13px 23px 0px;
-    border-color: transparent #ecf1f7 transparent transparent;
+    border-color: transparent var(--content) transparent transparent;
     border-style: solid;
   }
   @media screen and (max-width: 767px) {
@@ -52,7 +52,7 @@
       top: 0;
       left: 0;
       border-width: 17px 0 17px 8px;
-      border-color: transparent transparent transparent #ecf1f7;
+      border-color: transparent transparent transparent var(--content);
       border-style: solid;
     }
   }

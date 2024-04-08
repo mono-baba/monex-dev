@@ -49,21 +49,3 @@
     }
   }
 }
-
-@keyframes features_pc {
-  0% {
-    background-position: 0 0;
-  }
-  to {
-    background-position: -2269px 0;
-  }
-}
-
-@keyframes features_sp {
-  0% {
-    background-position: 0 0;
-  }
-  to {
-    background-position: -915px 0;
-  }
-}

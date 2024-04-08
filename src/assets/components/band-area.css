@@ -1,6 +1,6 @@
 .band-area {
   position: relative;
-  background-color: #ffc700;
+  background-color: var(--yellow);
   margin-inline: -20px;
   padding: 50px 20px 56px;
   margin-top: 60px;
@@ -18,9 +18,9 @@
     left: 50%;
     padding-top: 38px;
     transform: translateX(-50%);
-    background-color: #ffc700;
+    background-color: var(--yellow);
     font-size: 2.1rem;
-    font-weight: 900;
+    font-weight: var(--font-weight-strong);
     line-height: 1.5;
     @media screen and (max-width: 768px) {
       font-size: 1.6rem;
@@ -36,7 +36,7 @@
     position: relative;
     z-index: 1;
     font-size: min(1.62vw, 2.4rem);
-    font-weight: bold;
+    font-weight: var(--font-weight-bold);
     max-width: 972px;
     margin-inline: auto;
     line-height: 1.5;
@@ -45,7 +45,7 @@
     }
     @media screen and (max-width: 768px) {
       font-size: min(4.27vw, 1.6rem);
-      font-weight: 500;
+      font-weight: var(--font-weight-normal);
     }
     > span {
       display: block;
@@ -58,10 +58,10 @@
       display: block;
       position: relative;
       font-size: min(2.03vw, 3rem);
-      font-weight: 900;
+      font-weight: var(--font-weight-strong);
       @media screen and (max-width: 768px) {
         font-size: min(5.33vw, 2rem);
-        font-weight: bold;
+        font-weight: var(--font-weight-bold);
       }
       &::after {
         position: absolute;
@@ -72,7 +72,7 @@
         width: 100%;
         height: 23px;
         opacity: 0.5;
-        background-color: #fff;
+        background-color: var(--white);
       }
       @media screen and (max-width: 1180px) {
         &::after {
@@ -99,7 +99,7 @@
         max-width: clamp(300px, 22.43vw, 332px);
         font-size: 1.6rem;
         text-align: center;
-        font-weight: 400;
+        font-weight: var(--font-weight-thin);
         position: relative;
         @media screen and (max-width: 1180px) {
           display: block;

@@ -8,7 +8,7 @@
   }
   .link {
     font-size: 1.4rem;
-    font-weight: bold;
+    font-weight: var(--font-weight-bold);
   }
   .button {
     margin: 0;
@@ -31,7 +31,7 @@
     .l-gnavi {
       .link {
         text-align: left;
-        color: #333333;
+        color: var(--text);
       }
     }
   }

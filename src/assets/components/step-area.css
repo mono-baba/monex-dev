@@ -29,9 +29,9 @@
       }
     }
     > div {
-      border: 3px solid #000;
+      border: 3px solid var(--black);
       border-radius: 20px;
-      background-color: #fff;
+      background-color: var(--white);
       position: relative;
       text-align: center;
       padding: min(3.51vw, 52px) min(1.35vw, 20px) min(2.7vw, 40px);
@@ -46,19 +46,19 @@
         transform: translateX(-50%);
         display: grid;
         place-items: center;
-        background-color: #ffc700;
+        background-color: var(--yellow);
         border-radius: 50%;
         font-size: clamp(2rem, 2.21vw, 3rem);
         width: clamp(46px, 5.15vw, 70px);
         height: clamp(46px, 5.15vw, 70px);
-        font-weight: 900;
+        font-weight: var(--font-weight-strong);
       }
       > .title {
         font-size: min(1.91vw, 2.6rem);
-        font-weight: bold;
+        font-weight: var(--font-weight-bold);
         line-height: 1.385;
         @media screen and (max-width: 767px) {
-          font-weight: 900;
+          font-weight: var(--font-weight-strong);
           font-size: min(6.4vw, 2.4rem);
         }
       }

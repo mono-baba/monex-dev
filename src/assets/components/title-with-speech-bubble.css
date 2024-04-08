@@ -18,7 +18,7 @@
     padding-bottom: 35px;
     padding-inline: 26px;
     background-position: bottom;
-    font-weight: bold;
+    font-weight: var(--font-weight-bold);
     background-size: contain;
     @media screen and (max-width: 767px) {
       font-size: 2.2rem;
@@ -37,10 +37,10 @@
     place-content: center;
     position: relative;
     font-size: clamp(3rem, 3.97vw, 5.4rem);
-    background-color: #fff;
+    background-color: var(--white);
     padding: 11px 87px;
     min-height: 120px;
-    font-weight: 900;
+    font-weight: var(--font-weight-strong);
     line-height: 1.222;
     @media screen and (max-width: 767px) {
       font-size: min(8vw, 3rem);
@@ -57,7 +57,7 @@
       width: calc(100% + 2px);
       height: 3px;
       border-radius: 3px;
-      background-color: #000;
+      background-color: var(--black);
     }
     @media screen and (max-width: 767px) {
       &::before,

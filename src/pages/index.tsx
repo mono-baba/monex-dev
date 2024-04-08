@@ -128,7 +128,7 @@ const NewFunction = () => {
                 <div className="image-block poinco-area-mini" data-sp-poinco>
                   <div className="test-shadow-box" data-sp-show>
                     <img
-                      src="/image/feature/test/img_function_01_monex-card.png"
+                      src="/image/feature/test/img_function_01_monex-card.webp"
                       alt=""
                     />
                     <img
@@ -340,7 +340,7 @@ const FeaturesOfMonex = () => {
                   すべて無料！※
                 </h3>
                 <img
-                  src="/image/feature/test/img_feature_01.png"
+                  src="/image/feature/test/img_feature_01.webp"
                   alt="外国株式売買手数料、国内株式売買手数料、投資信託売買手数料、0円"
                 />
                 <div className="details">
@@ -367,7 +367,7 @@ const FeaturesOfMonex = () => {
                   ポイントがたまる！
                 </h3>
                 <img
-                  src="/image/feature/test/img_feature_02.png"
+                  src="/image/feature/test/img_feature_02.webp"
                   alt="貯まったポイントの使い道は色々！他のポイントに交換、投資信託購入など"
                 />
                 <div className="details">
@@ -395,7 +395,7 @@ const FeaturesOfMonex = () => {
                     NISA口座でのクレカ積立のポイント還元率が
                     <span className="image">
                       <img
-                        src="/image/feature/test/img_feature_max-point.png"
+                        src="/image/feature/test/img_feature_max-point.webp"
                         alt="最大2.2％！"
                       />
                       <span>（2024年9月30日まで）</span>

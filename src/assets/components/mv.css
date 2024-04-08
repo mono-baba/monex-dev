@@ -53,6 +53,9 @@
     @media screen and (max-width: 767px) {
       background-image: url(/image/feature/test/img_mv_01_sp.svg);
     }
+    @media (prefers-reduced-motion: reduce) {
+      animation: opacity 0.5s ease-in-out 1s forwards;
+    }
   }
   > span:nth-of-type(2) {
     background-image: url(/image/feature/test/img_mv_02.svg);
@@ -60,6 +63,9 @@
       move-illust-up 3s ease-in-out infinite;
     @media screen and (max-width: 767px) {
       background-image: url(/image/feature/test/img_mv_02_sp.svg);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      animation: opacity 0.5s ease-in-out 1s forwards;
     }
   }
   > span:nth-of-type(3) {
@@ -69,6 +75,9 @@
     @media screen and (max-width: 767px) {
       background-image: url(/image/feature/test/img_mv_03_sp.svg);
     }
+    @media (prefers-reduced-motion: reduce) {
+      animation: opacity 0.5s ease-in-out 1s forwards;
+    }
   }
   > span:nth-of-type(4) {
     background-image: url(/image/feature/test/img_mv_04.svg);
@@ -76,6 +85,9 @@
       move-illust-up 3s ease-in-out infinite;
     @media screen and (max-width: 767px) {
       background-image: url(/image/feature/test/img_mv_04_sp.svg);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      animation: opacity 0.5s ease-in-out 1s forwards;
     }
   }
   > span:nth-of-type(5) {
@@ -85,6 +97,9 @@
     @media screen and (max-width: 767px) {
       background-image: url(/image/feature/test/img_mv_05_sp.svg);
     }
+    @media (prefers-reduced-motion: reduce) {
+      animation: opacity 0.5s ease-in-out 1s forwards;
+    }
   }
   > span:nth-of-type(6) {
     background-image: url(/image/feature/test/img_mv_06.svg);
@@ -92,6 +107,9 @@
       move-illust-down 3s ease-in-out infinite;
     @media screen and (max-width: 767px) {
       background-image: none;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      animation: opacity 0.5s ease-in-out 1s forwards;
     }
   }
 }

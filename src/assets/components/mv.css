@@ -116,7 +116,7 @@
 
 .lead-area {
   border-top: 3px solid var(--black);
-  padding: 60px 60px 70px;
+  padding: 60px min(4.39vw, 60px) 70px;
   text-align: center;
   position: relative;
   @media screen and (max-width: 767px) {
@@ -151,7 +151,7 @@
   .lead {
     margin-top: 25px;
     font-weight: var(--font-weight-bold);
-    font-size: 2rem;
+    font-size: clamp(1.6rem, 1.39vw, 2rem);
     @media screen and (max-width: 767px) {
       margin-top: 20px;
       text-align: left;

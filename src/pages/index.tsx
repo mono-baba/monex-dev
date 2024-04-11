@@ -273,24 +273,6 @@ const NewFunction = () => {
                       height={382}
                     />
                     <img
-                      src="/image/feature/test/img_function_03_z01.svg"
-                      alt=""
-                      width={512}
-                      height={382}
-                    />
-                    <img
-                      src="/image/feature/test/img_function_03_z02.svg"
-                      alt=""
-                      width={512}
-                      height={382}
-                    />
-                    <img
-                      src="/image/feature/test/img_function_03_z03.svg"
-                      alt=""
-                      width={512}
-                      height={382}
-                    />
-                    <img
                       src="/image/feature/test/img_function_03_sparkling01.svg"
                       alt=""
                       width={512}
@@ -328,6 +310,12 @@ const NewFunction = () => {
                     />
                     <img
                       src="/image/feature/test/img_function_03_coin03.svg"
+                      alt=""
+                      width={512}
+                      height={382}
+                    />
+                    <img
+                      src="/image/feature/test/img_function_03_coin04.svg"
                       alt=""
                       width={512}
                       height={382}

@@ -732,7 +732,7 @@ const Step = () => {
                 +
                 マイナンバー通知カードをお持ちの方、日本国籍の成人で日本に納税をされている方です。
                 <br />
-                ※上記に該当しない方は<a href="">郵送での口座開設</a>
+                ※上記に該当しない方は<a href="https://open.monex.co.jp/open/servlet/ITS/account/AcOpenInfo2#post-area" target="_blank">郵送での口座開設</a>
                 でお申し込みください。※NISA口座の開設にはお時間がかかる場合があります。
               </p>
             </section>

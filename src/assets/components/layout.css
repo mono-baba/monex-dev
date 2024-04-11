@@ -38,3 +38,22 @@ main {
     margin-top: 50px;
   }
 }
+
+/* 990px以上は非表示 */
+@media screen and (min-width: 990px) {
+  .only-tb {
+    display: none;
+  }
+}
+
+/* 990px以下は非表示 */
+@media screen and (max-width: 1024px) {
+  .only-desktop {
+    display: none;
+  }
+}
+@media screen and (max-width: 990px) {
+  .only-laptop {
+    display: none;
+  }
+}

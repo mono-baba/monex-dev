@@ -751,7 +751,7 @@ const Step = () => {
 const Conversion = () => {
   return (
     <>
-      <aside className="conversion-button-area">
+      <aside className="conversion-button-area is-hidden" id="js-scrollFixButton">
         <a className="button-primary -account-small" href="#" target="_blank">
           総合口座を開設する
         </a>

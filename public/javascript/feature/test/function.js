@@ -13,6 +13,7 @@ window.addEventListener("load", function () {
     handlePoincoVisibility()
     handleScroll()
     handleScrollPoinco()
+    handleScrollFixButton()
   })
 })
 let count = 0
@@ -235,4 +236,14 @@ function handleScrollPoinco() {
       box.classList.remove("is-show")
     }
   })
+}
+
+// スクロールがスタートしたら、#js-scrollFixButtonからis-hiddenを削除します
+function handleScrollFixButton() {
+  const scrollFixButton = document.getElementById("js-scrollFixButton")
+  if (window.scrollY === 0) {
+    scrollFixButton.classList.add("is-hidden")
+  } else {
+    scrollFixButton.classList.remove("is-hidden")
+  }
 }

@@ -1,11 +1,21 @@
 .conversion-button-area {
   display: none;
   @media screen and (max-width: 767px) {
+    position: sticky;
+    bottom: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding: 9px 15px 14px;
     gap: 11px;
     background-color: var(--marker);
+    z-index: 1;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s;
+    &.is-hidden {
+      visibility: hidden;
+      opacity: 0;
+    }
   }
 }

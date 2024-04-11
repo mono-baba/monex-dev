@@ -29,7 +29,7 @@ body {
 }
 
 a {
-  color: var(--black);
+  color: var(--text-link);
 }
 
 main {

@@ -534,7 +534,7 @@
         > img {
           position: absolute;
           &:nth-child(1) {
-            width: min(36.17%, 187px);
+            width: min(38.68%, 200px);
             height: auto;
             top: 50%;
             left: 50%;

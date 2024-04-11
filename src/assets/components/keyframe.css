@@ -217,14 +217,14 @@
   75% {
     opacity: 1;
     /* 上に上がる */
-    top: min(5.98%, 31px);
+    top: min(8.32%, 43px);
     left: min(10.81%, 56px);
     transform: none;
   }
   100% {
     opacity: 1;
     /* 上に上がる */
-    top: min(5.98%, 31px);
+    top: min(8.32%, 31px);
     left: min(10.81%, 56px);
     transform: none;
   }
@@ -254,14 +254,14 @@
   75% {
     /* 上に上がる */
     opacity: 1;
-    top: min(5.98%, 31px);
+    top: min(8.32%, 43px);
     right: min(12.55%, 65px);
     transform: none;
   }
   100% {
     /* 上に上がる */
     opacity: 1;
-    top: min(5.98%, 31px);
+    top: min(8.32%, 43px);
     right: min(12.55%, 65px);
     transform: none;
   }

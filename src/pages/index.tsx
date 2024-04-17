@@ -61,11 +61,9 @@ const Lead = () => {
           loading="lazy"
         />
         <p className="lead">
-          マネックス証券株式会社（以下、マネックス証券）は、
-          <br className="only-pc" />
           2024年1月4日（木）より、
           <br className="only-sp" />
-          株式会社 NTTドコモ（以下、NTTドコモ）との業務提携を開始し、
+          マネックス証券はNTTドコモとの業務提携を開始し、
           <br className="only-pc" />
           今後お客様に最も選ばれる次世代の資産形成サービスを、
           <br className="only-tb only-pc" />
@@ -445,13 +443,21 @@ const FeaturesOfMonex = () => {
               </div>
               <div className="conversion-button">
                 <h2 className="title">NISAをはじめるなら</h2>
-                <a className="button-primary -account" href="#" target="_blank">
+                <a
+                  className="button-primary -account"
+                  href="https://open.monex.co.jp/open/servlet/ITS/account/AcOpenInfo2"
+                  target="_blank"
+                >
                   まずは総合口座を開設
                   <wbr />
                   （無料）
                 </a>
                 <h2 className="title">すでに総合口座をお持ちの方</h2>
-                <a className="button-primary -nisa" href="#" target="_blank">
+                <a
+                  className="button-primary -nisa"
+                  href="https://info.monex.co.jp/nisa/apply.html"
+                  target="_blank"
+                >
                   NISA口座を開設する
                   <wbr />
                   （無料）
@@ -533,7 +539,7 @@ const FeaturesOfMonex = () => {
                     <br />
                     初心者でも使いやすくApp Storeで4.3の高評価！
                   </p>
-                  <p className="note-list">※2024年〇月現在</p>
+                  <p className="note-list">※2024年4月現在</p>
                   <a
                     className="button-primary -details"
                     href="https://info.monex.co.jp/tradetool/monex-app/index.html"
@@ -634,7 +640,7 @@ const Campaign = () => {
                   </p>
                   <a
                     className="button-primary -campaign"
-                    href="#"
+                    href="#dummy"
                     target="_blank"
                   >
                     キャンペーン詳細はこちら
@@ -731,7 +737,7 @@ const Step = () => {
                 >
                   郵送での口座開設
                 </a>
-                でお申し込みください。※NISA口座の開設にはお時間がかかる場合があります。
+                でお申込みください。※NISA口座の開設にはお時間がかかる場合があります。
               </p>
             </section>
           </div>
@@ -743,11 +749,19 @@ const Step = () => {
             </h3>
             <div className="conversion-button">
               <h2 className="title">NISAをはじめるなら</h2>
-              <a className="button-primary -account" href="#" target="_blank">
+              <a
+                className="button-primary -account"
+                href="https://open.monex.co.jp/open/servlet/ITS/account/AcOpenInfo2"
+                target="_blank"
+              >
                 まずは総合口座を開設（無料）
               </a>
               <h2 className="title">すでに総合口座をお持ちの方</h2>
-              <a className="button-primary -nisa" href="#" target="_blank">
+              <a
+                className="button-primary -nisa"
+                href="https://info.monex.co.jp/nisa/apply.html"
+                target="_blank"
+              >
                 NISA口座を開設する（無料）
               </a>
             </div>
@@ -765,10 +779,18 @@ const Conversion = () => {
         className="conversion-button-area is-hidden"
         id="js-scrollFixButton"
       >
-        <a className="button-primary -account-small" href="#" target="_blank">
+        <a
+          className="button-primary -account-small"
+          href="https://open.monex.co.jp/open/servlet/ITS/account/AcOpenInfo2"
+          target="_blank"
+        >
           総合口座を開設する
         </a>
-        <a className="button-primary -nisa-small" href="#" target="_blank">
+        <a
+          className="button-primary -nisa-small"
+          href="https://info.monex.co.jp/nisa/apply.html"
+          target="_blank"
+        >
           NISA口座を開設する
         </a>
       </aside>

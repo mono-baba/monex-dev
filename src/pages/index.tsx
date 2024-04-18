@@ -30,7 +30,7 @@ const MainVisual = () => {
       <div className="mv">
         <h1 className="title">
           <img
-            src="/image/feature/test/img_title.svg"
+            src="/image/feature/docomo-cooperation/img_title.svg"
             alt="今後のドコモとマネックスの機能連携について"
             width={532}
             height={341}
@@ -52,7 +52,7 @@ const Lead = () => {
     <>
       <div className="lead-area">
         <img
-          src="/image/feature/test/logo_docomo-monex.svg"
+          src="/image/feature/docomo-cooperation/logo_docomo-monex.svg"
           alt="docomo ✕ monex"
           className="logo"
           width={370}
@@ -113,7 +113,7 @@ const NewFunction = () => {
               <div className="vertical-slider-panel" data-slider-panel>
                 <div className="title-block">
                   <img
-                    src="/image/feature/test/number_01.svg"
+                    src="/image/feature/docomo-cooperation/number_01.svg"
                     alt="01"
                     width={159}
                     height={117}
@@ -131,20 +131,20 @@ const NewFunction = () => {
                 <div className="image-block poinco-area-mini" data-sp-poinco>
                   <div className="shadow-box" data-sp-show>
                     <img
-                      src="/image/feature/test/img_function_01_monex-card.webp"
+                      src="/image/feature/docomo-cooperation/img_function_01_monex-card.webp"
                       alt=""
                       width={436}
                       height={288}
                     />
                     <img
-                      src="/image/feature/test/img_function_01_graph.svg"
+                      src="/image/feature/docomo-cooperation/img_function_01_graph.svg"
                       alt=""
                       width={167}
                       height={130}
                     />
                     <div>
                       <img
-                        src="/image/feature/test/img_function_01_point-01.svg"
+                        src="/image/feature/docomo-cooperation/img_function_01_point-01.svg"
                         alt=""
                         width={512}
                         height={382}
@@ -173,7 +173,7 @@ const NewFunction = () => {
               <div className="vertical-slider-panel" data-slider-panel>
                 <div className="title-block">
                   <img
-                    src="/image/feature/test/number_02.svg"
+                    src="/image/feature/docomo-cooperation/number_02.svg"
                     alt="02"
                     width={159}
                     height={117}
@@ -191,37 +191,37 @@ const NewFunction = () => {
                 <div className="image-block poinco-area-mini" data-sp-poinco>
                   <div className="shadow-box" data-sp-show>
                     <img
-                      src="/image/feature/test/img_function_02_read.svg"
+                      src="/image/feature/docomo-cooperation/img_function_02_read.svg"
                       alt=""
                       width={512}
                       height={382}
                     />
                     <img
-                      src="/image/feature/test/img_function_02_dpoint.svg"
+                      src="/image/feature/docomo-cooperation/img_function_02_dpoint.svg"
                       alt=""
                       width={512}
                       height={382}
                     />
                     <img
-                      src="/image/feature/test/img_function_02_arrow01.svg"
+                      src="/image/feature/docomo-cooperation/img_function_02_arrow01.svg"
                       alt=""
                       width={512}
                       height={382}
                     />
                     <img
-                      src="/image/feature/test/img_function_02_yen.svg"
+                      src="/image/feature/docomo-cooperation/img_function_02_yen.svg"
                       alt=""
                       width={512}
                       height={382}
                     />
                     <img
-                      src="/image/feature/test/img_function_02_arrow02.svg"
+                      src="/image/feature/docomo-cooperation/img_function_02_arrow02.svg"
                       alt=""
                       width={512}
                       height={382}
                     />
                     <img
-                      src="/image/feature/test/img_function_02_graph.svg"
+                      src="/image/feature/docomo-cooperation/img_function_02_graph.svg"
                       alt=""
                       width={512}
                       height={382}
@@ -251,7 +251,7 @@ const NewFunction = () => {
               <div className="vertical-slider-panel" data-slider-panel>
                 <div className="title-block">
                   <img
-                    src="/image/feature/test/number_03.svg"
+                    src="/image/feature/docomo-cooperation/number_03.svg"
                     alt="03"
                     width={159}
                     height={117}
@@ -269,55 +269,55 @@ const NewFunction = () => {
                 <div className="image-block poinco-area-mini" data-sp-poinco>
                   <div className="shadow-box" data-sp-show>
                     <img
-                      src="/image/feature/test/img_function_03_man.svg"
+                      src="/image/feature/docomo-cooperation/img_function_03_man.svg"
                       alt=""
                       width={512}
                       height={382}
                     />
                     <img
-                      src="/image/feature/test/img_function_03_sparkling01.svg"
+                      src="/image/feature/docomo-cooperation/img_function_03_sparkling01.svg"
                       alt=""
                       width={512}
                       height={382}
                     />
                     <img
-                      src="/image/feature/test/img_function_03_sparkling02.svg"
+                      src="/image/feature/docomo-cooperation/img_function_03_sparkling02.svg"
                       alt=""
                       width={512}
                       height={382}
                     />
                     <img
-                      src="/image/feature/test/img_function_03_sparkling03.svg"
+                      src="/image/feature/docomo-cooperation/img_function_03_sparkling03.svg"
                       alt=""
                       width={512}
                       height={382}
                     />
                     <img
-                      src="/image/feature/test/img_function_03_sparkling04.svg"
+                      src="/image/feature/docomo-cooperation/img_function_03_sparkling04.svg"
                       alt=""
                       width={512}
                       height={382}
                     />
                     <img
-                      src="/image/feature/test/img_function_03_coin01.svg"
+                      src="/image/feature/docomo-cooperation/img_function_03_coin01.svg"
                       alt=""
                       width={512}
                       height={382}
                     />
                     <img
-                      src="/image/feature/test/img_function_03_coin02.svg"
+                      src="/image/feature/docomo-cooperation/img_function_03_coin02.svg"
                       alt=""
                       width={512}
                       height={382}
                     />
                     <img
-                      src="/image/feature/test/img_function_03_coin03.svg"
+                      src="/image/feature/docomo-cooperation/img_function_03_coin03.svg"
                       alt=""
                       width={512}
                       height={382}
                     />
                     <img
-                      src="/image/feature/test/img_function_03_coin04.svg"
+                      src="/image/feature/docomo-cooperation/img_function_03_coin04.svg"
                       alt=""
                       width={512}
                       height={382}
@@ -371,7 +371,7 @@ const FeaturesOfMonex = () => {
                   すべて無料！※
                 </h3>
                 <img
-                  src="/image/feature/test/img_feature_01.webp"
+                  src="/image/feature/docomo-cooperation/img_feature_01.webp"
                   alt="外国株式売買手数料、国内株式売買手数料、投資信託売買手数料、0円"
                   width={860}
                   height={692}
@@ -400,7 +400,7 @@ const FeaturesOfMonex = () => {
                   ポイントがたまる！
                 </h3>
                 <img
-                  src="/image/feature/test/img_feature_02.webp"
+                  src="/image/feature/docomo-cooperation/img_feature_02.webp"
                   alt="貯まったポイントの使い道は色々！他のポイントに交換、投資信託購入など"
                   width={860}
                   height={844}
@@ -431,13 +431,13 @@ const FeaturesOfMonex = () => {
                     <span className="image">
                       <picture>
                         <source
-                          srcSet="/image/feature/test/img_feature_max-point_sp.webp"
+                          srcSet="/image/feature/docomo-cooperation/img_feature_max-point_sp.webp"
                           media="(max-width: 767px)"
                           width={485}
                           height={167}
                         />
                         <img
-                          src="/image/feature/test/img_feature_max-point.webp"
+                          src="/image/feature/docomo-cooperation/img_feature_max-point.webp"
                           alt="最大2.2％！"
                           width={659}
                           height={229}
@@ -447,7 +447,7 @@ const FeaturesOfMonex = () => {
                       <span>（2024年9月30日まで）</span>
                       <img
                         className="credit-limit"
-                        src="/image/feature/test/text_credit-limit.svg"
+                        src="/image/feature/docomo-cooperation/text_credit-limit.svg"
                         alt="10万円まで"
                         width={74}
                         height={74}
@@ -503,7 +503,7 @@ const FeaturesOfMonex = () => {
                   気軽にスタートできる！
                 </h3>
                 <img
-                  src="/image/feature/test/img_feature_03.svg"
+                  src="/image/feature/docomo-cooperation/img_feature_03.svg"
                   alt=""
                   width={430}
                   height={320}
@@ -543,7 +543,7 @@ const FeaturesOfMonex = () => {
                   アプリの利用も可能！
                 </h3>
                 <img
-                  src="/image/feature/test/img_feature_04.svg"
+                  src="/image/feature/docomo-cooperation/img_feature_04.svg"
                   alt=""
                   width={430}
                   height={332}
@@ -691,7 +691,7 @@ const Step = () => {
                   <span className="number">1</span>
                   <h3 className="title">メール登録</h3>
                   <img
-                    src="/image/feature/test/img_step_01.svg"
+                    src="/image/feature/docomo-cooperation/img_step_01.svg"
                     alt=""
                     width={129}
                     height={129}
@@ -708,7 +708,7 @@ const Step = () => {
                   <span className="number">2</span>
                   <h3 className="title">申込みフォーム入力</h3>
                   <img
-                    src="/image/feature/test/img_step_02.svg"
+                    src="/image/feature/docomo-cooperation/img_step_02.svg"
                     alt=""
                     width={129}
                     height={129}
@@ -725,7 +725,7 @@ const Step = () => {
                   <span className="number">3</span>
                   <h3 className="title">本人確認</h3>
                   <img
-                    src="/image/feature/test/img_step_03.svg"
+                    src="/image/feature/docomo-cooperation/img_step_03.svg"
                     alt=""
                     width={129}
                     height={129}

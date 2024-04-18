@@ -38,7 +38,7 @@
     width: clamp(20px, 1.91vw, 26px);
     height: clamp(20px, 1.91vw, 26px);
     flex-shrink: 0;
-    background-image: url(/image/feature/test/arrow_button-right.svg);
+    background-image: url(/image/feature/docomo-cooperation/arrow_button-right.svg);
     background-repeat: no-repeat;
     background-size: contain;
     margin-left: 6px;

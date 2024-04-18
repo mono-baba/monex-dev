@@ -1,7 +1,7 @@
 .campaign {
   > .inner {
     &::before {
-      background-image: url("/image/feature/test/loop-text_campaign.svg");
+      background-image: url("/image/feature/docomo-cooperation/loop-text_campaign.svg");
       background-size: 1230px 159px;
       height: 159px;
       animation: campaign_pc 13s linear infinite;
@@ -41,9 +41,9 @@
       }
     }
     > .speech-bubble {
-      background-image: url("/image/feature/test/speech-bubble_campaign.svg");
+      background-image: url("/image/feature/docomo-cooperation/speech-bubble_campaign.svg");
       @media screen and (max-width: 767px) {
-        background-image: url("/image/feature/test/speech-bubble_campaign_sp.svg");
+        background-image: url("/image/feature/docomo-cooperation/speech-bubble_campaign_sp.svg");
         padding-bottom: 40px;
       }
     }
@@ -107,7 +107,7 @@
       display: block;
       width: min(41.22vw, 610px);
       height: min(27.7vw, 410px);
-      background-image: url("/image/feature/test/campaign-banner_coin.svg");
+      background-image: url("/image/feature/docomo-cooperation/campaign-banner_coin.svg");
       background-repeat: no-repeat;
       background-size: contain;
     }
@@ -142,7 +142,7 @@
   height: min(27.77vw, 411px);
   left: auto;
   right: 0;
-  background-image: url("/image/feature/test/campaign-banner_coin_inversion.svg");
+  background-image: url("/image/feature/docomo-cooperation/campaign-banner_coin_inversion.svg");
 }
 @media screen and (max-width: 767px) {
   .campaign-section:nth-of-type(even) .two-columns .campaign-images::before {

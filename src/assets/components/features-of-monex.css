@@ -1,7 +1,7 @@
 .features-of-monex {
   > .inner {
     &::before {
-      background-image: url("/image/feature/test/loop-text_features-of-monex.svg");
+      background-image: url("/image/feature/docomo-cooperation/loop-text_features-of-monex.svg");
       background-size: 2269px 149px;
       height: 149px;
       animation: features_pc 23s linear infinite;
@@ -29,9 +29,9 @@
       }
     }
     > .speech-bubble {
-      background-image: url("/image/feature/test/speech-bubble_features-of-monex.svg");
+      background-image: url("/image/feature/docomo-cooperation/speech-bubble_features-of-monex.svg");
       @media screen and (max-width: 767px) {
-        background-image: url("/image/feature/test/speech-bubble_features-of-monex_sp.svg");
+        background-image: url("/image/feature/docomo-cooperation/speech-bubble_features-of-monex_sp.svg");
       }
     }
   }

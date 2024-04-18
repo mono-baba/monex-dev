@@ -50,7 +50,7 @@
     background-repeat: repeat-x;
     background-position: top;
     top: -60px;
-    background-image: url("/image/feature/test/loop-text_new-function.svg");
+    background-image: url("/image/feature/docomo-cooperation/loop-text_new-function.svg");
     background-size: 1680px 148px;
     height: 148px;
     animation: new-function_pc 16s linear infinite;
@@ -73,7 +73,7 @@
   > .title-with-speech-bubble {
     align-items: center;
     > .speech-bubble {
-      background-image: url("/image/feature/test/speech-bubble_new-function.svg");
+      background-image: url("/image/feature/docomo-cooperation/speech-bubble_new-function.svg");
     }
   }
 }
@@ -105,7 +105,7 @@
     transform: translateX(-50%);
     width: 229px;
     height: 196px;
-    background-image: url("/image/feature/test/poinco-young.webp");
+    background-image: url("/image/feature/docomo-cooperation/poinco-young.webp");
   }
   &::after {
     top: -164px;
@@ -113,7 +113,7 @@
     transform: translateX(50%);
     width: 223px;
     height: 164px;
-    background-image: url("/image/feature/test/poinco-old.webp");
+    background-image: url("/image/feature/docomo-cooperation/poinco-old.webp");
   }
   @media screen and (max-width: 767px) {
     &::before,
@@ -573,10 +573,10 @@
             z-index: 1;
           }
           &::before {
-            background-image: url(/image/feature/test/img_function_01_point-02.svg);
+            background-image: url(/image/feature/docomo-cooperation/img_function_01_point-02.svg);
           }
           &::after {
-            background-image: url(/image/feature/test/img_function_01_point-03.svg);
+            background-image: url(/image/feature/docomo-cooperation/img_function_01_point-03.svg);
           }
           > img {
             position: absolute;
@@ -717,7 +717,7 @@
     left: 0;
     width: min(9.26vw, 137px);
     height: min(8.45vw, 125px);
-    background-image: url("/image/feature/test/poinco-young_mini.webp");
+    background-image: url("/image/feature/docomo-cooperation/poinco-young_mini.webp");
   }
   @media screen and (max-width: 767px) {
     &::before {
@@ -729,7 +729,7 @@
     right: 40px;
     width: min(7.36vw, 109px);
     height: min(9.66vw, 143px);
-    background-image: url("/image/feature/test/poinco-old_mini.webp");
+    background-image: url("/image/feature/docomo-cooperation/poinco-old_mini.webp");
   }
   @media screen and (max-width: 767px) {
     &::after {

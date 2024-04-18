@@ -1,6 +1,6 @@
 import { defineConfig } from "minista"
 
-export const DIR = "test"
+export const DIR = "docomo-cooperation"
 
 export default defineConfig({
   assets: {

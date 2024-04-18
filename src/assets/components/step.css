@@ -1,7 +1,7 @@
 .step {
   > .inner {
     &::before {
-      background-image: url("/image/feature/test/loop-text_step.svg");
+      background-image: url("/image/feature/docomo-cooperation/loop-text_step.svg");
       background-size: 3413.5px 151px;
       height: 151px;
       animation: step_pc 30s linear infinite;
@@ -24,7 +24,7 @@
   }
   & .title-with-speech-bubble {
     > .speech-bubble {
-      background-image: url("/image/feature/test/speech-bubble_step.svg");
+      background-image: url("/image/feature/docomo-cooperation/speech-bubble_step.svg");
       padding-inline: clamp(25px, 2.79vw, 36px);
     }
     @media screen and (max-width: 767px) {
@@ -69,7 +69,7 @@
       width: 21px;
       height: 21px;
       background-size: contain;
-      background-image: url("/image/feature/test/icon_double-circle.svg");
+      background-image: url("/image/feature/docomo-cooperation/icon_double-circle.svg");
       background-repeat: no-repeat;
       margin-right: 10px;
     }

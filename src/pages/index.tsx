@@ -429,14 +429,29 @@ const FeaturesOfMonex = () => {
                   <strong>
                     NISA口座でのクレカ積立のポイント還元率が
                     <span className="image">
-                      <img
-                        src="/image/feature/test/img_feature_max-point.webp"
-                        alt="最大2.2％！"
-                        width={659}
-                        height={229}
-                      />
+                      <picture>
+                        <source
+                          srcSet="/image/feature/test/img_feature_max-point_sp.webp"
+                          media="(max-width: 767px)"
+                          width={485}
+                          height={167}
+                        />
+                        <img
+                          src="/image/feature/test/img_feature_max-point.webp"
+                          alt="最大2.2％！"
+                          width={659}
+                          height={229}
+                        />
+                      </picture>
                       <sub>※2</sub>
                       <span>（2024年9月30日まで）</span>
+                      <img
+                        className="credit-limit"
+                        src="/image/feature/test/text_credit-limit.svg"
+                        alt="10万円まで"
+                        width={74}
+                        height={74}
+                      />
                     </span>
                   </strong>
                 </p>

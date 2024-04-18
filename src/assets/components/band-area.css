@@ -125,6 +125,18 @@
             bottom: -33px;
           }
         }
+        > .credit-limit {
+          position: absolute;
+          top: 0;
+          right: -18%;
+          z-index: -1;
+          width: clamp(65px, 5vw, 74px);
+          @media screen and (max-width: 767px) {
+            width: min(13.07vw, 49px);
+            right: -6%;
+            top: -20%;
+          }
+        }
       }
     }
   }

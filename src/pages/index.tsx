@@ -110,6 +110,15 @@ const NewFunction = () => {
                 className="burette-button"
                 id="slide03"
               />
+              <label className="read-only" htmlFor="slide01">
+                セクション01を表示する
+              </label>
+              <label className="read-only" htmlFor="slide02">
+                セクション02を表示する
+              </label>
+              <label className="read-only" htmlFor="slide03">
+                セクション03を表示する
+              </label>
               <div className="vertical-slider-panel" data-slider-panel>
                 <div className="title-block">
                   <img

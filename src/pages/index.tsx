@@ -401,7 +401,7 @@ const FeaturesOfMonex = () => {
                 </h3>
                 <img
                   src="/image/feature/docomo-cooperation/img_feature_02.webp"
-                  alt="貯まったポイントの使い道は色々！他のポイントに交換、投資信託購入など"
+                  alt="貯まったポイントの使い道は色々！dポイントに交換、投資信託購入など"
                   width={860}
                   height={844}
                 />

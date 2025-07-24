@@ -1,0 +1,372 @@
+@keyframes campaign_pc {
+  0% {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -1230px 0;
+  }
+}
+
+@keyframes campaign_sp {
+  0% {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -464px 0;
+  }
+}
+
+@keyframes features_pc {
+  0% {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -2269px 0;
+  }
+}
+
+@keyframes features_sp {
+  0% {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -915px 0;
+  }
+}
+
+@keyframes move-illust-down {
+  0% {
+    transform: translate(-50%, 0%);
+  }
+  50% {
+    transform: translate(-50%, 2%);
+  }
+  100% {
+    transform: translate(-50%, 0%);
+  }
+}
+@keyframes move-illust-up {
+  0% {
+    transform: translate(-50%, 0%);
+  }
+  50% {
+    transform: translate(-50%, -2%);
+  }
+  100% {
+    transform: translate(-50%, 0%);
+  }
+}
+@keyframes move-illust-down-sp {
+  0% {
+    transform: translate(-50%, 0%);
+  }
+  50% {
+    transform: translate(-50%, 3px);
+  }
+  100% {
+    transform: translate(-50%, 0%);
+  }
+}
+@keyframes move-illust-up-sp {
+  0% {
+    transform: translate(-50%, 0%);
+  }
+  50% {
+    transform: translate(-50%, -3px);
+  }
+  100% {
+    transform: translate(-50%, 0%);
+  }
+}
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes title {
+  0% {
+    top: 55%;
+    opacity: 0;
+  }
+  100% {
+    top: 50%;
+    opacity: 1;
+  }
+}
+
+@keyframes new-function_pc {
+  0% {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -1680px 0;
+  }
+}
+
+@keyframes new-function_sp {
+  0% {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -681px 0;
+  }
+}
+
+@keyframes poinco-mini {
+  0% {
+    opacity: 0;
+    transform: translateY(150%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes opacity01 {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes opacity02 {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes opacity03 {
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes coin {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes step_pc {
+  0% {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -3413.5px 0;
+  }
+}
+
+@keyframes step_sp {
+  0% {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -1370px 0;
+  }
+}
+
+@keyframes function01-card {
+  0% {
+    /* 真ん中 */
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  25% {
+    /* 表示 */
+    opacity: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  50% {
+    /* 左に移る */
+    opacity: 1;
+    top: 50%;
+    left: min(10.81%, 56px);
+    transform: translate(0, -50%);
+  }
+  75% {
+    opacity: 1;
+    /* 上に上がる */
+    top: min(8.32%, 43px);
+    left: min(10.81%, 56px);
+    transform: none;
+  }
+  100% {
+    opacity: 1;
+    /* 上に上がる */
+    top: min(8.32%, 31px);
+    left: min(10.81%, 56px);
+    transform: none;
+  }
+}
+@keyframes function01-graph {
+  0% {
+    /* 非表示 */
+    opacity: 0;
+    top: 50%;
+    right: min(12.55%, 65px);
+    transform: translate(0, -50%);
+  }
+  25% {
+    /* 非表示 */
+    opacity: 0;
+    top: 50%;
+    right: min(12.55%, 65px);
+    transform: translate(0, -50%);
+  }
+  50% {
+    /* 表示 */
+    opacity: 1;
+    top: 50%;
+    right: min(12.55%, 65px);
+    transform: translate(0, -50%);
+  }
+  75% {
+    /* 上に上がる */
+    opacity: 1;
+    top: min(8.32%, 43px);
+    right: min(12.55%, 65px);
+    transform: none;
+  }
+  100% {
+    /* 上に上がる */
+    opacity: 1;
+    top: min(8.32%, 43px);
+    right: min(12.55%, 65px);
+    transform: none;
+  }
+}
+
+@keyframes function01-point {
+  0% {
+    opacity: 0;
+    bottom: -100%;
+  }
+  25% {
+    opacity: 0;
+    bottom: -100%;
+  }
+  50% {
+    opacity: 0;
+    bottom: -100%;
+  }
+  75% {
+    opacity: 1;
+    /* 上に上がる */
+    bottom: 0;
+  }
+  /* 上に上がる */
+  100% {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+@keyframes wave01 {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes wave02 {
+  0% {
+    transform: translateY(0px);
+  }
+  12.5% {
+    transform: translateY(0px);
+  }
+  37.5% {
+    transform: translateY(-10px);
+  }
+  62.5% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes wave03 {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  75% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes wave04 {
+  0% {
+    transform: translateY(0px);
+  }
+  37.5% {
+    transform: translateY(0px);
+  }
+  62.5% {
+    transform: translateY(-10px);
+  }
+  87.5% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes wave05 {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  75% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

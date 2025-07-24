@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="517" height="388" viewBox="0 0 517 388">
+  <g id="グループ_20947" data-name="グループ 20947" transform="translate(-3.328 53.313)">
+    <rect id="長方形_5708" data-name="長方形 5708" width="517" height="388" rx="40" transform="translate(3.328 -53.313)" fill="none"/>
+    <g id="coin" transform="translate(247.952 226.104)">
+      <g id="グループ_20649" data-name="グループ 20649" transform="translate(0 0)">
+        <g id="グループ_20648" data-name="グループ 20648" transform="translate(0)">
+          <ellipse id="楕円形_2410" data-name="楕円形 2410" cx="15.927" cy="9.947" rx="15.927" ry="9.947" transform="translate(5.862 28.976) rotate(-48.851)" fill="#ffc417"/>
+          <ellipse id="楕円形_2411" data-name="楕円形 2411" cx="15.927" cy="9.947" rx="15.927" ry="9.947" transform="translate(0 23.987) rotate(-48.851)" fill="#ffc417"/>
+          <path id="パス_4125" data-name="パス 4125" d="M193.793,157.21a17.842,17.842,0,0,1,7.573-8.73" transform="translate(-180.567 -135.169)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          <path id="パス_4126" data-name="パス 4126" d="M207.686,146.324c3.032-.784,5.841-.422,7.786,1.277,4.136,3.615,2.8,11.915-2.99,18.538s-13.834,9.062-17.971,5.448c-1.97-1.721-2.7-4.5-2.3-7.659" transform="translate(-181.16 -136.067)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          <path id="パス_4127" data-name="パス 4127" d="M206.2,158.368c-3.229,3.7-7.219,5.5-8.908,4.018" transform="translate(-179.338 -131.691)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
+          <path id="パス_4128" data-name="パス 4128" d="M188.36,164.722c-1.15-4.174.683-10.137,5.057-15.143,5.788-6.624,13.834-9.064,17.971-5.448a6.337,6.337,0,0,1,1.142,1.315" transform="translate(-182.596 -137.288)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+        </g>
+      </g>
+      <g id="グループ_20650" data-name="グループ 20650" transform="translate(28.189 20.249)">
+        <circle id="楕円形_2412" data-name="楕円形 2412" cx="1.634" cy="1.634" r="1.634" fill="#fff"/>
+      </g>
+    </g>
+    <g id="coin-2" data-name="coin" transform="translate(91.23 104.452)">
+      <g id="グループ_20661" data-name="グループ 20661" transform="translate(0 0)">
+        <g id="グループ_20660" data-name="グループ 20660" transform="translate(0)">
+          <ellipse id="楕円形_2419" data-name="楕円形 2419" cx="12.752" cy="7.964" rx="12.752" ry="7.964" transform="translate(0 11.913) rotate(-27.847)" fill="#ffc417"/>
+          <ellipse id="楕円形_2420" data-name="楕円形 2420" cx="12.752" cy="7.964" rx="12.752" ry="7.964" transform="translate(3.531 18.349) rotate(-27.847)" fill="#ffc417"/>
+          <path id="パス_4137" data-name="パス 4137" d="M109.64,102.976a11.57,11.57,0,0,1-6.612,3.523" transform="translate(-87.922 -85.408)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          <path id="パス_4138" data-name="パス 4138" d="M100.718,111.723c-2.49-.285-4.487-1.362-5.453-3.191-2.054-3.889,1.329-9.707,7.556-13s12.941-2.8,15,1.085c.978,1.851.724,4.14-.482,6.384" transform="translate(-91.546 -89.579)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+          <path id="パス_4139" data-name="パス 4139" d="M102.8,98.507c2.445-1.292,4.908-1.432,5.5-.314" transform="translate(-88.021 -87.809)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
+          <path id="パス_4140" data-name="パス 4140" d="M120.694,102.083c-.338,3.45-3.42,7.382-8.125,9.868-6.228,3.29-12.941,2.8-15-1.085a5.108,5.108,0,0,1-.477-1.312" transform="translate(-90.492 -85.795)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+        </g>
+      </g>
+      <g id="グループ_20662" data-name="グループ 20662" transform="translate(8.598 11.82)">
+        <circle id="楕円形_2421" data-name="楕円形 2421" cx="1.743" cy="1.743" r="1.743" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

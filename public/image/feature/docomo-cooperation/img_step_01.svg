@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="129" height="129" viewBox="0 0 129 129">
+  <g id="グループ_20302" data-name="グループ 20302" transform="translate(-456 -10598)">
+    <circle id="楕円形_2342" data-name="楕円形 2342" cx="64.5" cy="64.5" r="64.5" transform="translate(456 10598)" fill="#f4f8fd"/>
+    <g id="グループ_20826" data-name="グループ 20826" transform="translate(415.748 10587.738)">
+      <g id="グループ_20816" data-name="グループ 20816" transform="translate(78.409 25.529)">
+        <path id="パス_4309" data-name="パス 4309" d="M131.049,118.659a6.309,6.309,0,0,1-6.29,6.29H84.7a6.309,6.309,0,0,1-6.29-6.29l.046-86.84a6.309,6.309,0,0,1,6.29-6.29H124.8a6.309,6.309,0,0,1,6.29,6.29Z" transform="translate(-78.409 -25.529)" fill="#fff" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <path id="パス_4310" data-name="パス 4310" d="M141.464,148.058" transform="translate(-115.124 -96.874)" fill="#ffc417"/>
+        <g id="グループ_20813" data-name="グループ 20813" transform="translate(21.772 4.022)">
+          <g id="グループ_20812" data-name="グループ 20812">
+            <circle id="楕円形_2448" data-name="楕円形 2448" cx="1.13" cy="1.13" r="1.13"/>
+            <line id="線_251" data-name="線 251" x2="4.561" transform="translate(4.626 1.13)" fill="#fff" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+        </g>
+        <g id="グループ_20814" data-name="グループ 20814" transform="translate(24.031 89.854)">
+          <circle id="楕円形_2449" data-name="楕円形 2449" cx="2.335" cy="2.335" r="2.335" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+        <g id="グループ_20815" data-name="グループ 20815" transform="translate(3.812 10.145)">
+          <path id="パス_4311" data-name="パス 4311" d="M87.535,227.065a1.526,1.526,0,0,0,1.521,1.522H130.9a1.526,1.526,0,0,0,1.522-1.522" transform="translate(-87.535 -153.021)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          <path id="パス_4312" data-name="パス 4312" d="M87.535,51.336a1.526,1.526,0,0,1,1.521-1.522H130.9a1.526,1.526,0,0,1,1.522,1.522" transform="translate(-87.535 -49.814)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+      </g>
+      <g id="グループ_20819" data-name="グループ 20819" transform="translate(93.447 72.337)">
+        <g id="グループ_20818" data-name="グループ 20818">
+          <g id="グループ_20817" data-name="グループ 20817">
+            <path id="パス_4313" data-name="パス 4313" d="M114.408,137.582" transform="translate(-114.408 -137.582)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </g>
+        </g>
+      </g>
+      <g id="グループ_20820" data-name="グループ 20820" transform="translate(97.618 49.952)">
+        <path id="パス_4314" data-name="パス 4314" d="M135.288,96.428V91.183h3.483l-7.189-7.189-7.189,7.189h3.483v5.245" transform="translate(-124.393 -83.994)" fill="#fff" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+      <g id="グループ_20825" data-name="グループ 20825" transform="translate(84.828 66.687)">
+        <g id="グループ_20824" data-name="グループ 20824" transform="translate(0 0)">
+          <g id="グループ_20823" data-name="グループ 20823">
+            <g id="グループ_20821" data-name="グループ 20821">
+              <rect id="長方形_5930" data-name="長方形 5930" width="39.454" height="26.237" rx="4" fill="#ffc417"/>
+              <rect id="長方形_5931" data-name="長方形 5931" width="39.454" height="26.237" rx="4" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            </g>
+            <g id="グループ_20822" data-name="グループ 20822" transform="translate(3.351 3.224)">
+              <path id="パス_4315" data-name="パス 4315" d="M101.8,131.772l16.355,16.078,16.725-16.078" transform="translate(-101.799 -131.772)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+            </g>
+          </g>
+          <line id="線_252" data-name="線 252" x1="8.199" y1="8.109" transform="translate(28.232 15.258)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+        <line id="線_253" data-name="線 253" x1="8.084" y2="8.04" transform="translate(3.351 15.327)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+    </g>
+  </g>
+</svg>

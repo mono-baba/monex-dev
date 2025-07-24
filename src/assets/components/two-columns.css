@@ -1,0 +1,62 @@
+.two-columns {
+  display: grid;
+  grid-template-areas:
+    "title image"
+    "details image";
+  justify-content: center;
+  grid-template-columns: min(36.36vw, 480px) min(32.58vw, 430px);
+  grid-template-rows: auto 1fr;
+  column-gap: clamp(20px, 3.79vw, 50px);
+  max-width: 960px;
+  margin-inline: auto;
+  @media screen and (max-width: 767px) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "image"
+      "details";
+  }
+  > .heading-normal {
+    grid-area: title;
+    @media screen and (max-width: 767px) {
+      text-align: center;
+    }
+  }
+  > img {
+    grid-area: image;
+    margin-inline: auto;
+    min-width: 215px;
+    width: 100%;
+    max-width: 450px;
+    @media screen and (max-width: 767px) {
+      margin-top: 15px;
+    }
+  }
+  > .details {
+    grid-area: details;
+    margin-top: 15px;
+    @media screen and (max-width: 767px) {
+      margin-top: 20px;
+    }
+    > .note-list {
+      margin-top: 20px;
+      @media screen and (max-width: 767px) {
+        margin-top: 15px;
+      }
+    }
+    > .button-primary {
+      margin-left: 0;
+      margin-top: 30px;
+      @media screen and (max-width: 767px) {
+        margin-top: 15px;
+        margin-left: auto;
+      }
+      + .button-primary {
+        margin-top: 20px;
+        @media screen and (max-width: 767px) {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}

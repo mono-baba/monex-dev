@@ -3,46 +3,40 @@ const navItems = [
     name: "3つの新機能",
     url: "#new-function",
     isActive: false,
-    isScroll: false,
     subItems: [],
   },
   {
     name: "マネックス証券の特長",
     url: "#features-of-monex-securities",
     isActive: false,
-    isScroll: true,
     subItems: [],
   },
   {
     name: "キャンペーン",
     url: "#campaign",
     isActive: false,
-    isScroll: true,
     subItems: [],
   },
   {
     name: "口座開設までの流れ",
     url: "#steps-to-opening-an-account",
     isActive: false,
-    isScroll: true,
     subItems: [],
   },
   // 他のナビゲーションアイテム...
 ]
 
-const GlobalNavigation = () => {
+const GlobalNavigationFooter = () => {
   return (
-    <div className="l-gnavi">
-      <nav className="container js-fixedMenu">
+    <div className="l-gnavi -migration">
+      <nav className="container">
         <ul className="list">
           {/* liをnavItemsでmapする */}
           {navItems.map((navItem) => {
             return (
               <li className="item">
                 <a
-                  className={`link${navItem.isActive ? " is-active" : ""}${
-                    navItem.isScroll ? " js-gnavi-link" : ""
-                  }`}
+                  className={`link ${navItem.isActive ? "is-active" : ""}`}
                   href={navItem.url}
                 >
                   {navItem.name}
@@ -72,23 +66,14 @@ const GlobalNavigation = () => {
           })}
         </ul>
       </nav>
-      <div className="buttons js-fixed-button">
-        <div className="conversion-button">
-          <h2 className="title">NISAをはじめるなら</h2>
-          <a className="button-primary -account" href="https://open.monex.co.jp/open/servlet/ITS/account/AcOpenInfo2" target="_blank">
-            まずは総合口座を開設（無料）
-          </a>
-          <h2 className="title">すでに総合口座をお持ちの方</h2>
-          <a className="button-primary -nisa" href="https://info.monex.co.jp/nisa/apply.html" target="_blank">
-            NISA口座を開設する（無料）
-          </a>
-        </div>
-      </div>
-      <p className="close js-menuToggle">
-        <span>CLOSE</span>
-      </p>
+      <button className="pageTop js-pageTop">
+        <img
+          src="/image/feature/common/btn_pagetop_01.png"
+          alt="トップへ戻る"
+        />
+      </button>
     </div>
   )
 }
 
-export default GlobalNavigation
+export default GlobalNavigationFooter

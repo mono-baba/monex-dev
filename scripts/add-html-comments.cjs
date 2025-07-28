@@ -30,13 +30,17 @@ function addHtmlComments() {
     
     // Extract and rebuild the head section with proper comments
     const headStart = content.indexOf('<head>')
-    const headEnd = content.indexOf('</head>') + 7
+    const headEnd = content.indexOf('</head>')
     
-    if (headStart === -1 || headEnd === -1) continue
+    if (headStart === -1 || headEnd === -1) {
+      console.log(`Skipping ${filePath}: head tags not found properly`)
+      console.log(`Head start: ${headStart}, Head end: ${headEnd}`)
+      continue
+    }
     
     const beforeHead = content.substring(0, headStart + 6)
     const afterHead = content.substring(headEnd)
-    const headContent = content.substring(headStart + 6, headEnd - 7)
+    const headContent = content.substring(headStart + 6, headEnd)
     
     // Parse head content and reorganize
     const lines = headContent.split('\n').map(line => line.trim()).filter(line => line)
@@ -103,13 +107,21 @@ function addHtmlComments() {
     
     newHeadContent += '  '
     
-    let newContent = beforeHead + newHeadContent + afterHead
+    let newContent = beforeHead + newHeadContent + '</head>\n  ' + afterHead.replace('</head>', '')
     
     // Convert JSX comments to HTML comments for disclaimer sections
     newContent = newContent.replace(/\{\/\*\s*(<!--\s*disclaimer_num\[[^\]]+\]\s*[^>]*-->\s*)\*\/\}/g, '$1')
     
     // Clean up div wrapper around disclaimer comments
     newContent = newContent.replace(/<div>(<!-- disclaimer_num\[[^\]]+\]  [^>]*-->)<\/div>/g, '$1')
+    
+    // Clean up defer="true" to just defer
+    newContent = newContent.replace(/defer="true"/g, 'defer')
+    
+    // Convert HTML entities that need to be properly encoded
+    newContent = newContent.replace(/×/g, '&times;')
+    newContent = newContent.replace(/®/g, '&reg;')
+    newContent = newContent.replace(/©/g, '&copy;')
     
     fs.writeFileSync(filePath, newContent, 'utf8')
   }

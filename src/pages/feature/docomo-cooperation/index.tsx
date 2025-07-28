@@ -1,27 +1,16 @@
-import { Head } from "minista"
 import GlobalNavigation from "../../../components/GlobalNavigation"
 import GlobalNavigationFooter from "../../../components/GlobalNavigationFooter"
 import FixedConversionButton from "../../../components/docomo-cooperation/FixedConversionButton"
 import Disclaimer from "../../../components/Disclaimer"
-import { getFeatureConfig } from "../../../config/features"
+import FeatureHead from "../../../components/FeatureHead"
+import Header from "../../../components/Header"
+import Footer from "../../../components/Footer"
 
 export default function () {
-  const config = getFeatureConfig("docomo-cooperation")
-  
   return (
     <>
-      <Head>
-        <title>{config.title}</title>
-        <meta name="description" content={config.description} />
-        <meta name="keywords" content={config.keywords} />
-        <meta name="twitter:card" content={config.twitterCard} />
-        <meta name="twitter:site" content={config.twitterSite} />
-        <meta property="og:title" content={config.title.replace(" | マネックス証券", "")} />
-        <meta property="og:url" content={config.ogUrl} />
-        <meta property="og:image" content={config.ogImage} />
-        <meta property="og:site_name" content="マネックス証券" />
-        <meta property="og:description" content={config.description} />
-      </Head>
+      <FeatureHead featureName="docomo-cooperation" />
+      <Header />
       <GlobalNavigation />
       <FixedConversionButton />
       <main>
@@ -35,71 +24,68 @@ export default function () {
       </main>
       <GlobalNavigationFooter />
       <Disclaimer />
+      <Footer />
+      <div className="l-overlay"></div>
     </>
   )
 }
 
 const MainVisual = () => {
   return (
-    <>
-      <div className="mv">
-        <h1 className="title">
-          <img
-            src="/image/feature/docomo-cooperation/img_title.svg"
-            alt="今後のドコモとマネックスの機能連携について"
-            width={532}
-            height={341}
-          />
-        </h1>
-        <span className="mv-image"></span>
-        <span className="mv-image"></span>
-        <span className="mv-image"></span>
-        <span className="mv-image"></span>
-        <span className="mv-image"></span>
-        <span className="mv-image"></span>
-      </div>
-    </>
+    <div className="mv">
+      <h1 className="title">
+        <img
+          src="/image/feature/docomo-cooperation/img_title.svg"
+          alt="今後のドコモとマネックスの機能連携について"
+          width={532}
+          height={341}
+        />
+      </h1>
+      <span className="mv-image"></span>
+      <span className="mv-image"></span>
+      <span className="mv-image"></span>
+      <span className="mv-image"></span>
+      <span className="mv-image"></span>
+      <span className="mv-image"></span>
+    </div>
   )
 }
 
 const Lead = () => {
   return (
-    <>
-      <div className="lead-area">
-        <img
-          src="/image/feature/docomo-cooperation/logo_docomo-monex.svg"
-          alt="docomo ✕ monex"
-          className="logo"
-          width={370}
-          height={50}
-          decoding="async"
-          loading="lazy"
-        />
-        <p className="lead">
-          2024年1月4日（木）より、
-          <br className="only-sp" />
-          マネックス証券はNTTドコモとの業務提携を開始し、
-          <br className="only-pc" />
-          今後お客様に最も選ばれる次世代の資産形成サービスを、
-          <br className="only-tb only-pc" />
-          NTTドコモと共同で創出・提供をしていく予定です。
-        </p>
-        <p className="lead">
-          新NISAの開始に伴ってお客様から多数のご要望をいただいている
-          <br className="only-tb only-pc" />
-          dカード&reg;でのクレカ積立サービスをはじめとした
-          <br className="only-pc" />
-          主なドコモサービスとの機能連携の概要や提供予定時期についてご案内いたします。
-        </p>
-      </div>
-    </>
+    <div className="lead-area">
+      <img
+        src="/image/feature/docomo-cooperation/logo_docomo-monex.svg"
+        alt="docomo &#215; monex"
+        className="logo"
+        width={370}
+        height={50}
+        decoding="async"
+        loading="lazy"
+      />
+      <p className="lead">
+        2024年1月4日（木）より、
+        <br className="only-sp" />
+        マネックス証券はNTTドコモとの業務提携を開始し、
+        <br className="only-pc" />
+        今後お客様に最も選ばれる次世代の資産形成サービスを、
+        <br className="only-tb only-pc" />
+        NTTドコモと共同で創出・提供をしていく予定です。
+      </p>
+      <p className="lead">
+        新NISAの開始に伴ってお客様から多数のご要望をいただいている
+        <br className="only-tb only-pc" />
+        dカード&reg;でのクレカ積立サービスをはじめとした
+        <br className="only-pc" />
+        主なドコモサービスとの機能連携の概要や提供予定時期についてご案内いたします。
+      </p>
+    </div>
   )
 }
 
 const NewFunction = () => {
   return (
-    <>
-      <section className="new-function section-area" id="js-slider">
+    <section className="new-function section-area" id="js-slider">
         <div className="inner" id="new-function" data-slider-in>
           <div className="vertical-slider-wrapper">
             <h2 className="title-with-speech-bubble">
@@ -361,18 +347,16 @@ const NewFunction = () => {
             </div>
           </div>
         </div>
-      </section>
-    </>
+    </section>
   )
 }
 
 const FeaturesOfMonex = () => {
   return (
-    <>
-      <section
-        className="section-area features-of-monex"
-        id="features-of-monex-securities"
-      >
+    <section
+      className="section-area features-of-monex"
+      id="features-of-monex-securities"
+    >
         <div className="inner">
           <h2 className="title-with-speech-bubble">
             <span className="speech-bubble">
@@ -591,15 +575,13 @@ const FeaturesOfMonex = () => {
             </section>
           </div>
         </div>
-      </section>
-    </>
+    </section>
   )
 }
 
 const Campaign = () => {
   return (
-    <>
-      <section className="section-area campaign" id="campaign">
+    <section className="section-area campaign" id="campaign">
         <div className="inner">
           <h2 className="title-with-speech-bubble">
             <span className="speech-bubble">
@@ -692,15 +674,13 @@ const Campaign = () => {
             </p>
           </div>
         </div>
-      </section>
-    </>
+    </section>
   )
 }
 
 const Step = () => {
   return (
-    <>
-      <section className="section-area step" id="steps-to-opening-an-account">
+    <section className="section-area step" id="steps-to-opening-an-account">
         <div className="inner">
           <h2 className="title-with-speech-bubble">
             <span className="speech-bubble">
@@ -806,18 +786,16 @@ const Step = () => {
             </div>
           </div>
         </div>
-      </section>
-    </>
+    </section>
   )
 }
 
 const Conversion = () => {
   return (
-    <>
-      <aside
-        className="conversion-button-area is-hidden"
-        id="js-scrollFixButton"
-      >
+    <aside
+      className="conversion-button-area is-hidden"
+      id="js-scrollFixButton"
+    >
         <a
           className="button-primary -account-small"
           href="https://open.monex.co.jp/open/servlet/ITS/account/AcOpenInfo2"
@@ -832,7 +810,6 @@ const Conversion = () => {
         >
           NISA口座を開設する
         </a>
-      </aside>
-    </>
+    </aside>
   )
 }

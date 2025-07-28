@@ -36,9 +36,9 @@ const GlobalNavigation = () => {
       <nav className="container js-fixedMenu">
         <ul className="list">
           {/* liをnavItemsでmapする */}
-          {navItems.map((navItem) => {
+          {navItems.map((navItem, index) => {
             return (
-              <li className="item">
+              <li key={index} className="item">
                 <a
                   className={`link${navItem.isActive ? " is-active" : ""}${
                     navItem.isScroll ? " js-gnavi-link" : ""
@@ -55,9 +55,9 @@ const GlobalNavigation = () => {
                           孫ページ
                         </a>
                       </li>
-                      {navItem.subItems.map((subItem) => {
+                      {navItem.subItems.map((subItem, subIndex) => {
                         return (
-                          <li className="subItem">
+                          <li key={subIndex} className="subItem">
                             <a className="subLink" href={subItem.url}>
                               {subItem.name}
                             </a>

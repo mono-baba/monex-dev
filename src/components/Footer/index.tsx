@@ -46,7 +46,6 @@ const Footer = () => {
           <p>
             <a
               href="https://info.monex.co.jp/policy/risk/index.html"
-              // style={{ color: #ffffff }}
               target="_blank"
               className="outer"
             >

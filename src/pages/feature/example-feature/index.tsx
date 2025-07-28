@@ -1,14 +1,18 @@
-import { Head } from "minista"
+import FeatureHead from "../../../components/FeatureHead"
 import Header from "../../../components/Header"
 import Footer from "../../../components/Footer"
 
 export default function () {
   return (
     <>
+      <FeatureHead featureName="example-feature" />
+      <Header />
       <main>
         <ExampleMainVisual />
         <ExampleContent />
       </main>
+      <Footer />
+      <div className="l-overlay"></div>
     </>
   )
 }

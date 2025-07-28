@@ -5,8 +5,6 @@ export interface FeatureConfig {
   keywords: string
   ogImage: string
   ogUrl: string
-  twitterCard?: string
-  twitterSite?: string
   // 追加のスタイルとスクリプトの設定
   additionalStyles?: string[]
   additionalScripts?: string[]
@@ -18,15 +16,13 @@ export const FEATURE_NAMES = {
   EXAMPLE_FEATURE: "example-feature"
 } as const
 
-function createFeatureConfig(featureName: string, config: Omit<FeatureConfig, 'name' | 'ogImage' | 'ogUrl' | 'twitterCard' | 'twitterSite' | 'title'> & { title: string }): FeatureConfig {
+function createFeatureConfig(featureName: string, config: Omit<FeatureConfig, 'name' | 'ogImage' | 'ogUrl' | 'title'> & { title: string }): FeatureConfig {
   return {
     ...config,
     name: featureName,
     title: `${config.title} | マネックス証券`,
     ogImage: `https://info.monex.co.jp/image/feature/${featureName}/sns_1200-630.png`,
     ogUrl: `https://info.monex.co.jp/feature/${featureName}/index.html`,
-    twitterCard: "summary_large_image",
-    twitterSite: "@MonexJP",
     // additionalStylesのパスを自動生成
     additionalStyles: config.additionalStyles?.map(fileName => 
       `/style/feature/${featureName}/${fileName}`

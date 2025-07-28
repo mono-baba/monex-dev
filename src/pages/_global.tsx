@@ -31,11 +31,11 @@ export default function ({ url, title, children }: GlobalProps) {
         />
         <meta
           property="og:url"
-          content="https://info.monex.co.jp/feature/docomo-cooperation/index.html"
+          content="https://info.monex.co.jp/feature/nisa-fulluse/index.html"
         />
         <meta
           property="og:image"
-          content="https://info.monex.co.jp/image/feature/docomo-cooperation/sns_1200-630.png"
+          content="https://info.monex.co.jp/image/feature/nisa-fulluse/sns_1200-630.png"
         />
         <meta property="og:site_name" content="マネックス証券" />
         <meta
@@ -53,7 +53,7 @@ export default function ({ url, title, children }: GlobalProps) {
           href="/style/feature/common/parts.css"
           media="all"
         />
-        <link rel="stylesheet" href="/src/assets/style.css" media="all" />
+        <link rel="stylesheet" href="/src/assets/nisa-fulluse/style.css" media="all" />
         <script
           type="text/javascript"
           src="/javascript/js2_8/common/jquery-3.4.1.min.js"
@@ -64,7 +64,7 @@ export default function ({ url, title, children }: GlobalProps) {
         ></script>
         <script
           type="text/javascript"
-          src="/javascript/feature/docomo-cooperation/function.js"
+          src="/javascript/feature/nisa-fulluse/function.js"
         ></script>
       </Head>
       <Header />

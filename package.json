@@ -4,7 +4,8 @@
   "type": "module",
   "scripts": {
     "dev": "minista",
-    "build": "minista build",
+    "build": "npm run build:css && minista build && node scripts/add-html-comments.cjs",
+    "build:css": "node scripts/build-css.js",
     "preview": "minista preview"
   },
   "prettier": {

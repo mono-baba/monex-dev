@@ -2,8 +2,18 @@ import type { GlobalProps } from "minista"
 import { Head } from "minista"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
+import { getFeatureConfig, featureConfigs } from "../config/features"
 
 export default function ({ url, title, children }: GlobalProps) {
+  // URLからfeature名を抽出
+  const featureMatch = url.match(/\/feature\/([^\/]+)/)
+  const featureName = featureMatch ? featureMatch[1] : null
+  
+  // feature設定を取得（featureページの場合のみ）
+  const config = featureName && featureConfigs[featureName] 
+    ? getFeatureConfig(featureName)
+    : null
+  
   return (
     <>
       <Head>
@@ -14,34 +24,23 @@ export default function ({ url, title, children }: GlobalProps) {
         />
         <meta name="format-detection" content="telephone=no" />
         <link rel="shortcut icon" href="/favicon.ico" />
-        <title>ドコモとマネックスの機能連携について | マネックス証券</title>
-        <meta
-          name="description"
-          content="より便利に使いやすく！「dカード®」によるクレカ積立サービスをはじめとしたNTTドコモとの機能連携の概要や提供時期など最新の情報をご案内いたします。"
-        />
-        <meta
-          name="keywords"
-          content="NTTドコモ,マネックス証券,機能連携,資本業務提携,提携・協業"
-        />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@MonexJP" />
-        <meta
-          property="og:title"
-          content="ドコモとマネックスの機能連携について"
-        />
-        <meta
-          property="og:url"
-          content="https://info.monex.co.jp/feature/docomo-cooperation/index.html"
-        />
-        <meta
-          property="og:image"
-          content="https://info.monex.co.jp/image/feature/docomo-cooperation/sns_1200-630.png"
-        />
-        <meta property="og:site_name" content="マネックス証券" />
-        <meta
-          property="og:description"
-          content="より便利に使いやすく！「dカード®」によるクレカ積立サービスをはじめとしたNTTドコモとの機能連携の概要や提供時期など最新の情報をご案内いたします。"
-        />
+        {config && (
+          <>
+            <title>{config.title}</title>
+            <meta name="description" content={config.description} />
+            <meta name="keywords" content={config.keywords} />
+            {config.twitterCard && <meta name="twitter:card" content={config.twitterCard} />}
+            {config.twitterSite && <meta name="twitter:site" content={config.twitterSite} />}
+            <meta
+              property="og:title"
+              content={config.title.replace(" | マネックス証券", "")}
+            />
+            <meta property="og:url" content={config.ogUrl} />
+            <meta property="og:image" content={config.ogImage} />
+            <meta property="og:site_name" content="マネックス証券" />
+            <meta property="og:description" content={config.description} />
+          </>
+        )}
 
         <link
           rel="stylesheet"
@@ -53,19 +52,34 @@ export default function ({ url, title, children }: GlobalProps) {
           href="/style/feature/common/parts.css"
           media="all"
         />
-        <link rel="stylesheet" href="/src/assets/style.css" media="all" />
         <script
           type="text/javascript"
-          src="/javascript/js2_8/common/jquery-3.4.1.min.js"
+          src="/javascript/js2_8/common/jquery-3.7.1.min.js"
+          defer
         ></script>
         <script
           type="text/javascript"
           src="/javascript/feature/common/main.js"
+          defer
         ></script>
-        <script
-          type="text/javascript"
-          src="/javascript/feature/docomo-cooperation/function.js"
-        ></script>
+        
+        {config?.additionalStyles?.map((style, index) => (
+          <link
+            key={`style-${index}`}
+            rel="stylesheet"
+            href={style}
+            media="all"
+          />
+        ))}
+        
+        {config?.additionalScripts?.map((script, index) => (
+          <script
+            key={`script-${index}`}
+            type="text/javascript"
+            src={script}
+            defer
+          ></script>
+        ))}
       </Head>
       <Header />
       {children}

@@ -11,7 +11,7 @@ const Disclaimer = () => {
               </div>
             </div>
           </div>
-          {/* <!-- disclaimer_num[NS01]  2024/01/31 08:45:49 --> */}
+          <div dangerouslySetInnerHTML={{__html: '<!-- disclaimer_num[NS01]  2024/01/31 08:45:49 -->'}} />
           <p className="title">NISA口座の開設およびお取引に関するご留意事項</p>
           <div className="text -large -titleHide">
             <div className="common_disclaimer">
@@ -72,7 +72,7 @@ const Disclaimer = () => {
               </div>
             </div>
           </div>
-          {/* <!-- disclaimer_num[IT01]  2024/01/18 10:59:59 --> */}
+          <div dangerouslySetInnerHTML={{__html: '<!-- disclaimer_num[IT01]  2024/01/18 10:59:59 -->'}} />
           <p className="title">投資信託取引に関する重要事項</p>
           <div className="text -large -titleHide">
             <div className="common_disclaimer">
@@ -111,7 +111,7 @@ const Disclaimer = () => {
               </div>
             </div>
           </div>
-          {/* <!-- disclaimer_num[JS15]  2021/07/02 15:11:17 --> */}
+          <div dangerouslySetInnerHTML={{__html: '<!-- disclaimer_num[JS15]  2021/07/02 15:11:17 -->'}} />
           <p className="title">単元未満株式の取引に関する重要事項</p>
           <div className="text -large -titleHide">
             <div className="common_disclaimer">
@@ -136,7 +136,7 @@ const Disclaimer = () => {
               </div>
             </div>
           </div>
-          {/* <!-- disclaimer_num[SK04]  2022/03/18 15:21:26 --> */}
+          <div dangerouslySetInnerHTML={{__html: '<!-- disclaimer_num[SK04]  2022/03/18 15:21:26 -->'}} />
           <p className="title">
             NISAおよびジュニアNISAにおける国内外上場有価証券取引に関する重要事項
           </p>

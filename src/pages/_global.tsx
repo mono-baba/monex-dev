@@ -1,7 +1,5 @@
 import type { GlobalProps } from "minista"
 import { Head } from "minista"
-import Header from "../components/Header"
-import Footer from "../components/Footer"
 
 export default function ({ url, title, children }: GlobalProps) {
   return (
@@ -67,10 +65,7 @@ export default function ({ url, title, children }: GlobalProps) {
           src="/javascript/feature/docomo-cooperation/function.js"
         ></script>
       </Head>
-      <Header />
       {children}
-      <Footer />
-      <div className="l-overlay"></div>
     </>
   )
 }

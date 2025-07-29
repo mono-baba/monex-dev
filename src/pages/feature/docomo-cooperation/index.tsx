@@ -1,12 +1,15 @@
 import { Head } from "minista"
-import GlobalNavigation from "../components/GlobalNavigation"
-import GlobalNavigationFooter from "../components/GlobalNavigationFooter"
-import FixedConversionButton from "../components/FixedConversionButton"
-import Disclaimer from "../components/Disclaimer"
+import GlobalNavigation from "../../../components/GlobalNavigation"
+import GlobalNavigationFooter from "../../../components/GlobalNavigationFooter"
+import FixedConversionButton from "../../../components/FixedConversionButton"
+import Disclaimer from "../../../components/Disclaimer"
+import Header from "../../../components/Header"
+import Footer from "../../../components/Footer"
 
 export default function () {
   return (
     <>
+      <Header />
       <GlobalNavigation />
       <FixedConversionButton />
       <main>
@@ -20,6 +23,8 @@ export default function () {
       </main>
       <GlobalNavigationFooter />
       <Disclaimer />
+      <Footer />
+      <div className="l-overlay"></div>
     </>
   )
 }

@@ -1,3 +1,6 @@
+.speech-bubble {
+  position: relative;
+}
 .speech-bubble::before,
 .speech-bubble::after {
   --border-width: 1px;

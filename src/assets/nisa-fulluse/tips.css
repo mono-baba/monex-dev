@@ -1,0 +1,40 @@
+.tips {
+  background-color: var(--content-green);
+  @media screen and (max-width: 767px) {
+    /* height: 550px; */
+  }
+  .inner {
+    position: relative;
+    aspect-ratio: 1440 / 810;
+    width: 100%;
+    @media screen and (max-width: 1440px) {
+      width: 100vw;
+    }
+  }
+  .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .slider-nav {
+    display: flex;
+    border: 3px solid var(--black);
+    border-radius: 10px;
+  }
+  .slider-nav button {
+    background-color: var(--white);
+    width: 100%;
+    padding: 28px;
+  }
+  .slider-content [role="tabpanel"] {
+    margin-top: 40px;
+    margin-inline: auto;
+    padding: 40px;
+    max-width: 920px;
+    height: 400px;
+    background-color: var(--white);
+    border-radius: 50px;
+  }
+}

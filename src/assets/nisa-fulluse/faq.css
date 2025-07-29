@@ -4,12 +4,6 @@
     /* height: 550px; */
   }
   .inner {
-    position: relative;
-    aspect-ratio: 1440 / 810;
-    width: 100%;
-    @media screen and (max-width: 1440px) {
-      width: 100vw;
-    }
   }
   .title {
     display: flex;

@@ -4,6 +4,7 @@ import MainVisual from "./MainVisual";
 import Contents from "./Contents"
 import Tips from "./Tips"
 import Faq from "./Faq"
+import RelatedLinks from "./RelatedLinks"
 
 export default function () {
   return (
@@ -13,6 +14,7 @@ export default function () {
         <Contents />
         <Tips />
         <Faq />
+        <RelatedLinks />
       </main>
       {/* <Disclaimer /> */}
     </>

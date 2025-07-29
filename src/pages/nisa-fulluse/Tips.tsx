@@ -12,7 +12,7 @@ const Tips = () => {
               width={520}
               height={68}
               decoding="async"
-              loading="eager"
+              loading="lazy"
               />
           </h2>
           <div className="slider-nav" role="tablist"  aria-labelledby="slider-title">

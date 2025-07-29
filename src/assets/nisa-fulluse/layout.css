@@ -1,0 +1,28 @@
+:root {
+  /* --red: #cc0033;
+  --black: #000;
+  --text-link: #1155cc;
+  --white: #fff;
+  --yellow: #ffc700;
+  --account: #ff943e;
+  --nisa: #8ceb94;
+  --border: #707070;
+  --marker: #f4f8fd;
+  --text: #333;
+  --content: #ecf1f7; */
+  --content-yellow: #ffc700;
+  --content-blue: #005699;
+  --content-green: #206F76;
+  --content-purple: #68339B;
+  --content-max-width: 1440px;
+  --line-height-tight: 1.333;
+}
+a {
+  text-decoration: none;
+}
+summary::marker  {
+  content: "";
+}
+summary::-webkit-details-marker {
+  display: none;
+}

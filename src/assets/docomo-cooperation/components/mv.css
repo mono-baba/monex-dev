@@ -48,7 +48,8 @@
   }
   > span:nth-of-type(1) {
     background-image: url(/image/feature/docomo-cooperation/img_mv_01.svg);
-    animation: opacity 0.5s ease-in-out 1s forwards,
+    animation:
+      opacity 0.5s ease-in-out 1s forwards,
       move-illust-down 4s ease-in-out infinite;
     @media screen and (max-width: 767px) {
       background-image: url(/image/feature/docomo-cooperation/img_mv_01_sp.svg);
@@ -59,7 +60,8 @@
   }
   > span:nth-of-type(2) {
     background-image: url(/image/feature/docomo-cooperation/img_mv_02.svg);
-    animation: opacity 0.5s ease-in-out 1s forwards,
+    animation:
+      opacity 0.5s ease-in-out 1s forwards,
       move-illust-up 3s ease-in-out infinite;
     @media screen and (max-width: 767px) {
       background-image: url(/image/feature/docomo-cooperation/img_mv_02_sp.svg);
@@ -70,7 +72,8 @@
   }
   > span:nth-of-type(3) {
     background-image: url(/image/feature/docomo-cooperation/img_mv_03.svg);
-    animation: opacity 0.5s ease-in-out 1s forwards,
+    animation:
+      opacity 0.5s ease-in-out 1s forwards,
       move-illust-down 4s ease-in-out infinite;
     @media screen and (max-width: 767px) {
       background-image: url(/image/feature/docomo-cooperation/img_mv_03_sp.svg);
@@ -81,7 +84,8 @@
   }
   > span:nth-of-type(4) {
     background-image: url(/image/feature/docomo-cooperation/img_mv_04.svg);
-    animation: opacity 0.5s ease-in-out 1s forwards,
+    animation:
+      opacity 0.5s ease-in-out 1s forwards,
       move-illust-up 3s ease-in-out infinite;
     @media screen and (max-width: 767px) {
       background-image: url(/image/feature/docomo-cooperation/img_mv_04_sp.svg);
@@ -92,7 +96,8 @@
   }
   > span:nth-of-type(5) {
     background-image: url(/image/feature/docomo-cooperation/img_mv_05.svg);
-    animation: opacity 0.5s ease-in-out 1s forwards,
+    animation:
+      opacity 0.5s ease-in-out 1s forwards,
       move-illust-up 3s ease-in-out 0.5s infinite;
     @media screen and (max-width: 767px) {
       background-image: url(/image/feature/docomo-cooperation/img_mv_05_sp.svg);
@@ -103,7 +108,8 @@
   }
   > span:nth-of-type(6) {
     background-image: url(/image/feature/docomo-cooperation/img_mv_06.svg);
-    animation: opacity 0.5s ease-in-out 1s forwards,
+    animation:
+      opacity 0.5s ease-in-out 1s forwards,
       move-illust-down 3s ease-in-out infinite;
     @media screen and (max-width: 767px) {
       background-image: none;

@@ -75,11 +75,19 @@ const GlobalNavigation = () => {
       <div className="buttons js-fixed-button">
         <div className="conversion-button">
           <h2 className="title">NISAをはじめるなら</h2>
-          <a className="button-primary -account" href="https://open.monex.co.jp/open/servlet/ITS/account/AcOpenInfo2" target="_blank">
+          <a
+            className="button-primary -account"
+            href="https://open.monex.co.jp/open/servlet/ITS/account/AcOpenInfo2"
+            target="_blank"
+          >
             まずは総合口座を開設（無料）
           </a>
           <h2 className="title">すでに総合口座をお持ちの方</h2>
-          <a className="button-primary -nisa" href="https://info.monex.co.jp/nisa/apply.html" target="_blank">
+          <a
+            className="button-primary -nisa"
+            href="https://info.monex.co.jp/nisa/apply.html"
+            target="_blank"
+          >
             NISA口座を開設する（無料）
           </a>
         </div>

@@ -12,15 +12,15 @@
   --content: #ecf1f7; */
   --content-yellow: #ffc700;
   --content-blue: #005699;
-  --content-green: #206F76;
-  --content-purple: #68339B;
+  --content-green: #206f76;
+  --content-purple: #68339b;
   --content-max-width: 1440px;
   --line-height-tight: 1.333;
 }
 a {
   text-decoration: none;
 }
-summary::marker  {
+summary::marker {
   content: "";
 }
 summary::-webkit-details-marker {

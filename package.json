@@ -4,11 +4,15 @@
   "type": "module",
   "scripts": {
     "dev": "minista",
-    "build": "minista build",
+    "build": "minista build && node scripts/convert-to-crlf.js",
+    "postbuild": "node scripts/convert-to-crlf.js",
     "preview": "minista preview"
   },
   "prettier": {
-    "semi": false
+    "semi": false,
+    "tabWidth": 2,
+    "useTabs": false,
+    "endOfLine": "crlf"
   },
   "devDependencies": {
     "@types/react": "^18.2.65",

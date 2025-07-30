@@ -26,7 +26,6 @@
     font-size: 4.7rem;
     font-weight: var(--font-weight-bold);
     @media screen and (max-width: 767px) {
-
     }
   }
   .img {

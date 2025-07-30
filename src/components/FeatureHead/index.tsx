@@ -7,7 +7,12 @@ interface FeatureHeadProps {
   featureName: string
 }
 
-const FeatureHead = ({ pageTitle, pageDescription, pageKeywords, featureName }: FeatureHeadProps) => {
+const FeatureHead = ({
+  pageTitle,
+  pageDescription,
+  pageKeywords,
+  featureName,
+}: FeatureHeadProps) => {
   return (
     <Head>
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -18,20 +23,11 @@ const FeatureHead = ({ pageTitle, pageDescription, pageKeywords, featureName }: 
       <meta name="format-detection" content="telephone=no" />
       <link rel="shortcut icon" href="/favicon.ico" />
       <title>{pageTitle} | マネックス証券</title>
-      <meta
-        name="description"
-        content={pageDescription}
-      />
-      <meta
-        name="keywords"
-        content={pageKeywords}
-      />
+      <meta name="description" content={pageDescription} />
+      <meta name="keywords" content={pageKeywords} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@MonexJP" />
-      <meta
-        property="og:title"
-        content={pageTitle}
-      />
+      <meta property="og:title" content={pageTitle} />
       <meta
         property="og:url"
         content={`https://info.monex.co.jp/feature/${featureName}/index.html`}
@@ -41,10 +37,7 @@ const FeatureHead = ({ pageTitle, pageDescription, pageKeywords, featureName }: 
         content={`https://info.monex.co.jp/image/feature/${featureName}/sns_1200-630.png`}
       />
       <meta property="og:site_name" content="マネックス証券" />
-      <meta
-        property="og:description"
-        content={pageDescription}
-      />
+      <meta property="og:description" content={pageDescription} />
 
       <link
         rel="stylesheet"
@@ -56,7 +49,6 @@ const FeatureHead = ({ pageTitle, pageDescription, pageKeywords, featureName }: 
         href="/style/feature/common/parts.css"
         media="all"
       />
-      <link rel="stylesheet" href="/src/assets/style.css" media="all" />
       <script
         type="text/javascript"
         src="/javascript/js2_8/common/jquery-3.4.1.min.js"
@@ -65,6 +57,11 @@ const FeatureHead = ({ pageTitle, pageDescription, pageKeywords, featureName }: 
         type="text/javascript"
         src="/javascript/feature/common/main.js"
       ></script>
+      <link
+        rel="stylesheet"
+        href={`/src/assets/${featureName}/style.css`}
+        media="all"
+      />
       <script
         type="text/javascript"
         src={`/javascript/feature/${featureName}/function.js`}

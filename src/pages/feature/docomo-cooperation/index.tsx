@@ -7,7 +7,8 @@ import Header from "../../../components/Header"
 import Footer from "../../../components/Footer"
 
 const pageTitle = "ドコモとマネックスの機能連携について"
-const pageDescription = "より便利に使いやすく！「dカード®」によるクレカ積立サービスをはじめとしたNTTドコモとの機能連携の概要や提供時期など最新の情報をご案内いたします。"
+const pageDescription =
+  "より便利に使いやすく！「dカード®」によるクレカ積立サービスをはじめとしたNTTドコモとの機能連携の概要や提供時期など最新の情報をご案内いたします。"
 const pageKeywords = "NTTドコモ,マネックス証券,機能連携,資本業務提携,提携・協業"
 const featureName = "docomo-cooperation"
 

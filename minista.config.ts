@@ -1,12 +1,12 @@
 import { defineConfig } from "minista"
 
-export const DIR = "docomo-cooperation"
+export const DIR = "nisa-fulluse"
 
 export default defineConfig({
   assets: {
     outDir: `style/feature/${DIR}`,
     bundle: {
-      outName: "style",
+      // outName: "style",
       // CSSのminify化を無効にする
       minify: false,
     },
@@ -17,6 +17,6 @@ export default defineConfig({
     build: {
       minify: false,
       cssMinify: false,
-    }
-  }
+    },
+  },
 })

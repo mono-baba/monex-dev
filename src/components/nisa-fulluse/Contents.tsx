@@ -197,20 +197,32 @@ export default Contents
 interface FeatureHeaderProps {
   number: string
   title: React.ReactNode
+  img: string
   description?: React.ReactNode
 }
 
 const FeatureHeader = (props: FeatureHeaderProps) => {
-  const { number, title, description } = props
+  const { number, title, img, description } = props
   return (
     <div className="feature-header">
-      <h2 className="title">
-        <span>
-          NISAのおさらい<span className="number">{number}</span>
-        </span>
-        <strong>{title}</strong>
-      </h2>
-      {description && <p className="description">{description}</p>}
+      <div className="bg">
+        <h2 className="title">
+          <span>
+            NISAのおさらい<span className="number">{number}</span>
+          </span>
+          <strong>{title}</strong>
+        </h2>
+          {description && <p className="description">{description}</p>}
+      </div>
+      <img
+        src={img}
+        alt="小判猫"
+        className="img"
+        width={334}
+        height={460}
+        decoding="async"
+        loading="lazy"
+      />
     </div>
   )
 }
@@ -234,6 +246,7 @@ const featureHeaderData: FeatureHeaderProps[] = [
         大きくなります。
       </>
     ),
+    img: '/image/feature/nisa-fulluse/img_kobanneko_feature-01.svg',
   },
   {
     number: "02",
@@ -244,6 +257,7 @@ const featureHeaderData: FeatureHeaderProps[] = [
         年内期限
       </>
     ),
+    img: '/image/feature/nisa-fulluse/img_kobanneko_feature-02.svg',
   },
   {
     number: "03",
@@ -254,5 +268,6 @@ const featureHeaderData: FeatureHeaderProps[] = [
         投資限度額
       </>
     ),
+    img: '/image/feature/nisa-fulluse/img_kobanneko_feature-03.svg',
   },
 ]

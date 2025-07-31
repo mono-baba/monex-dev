@@ -7,7 +7,6 @@
     }
   }
   .feature {
-
   }
   .feature-header {
     margin-inline: auto;
@@ -38,7 +37,7 @@
     text-align: center;
   }
   .feature-body {
-    background-color: #3A8ADC;
+    background-color: #3a8adc;
     border-radius: 50px;
     padding: 120px 96px;
   }

@@ -1,0 +1,4 @@
+main > section > .inner {
+  margin-inline: auto;
+  max-width: var(--content-max-width);
+}

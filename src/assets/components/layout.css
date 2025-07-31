@@ -10,8 +10,9 @@
   --marker: #f4f8fd;
   --text: #333;
   --content: #ecf1f7;
-  --font-family: "Noto Sans JP", "Roboto Condensed", "Roboto", "游ゴシック体",
-    yugothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic",
+  --font-family:
+    "Noto Sans JP", "Roboto Condensed", "Roboto", "游ゴシック体", yugothic,
+    "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic",
     sans-serif;
   --font-weight-thin: 400;
   --font-weight-normal: 500;

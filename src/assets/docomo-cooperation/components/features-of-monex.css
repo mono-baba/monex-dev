@@ -1,0 +1,51 @@
+.features-of-monex {
+  > .inner {
+    &::before {
+      background-image: url("/image/feature/docomo-cooperation/loop-text_features-of-monex.svg");
+      background-size: 2269px 149px;
+      height: 149px;
+      animation: features_pc 23s linear infinite;
+      top: -10px;
+    }
+    @media screen and (max-width: 767px) {
+      &::before {
+        background-size: 915px 60px;
+        animation: features_sp 19s linear infinite;
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      &::before {
+        animation: none;
+      }
+    }
+  }
+  & .title-with-speech-bubble {
+    @media screen and (max-width: 767px) {
+      margin-bottom: -50px;
+    }
+    @media screen and (max-width: 767px) {
+      > .title {
+        min-height: 100px;
+      }
+    }
+    > .speech-bubble {
+      background-image: url("/image/feature/docomo-cooperation/speech-bubble_features-of-monex.svg");
+      @media screen and (max-width: 767px) {
+        background-image: url("/image/feature/docomo-cooperation/speech-bubble_features-of-monex_sp.svg");
+      }
+    }
+  }
+  .conversion-button {
+    margin-top: clamp(20px, 3.68vw, 50px);
+  }
+  .border-box + ol {
+    max-width: 1200px;
+    margin-inline: auto;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    @media screen and (max-width: 767px) {
+      margin-top: 15px;
+      margin-bottom: 20px;
+    }
+  }
+}

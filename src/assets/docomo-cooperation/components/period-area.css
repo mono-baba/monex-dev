@@ -1,0 +1,59 @@
+.period-area {
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  background-color: var(--white);
+  color: var(--red);
+  padding-inline: min(1.01vw, 15px) min(2.21vw, 30px);
+  height: 46px;
+  line-height: 46px;
+  font-size: clamp(1.1rem, 1.18vw, 1.6rem);
+  font-weight: var(--font-weight-bold);
+  @media screen and (max-width: 767px) {
+    display: block;
+    max-width: 309px;
+    height: 34px;
+    line-height: 34px;
+    font-size: min(3.1vw, 1.2rem);
+    padding-inline: min(2.93vw, 11px);
+    margin-inline: auto;
+  }
+  > span {
+    line-height: 0;
+    font-size: clamp(1.2rem, 1.47vw, 2rem);
+    @media screen and (max-width: 767px) {
+      font-size: min(3.9vw, 1.6rem);
+    }
+  }
+  &:after {
+    position: absolute;
+    content: "";
+    width: 0px;
+    height: 0px;
+    /* z-index: 1; */
+    top: 0;
+    right: 0;
+    border-width: 23px 13px 23px 0px;
+    border-color: transparent var(--content) transparent transparent;
+    border-style: solid;
+  }
+  @media screen and (max-width: 767px) {
+    &:after {
+      border-width: 17px 8px 17px 0px;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    &:before {
+      position: absolute;
+      content: "";
+      width: 0px;
+      height: 0px;
+      /* z-index: 1; */
+      top: 0;
+      left: 0;
+      border-width: 17px 0 17px 8px;
+      border-color: transparent transparent transparent var(--content);
+      border-style: solid;
+    }
+  }
+}

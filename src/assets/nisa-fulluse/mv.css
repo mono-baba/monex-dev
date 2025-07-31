@@ -6,7 +6,7 @@
   }
   .inner {
     position: relative;
-    aspect-ratio: 1440 / 810;
+    aspect-ratio: 1440 / 746;
     width: 100%;
     @media screen and (max-width: 1440px) {
       width: 100vw;
@@ -51,5 +51,30 @@
     @media screen and (max-width: 1440px) {
       width: 100vw;
     }
+  }
+  .scroll-label {
+    position: absolute;
+    inset-inline: 0;
+    bottom: 16px;
+    margin: auto;
+    display: inline-block;
+    width: fit-content;
+    opacity: 0;
+    animation: fadeSlideIn 3.3s ease-out infinite;
+    animation-fill-mode: both;
+  }
+}
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

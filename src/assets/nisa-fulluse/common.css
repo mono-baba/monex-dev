@@ -1,3 +1,7 @@
+main > section:not(.mv, .related-links) {
+  padding-top: 160px;
+  background-color: var(--content-light-blue);
+}
 main > section > .inner {
   margin-inline: auto;
   max-width: var(--content-max-width);

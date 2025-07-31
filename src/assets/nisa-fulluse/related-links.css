@@ -1,13 +1,13 @@
 .related-links {
-  /* height: clamp(350px, 41.28vw, 611px); */
   background-color: var(--content-yellow);
   @media screen and (max-width: 767px) {
-    /* height: 550px; */
   }
   .inner {
     position: relative;
-    aspect-ratio: 1440 / 810;
+    aspect-ratio: 1440 / 746;
     width: 100%;
+    background-image: url(/image/feature/nisa-fulluse/img_kobanneko_related-links.svg);
+    background-size: contain;
     @media screen and (max-width: 1440px) {
       width: 100vw;
     }

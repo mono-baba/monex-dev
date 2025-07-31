@@ -6,8 +6,8 @@
   }
   .inner {
     position: relative;
-    aspect-ratio: 1440 / 746;
     width: 100%;
+    height: 100dvh;
     @media screen and (max-width: 1440px) {
       width: 100vw;
     }
@@ -45,9 +45,11 @@
   }
   .mv-character .img {
     position: absolute;
-    inset: 0;
+    inset-inline: 0;
+    bottom: 0;
     display: block;
     margin-inline: auto;
+    aspect-ratio: 1440 / 746;
     @media screen and (max-width: 1440px) {
       width: 100vw;
     }

@@ -1,3 +1,5 @@
+import ArrowRoundedButtonLink from "../ArrowRoundedButtonLink"
+
 const RelatedLinks = () => {
   return (
     <>
@@ -12,9 +14,9 @@ const RelatedLinks = () => {
             <br />
             取り組んでいます
           </h2>
-          <a href="#dummy" className="related-link">
+          <ArrowRoundedButtonLink href="#dummy">
             特設ウェブサイトを見る
-          </a>
+          </ArrowRoundedButtonLink>
         </div>
       </section>
     </>

@@ -1,3 +1,4 @@
+import ArrowRoundedButtonLink from "../ArrowRoundedButtonLink"
 import CommonHeader, { CommonHeaderProps } from "./CommonHeader"
 
 const Contents = () => {
@@ -160,31 +161,37 @@ const Contents = () => {
                     <br />
                     NISAを利用した投資では非課税となるメリットがあります。
                   </p>
-                  <figure className="h-mt60-pc border-box">
-                    <figcaption>
-                      <span className="highlight-title">年間投資枠
-                        資産運用で
-                        <br />
-                          10万円の利益が出た場合
+                  <div className="h-mt60-pc border-box">
+                    <h3 className="text-center">
+                      <span className="highlight-title">資産運用で10万円の利益が出た場合
                       </span>
-                    </figcaption>
-                    {/* TODO アニメーションだった場合は画像からテキスト＋svgなどへ修正 */}
+                    </h3>
                     <img
                       src="/image/feature/nisa-fulluse/img_feature-03_02.webp"
                       alt="例 投資をして10万円の収益が出た場合 NISAを利用しなかった場合：収益の約20%（※）が課税されるので受け取れるのは約8万円 NISAを利用していた場合：収益に課税されないので受け取れるのは約10万円（確定申告不要）"
                     />
-                  </figure>
+                  </div>
                 </section>
               </section>
             </div>
           </section>
           <div className="feature-cta">
-            <p className="lead">
-              まずは
-              <br />
-              <strong>現在のNISA投資額</strong>を確認してみましょう。
-            </p>
-            <a href="#dummy" className="h-mt30-pc">現在のNISA投資額を確認</a>
+            <div>
+              <p className="lead">
+                まずは
+                <br />
+                <strong>現在のNISA投資額</strong>を確認してみましょう。
+              </p>
+              <ArrowRoundedButtonLink href="#dummy" className="h-mt30-pc">現在のNISA投資額を確認</ArrowRoundedButtonLink>
+            </div>
+            <img
+              src="/image/feature/nisa-fulluse/img_feature-cta_01.svg"
+              alt=""
+              width={199}
+              height={192}
+              loading="lazy"
+              decoding="async"
+            />
           </div>
         </div>
       </section>

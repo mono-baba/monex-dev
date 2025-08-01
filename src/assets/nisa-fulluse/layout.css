@@ -17,10 +17,42 @@ summary::marker  {
 summary::-webkit-details-marker {
   display: none;
 }
+
+/* 全体縮小 */
 #scale-wrapper {
   @media screen and (max-width: 1440px) {
     transform-origin: top left;
     width: var(--content-max-width);
     margin: 0 auto;
+  }
+}
+
+/* summary details アコーディオンアニメーション */
+details {
+  &::details-content {
+    transition:
+      height 0.4s,
+      opacity 0.4s,
+      content-visibility 0.4s allow-discrete;
+    height: 0;
+    opacity: 0;
+    overflow: clip;
+  }
+  &[open]::details-content {
+    opacity: 1;
+  }
+}
+@supports (interpolate-size: allow-keywords) {
+  :root {
+    interpolate-size: allow-keywords;
+  }
+  details[open]::details-content {
+    height: auto;
+  }
+}
+@supports not (interpolate-size: allow-keywords) {
+  details[open]::details-content {
+    height: 150px;
+    overflow-y: scroll;
   }
 }

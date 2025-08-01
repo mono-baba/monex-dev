@@ -9,22 +9,55 @@
   }
 
   .slider-nav {
+    --slider-nav-button-bg: var(--white);
+    --slider-nav-button-border-radius: 10px;
+
     display: flex;
-    border: 3px solid var(--black);
-    border-radius: 10px;
+    border: 1px solid var(--black);
+    border-radius: var(--slider-nav-button-border-radius);
   }
   .slider-nav button {
-    background-color: var(--white);
+    background-color: var(--slider-nav-button-bg);
     width: 100%;
-    padding: 28px;
+    padding: 25px;
+    border: 1px solid var(--black);
+    font-size: 1.8rem;
+    font-weight: var(--font-weight-bold);
   }
-  .slider-content [role="tabpanel"] {
-    margin-top: 40px;
-    margin-inline: auto;
-    padding: 40px;
-    max-width: var(--content-small-width);
-    height: 400px;
-    background-color: var(--white);
-    border-radius: 50px;
-  }
+    .slider-nav button:first-child {
+      border-top-left-radius: var(--slider-nav-button-border-radius);
+      border-bottom-left-radius: var(--slider-nav-button-border-radius);
+    }
+    .slider-nav button:last-child {
+      border-top-right-radius: var(--slider-nav-button-border-radius);
+      border-bottom-right-radius: var(--slider-nav-button-border-radius);
+    }
+    .slider-nav button[aria-selected="true"] {
+      --slider-nav-button-bg: var(--text-bg-yellow);
+    }
+    .slider-content [role="tabpanel"] {
+      margin-top: 40px;
+      margin-inline: auto;
+      padding: 40px;
+      max-width: var(--content-small-width);
+      background-color: var(--white);
+      border: 2px solid var(--black);
+      border-radius: 50px;
+    }
+    .slider-content h3 {
+      font-size: 4rem;
+      line-height: 1.5;
+      margin-bottom: 1em;
+    }
+    .slider-content section:has(> h4) {
+      margin-top: 48px;
+    }
+    .slider-content h4 {
+      font-size: 2.4rem;
+      line-height: 1.5;
+      border-left: 4px solid var(--content-light-blue);
+      margin-bottom: 1em;
+      padding-left: 16px;
+    }
+
 }

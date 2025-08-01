@@ -167,6 +167,8 @@
           line-height: 1.429;
         }
   .feature-cta {
+    display: flex;
+    justify-content: space-between;
     margin-top: var(--section-spacing);
     margin-inline: auto;
     padding: 60px 56px;
@@ -175,17 +177,15 @@
     border: 2px solid var(--black);
     border-radius: 20px;
   }
-  a {
-    display: flex;
-    margin-inline: auto;
-    width: fit-content;
-    min-width: 520px;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--white);
-    color: var(--black);
-    border: 3px solid var(--black);
-    border-radius: 100px;
-    padding: 18px;
-  }
+    .feature-cta > div {
+      padding-left: 36px;
+    }
+    .feature-cta .arrow-rounded-button-link {
+      min-width: 464px;
+      font-size: 2.8rem;
+      margin-left: 32px;
+    }
+    .feature-cta .arrow-rounded-button-link::after {
+      right: 20px;
+    }
 }

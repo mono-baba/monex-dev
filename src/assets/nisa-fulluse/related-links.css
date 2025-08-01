@@ -8,9 +8,6 @@
     width: 100%;
     background-image: url(/image/feature/nisa-fulluse/img_kobanneko_related-links.svg);
     background-size: contain;
-    @media screen and (max-width: 1440px) {
-      width: 100vw;
-    }
   }
   .title {
     position: relative;
@@ -22,8 +19,6 @@
     text-orientation: upright;
     font-size: 4.7rem;
     font-weight: var(--font-weight-bold);
-    @media screen and (max-width: 767px) {
-    }
   }
   .img {
     position: absolute;
@@ -34,21 +29,10 @@
       width: 100vw;
     }
   }
-  .related-link {
+  .arrow-rounded-button-link {
     position: absolute;
-    margin: auto;
     right: 120px;
     bottom: 120px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--white);
-    border-radius: 100px;
-    color: var(--black);
-    border: 3px solid var(--black);
-    width: 320px;
-    height: 64px;
-    font-size: 2rem;
-    line-height: 1.6;
+    padding-right: 60px;
   }
 }

@@ -7,6 +7,10 @@ main > section > .inner {
   max-width: var(--content-max-width);
 }
 
+.text-center {
+  text-align: center;
+}
+
 .animation-spacing {
   margin-top: 400px;
 }
@@ -60,32 +64,3 @@ main > section > .inner {
     font-size: 1.8rem;
     line-height: 1.5;
   }
-
-details {
-  &::details-content {
-    transition:
-      height 0.4s,
-      opacity 0.4s,
-      content-visibility 0.4s allow-discrete;
-    height: 0;
-    opacity: 0;
-    overflow: clip;
-  }
-  &[open]::details-content {
-    opacity: 1;
-  }
-}
-@supports (interpolate-size: allow-keywords) {
-  :root {
-    interpolate-size: allow-keywords;
-  }
-  details[open]::details-content {
-    height: auto;
-  }
-}
-@supports not (interpolate-size: allow-keywords) {
-  details[open]::details-content {
-    height: 150px;
-    overflow-y: scroll;
-  }
-}

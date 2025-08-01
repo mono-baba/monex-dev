@@ -1,10 +1,6 @@
 .faq {
-  background-color: var(--content-purple);
-  @media screen and (max-width: 767px) {
-    /* height: 550px; */
-  }
-  .inner {
-  }
+  padding-block: var(--section-spacing);
+
   .title {
     display: flex;
     flex-direction: column;

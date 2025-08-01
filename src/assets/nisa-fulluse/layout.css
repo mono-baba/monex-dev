@@ -1,19 +1,11 @@
 :root {
-  /* --red: #cc0033;
-  --black: #000;
-  --text-link: #1155cc;
-  --white: #fff;
-  --yellow: #ffc700;
-  --account: #ff943e;
-  --nisa: #8ceb94;
-  --border: #707070;
-  --marker: #f4f8fd;
-  --text: #333;
-  --content: #ecf1f7; */
+  --text-bg-yellow: #ffc417;
   --content-yellow: #ffc700;
   --content-light-blue: #33b0ff;
   --content-max-width: 1440px;
+  --content-width: 1200px;
   --line-height-tight: 1.333;
+  --section-spacing: 160px;
 }
 a {
   text-decoration: none;
@@ -24,17 +16,10 @@ summary::marker  {
 summary::-webkit-details-marker {
   display: none;
 }
-
-html, body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  width: 100%;
-}
 #scale-wrapper {
   @media screen and (max-width: 1440px) {
     transform-origin: top left;
-    width: 1440px;
+    width: var(--content-max-width);
     margin: 0 auto;
   }
 }

@@ -16,7 +16,7 @@ const Tips = () => {
             />
           </h2>
           <div
-            className="slider-nav"
+            className="h-mt80-pc slider-nav"
             role="tablist"
             aria-labelledby="slider-title"
           >

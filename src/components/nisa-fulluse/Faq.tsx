@@ -14,7 +14,7 @@ const Faq = () => {
               loading="lazy"
             />
           </h2>
-          <ul className="faq-list">
+          <ul className="h-mt80-pc faq-list">
             {faqData.map((item, index) => (
               <li key={index}>
                 <details>

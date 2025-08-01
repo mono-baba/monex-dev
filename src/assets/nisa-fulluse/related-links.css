@@ -20,9 +20,6 @@
     margin-left: auto;
     writing-mode: vertical-rl;
     text-orientation: upright;
-    text-decoration: underline;
-    text-decoration-thickness: 4px;
-    text-underline-offset: 6px;
     font-size: 4.7rem;
     font-weight: var(--font-weight-bold);
     @media screen and (max-width: 767px) {
@@ -40,14 +37,18 @@
   .related-link {
     position: absolute;
     margin: auto;
-    left: 0;
-    top: calc(50% - 180px);
+    right: 120px;
+    bottom: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: var(--white);
-    border-radius: 100%;
-    aspect-ratio: 1 / 1;
-    width: 360px;
+    border-radius: 100px;
+    color: var(--black);
+    border: 3px solid var(--black);
+    width: 320px;
+    height: 64px;
+    font-size: 2rem;
+    line-height: 1.6;
   }
 }

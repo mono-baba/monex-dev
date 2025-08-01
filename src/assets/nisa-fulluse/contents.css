@@ -1,73 +1,221 @@
 .features {
-  @media screen and (max-width: 767px) {
-  }
-  .inner {
-    @media screen and (max-width: 1440px) {
-    }
-  }
   .feature {
+    padding-top: var(--section-spacing);
   }
   .feature-header {
     display: flex;
     justify-content: center;
     padding-right: 10px;
   }
-  .feature-header img {
-    margin-left: -60px;
-  }
-  .feature-header .bg {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--black);
-    color: var(--white);
-    border-radius: 100%;
-    aspect-ratio: 1 / 1;
-    width: 500px;
-  }
-  .feature-header .title {
-    display: inline-flex;
-    flex-direction: column;
-    text-align: center;
-    font-size: 2.4rem;
-    line-height: 1.25;
-  }
-  .feature-header .title > span {
-    display: inline-flex;
-    flex-direction: column;
-  }
-  .feature-header .title > span .number {
-    margin-top: 10px;
-    font-family: Filson Soft, var(--font-family);
-    font-size: 7.2rem;
-    line-height: 1;
-  }
-  .feature-header .title > strong {
-    margin-top: 10px;
-    border-block: 4px solid var(--white);
-    padding-block: 6px;
-    font-size: 3.6rem;
-  }
-  .feature-header .description {
-    margin-top: 24px;
-    text-align: center;
-    font-size: 1.8rem;
-    line-height: 1.5;
-  }
+    .feature-header img {
+      margin-left: -60px;
+    }
+    .feature-header .bg {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--black);
+      color: var(--white);
+      border-radius: 100%;
+      aspect-ratio: 1 / 1;
+      width: 500px;
+    }
+    .feature-header .title {
+      display: inline-flex;
+      flex-direction: column;
+      text-align: center;
+      font-size: 2.4rem;
+      line-height: 1.25;
+    }
+      .feature-header .title > span {
+        display: inline-flex;
+        flex-direction: column;
+      }
+        .feature-header .title > span .number {
+          margin-top: 10px;
+          font-family: Filson Soft, var(--font-family);
+          font-size: 7.2rem;
+          line-height: 1;
+        }
+      .feature-header .title > strong {
+        margin-top: 10px;
+        border-block: 4px solid var(--white);
+        padding-block: 6px;
+        font-size: 3.6rem;
+      }
+    .feature-header .description {
+      margin-top: 24px;
+      text-align: center;
+      font-size: 1.8rem;
+      line-height: 1.5;
+    }
   .feature-body {
-    padding: 120px 96px;
+    padding-top: 80px;
+    padding-inline: 120px;
   }
-  .feature-body figure {
-    background-color: var(--white);
-    border-radius: 20px;
-    padding: 40px;
-  }
-  .feature-body article {
-    background-color: var(--white);
-    padding: 28px 30px;
-  }
+    .feature-body p:not([class]) {
+      font-size: 1.8rem;
+      line-height: 2;
+    }
+    .feature-body .lead {
+      text-align: center;
+      font-size: 3.2rem;
+      font-weight: var(--font-weight-bold);
+      line-height: 1.5;
+    }
+    .feature-body .lead-small {
+      text-align: center;
+      font-size: 1.8rem;
+      line-height: 2;
+    }
+    .feature-body .border-box {
+      position: relative;
+      background-color: var(--white);
+      border: 2px solid var(--black);
+      border-radius: 20px;
+      padding: 40px;
+    }
+    .feature-body .border-box:has(.heading) {
+      margin-top: 68px;
+      padding: 60px 40px 40px;
+    }
+      .feature-body .border-box .heading {
+        position: absolute;
+        top: 0;
+        transform: translateY(-50%);
+        inset-inline: 0;
+        margin-inline: auto;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: fit-content;
+        min-width: 400px;
+        min-height: 56px;
+        border: 2px solid var(--black);
+        border-radius: 100px;
+        padding: 8px;
+        font-size: 2.4rem;
+        line-height: 1.667;
+        background-color: var(--text-bg-yellow);
+      }
+        .feature-body .border-box .heading span {
+          font-size: 1.6rem;
+          padding-top: 6px;
+        }
+    .feature-body .responsive-stack {
+      display: flex;
+      gap: 40px;
+      justify-content: space-between;
+    }
+      .feature-body .responsive-stack > * {
+        flex: 1;
+      }
+    .feature-body figure {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      justify-content: space-between;
+    }
+    .feature-body .figure-responsive-stack {
+      flex-direction: row;
+    }
+    .feature-body .highlight-title {
+      display: inline;
+      background-color: var(--black);
+      color: var(--white);
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+      padding: 5px 12px;
+      font-size: 1.8rem;
+      line-height: 2.222;
+    }
+    .feature-body .deadline-list {
+      margin-top: 80px;
+      display: flex;
+      gap: 48px;
+    }
+      .feature-body .deadline-list li {
+        flex: 1;
+      }
+    .feature-body .deadline-article {
+      position: relative;
+      background-color: var(--white);
+      border: 2px solid var(--black);
+      border-radius: 20px;
+      padding: 22px 22px 38px;
+      height: 100%;
+    }
+      .feature-body .deadline-article .date {
+        position: absolute;
+        top: -20px;
+        left: -20px;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--text-bg-yellow);
+        border: 2px solid var(--black);
+        border-radius: 100%;
+        aspect-ratio: 1 / 1;
+        width: 120px;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: var(--font-weight-bold);
+        line-height: 1.35;
+      }
+        .feature-body .deadline-article .date:has(.small) time {
+          margin-top: 2px;
+        }
+        .feature-body .deadline-article .date .weekday {
+          margin-left: 0.2em;
+        }
+        .feature-body .deadline-article .date .small {
+          font-size: 1.4rem;
+          line-height: 1.35;
+          display: inline-block;
+        }
+          .feature-body .deadline-article .date .weekday.offset-y {
+            vertical-align: 2px;
+          }
+          .feature-body .deadline-article .date .small.offset-y:not(.weekday) {
+            vertical-align: 3px;
+          }
+      .feature-body .deadline-article img {
+        width: 100%;
+      }
+      .feature-body .deadline-article .title {
+        margin-block: 16px;
+        font-size: 2.4rem;
+      }
+        .feature-body .deadline-article .title sup {
+          font-size: 1.2rem;
+          vertical-align: 0.5em;
+        }
+      .feature-body .deadline-article p {
+        font-size: 1.4rem;
+      }
+      .feature-body .deadline-article .details {
+        margin-top: 24px;
+      }
+        .feature-body .deadline-article .details dt {
+          font-size: 1.4rem;
+          font-weight: var(--font-weight-bold);
+          line-height: 1.929;
+          border-left: 4px solid var(--content-light-blue);
+          padding-left: 8px;
+        }
+          .feature-body .deadline-article .details dt sup {
+            font-size: 1.2rem;
+          }
+        .feature-body .deadline-article .details dt + dd {
+          margin-top: 10px;
+        }
+        .feature-body .deadline-article .details dd {
+          font-size: 1.4rem;
+          line-height: 1.429;
+        }
   a {
     display: flex;
     margin-inline: auto;

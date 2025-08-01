@@ -20,7 +20,7 @@ export default function () {
         pageKeywords={pageKeywords}
         featureName={featureName}
       />
-      <main>
+      <main id="scale-wrapper">
         <MainVisual />
         <Contents />
         <Tips />

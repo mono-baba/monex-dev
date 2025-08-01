@@ -2,6 +2,7 @@
 /* components */
 @import url("/src/assets/components/layout.css");
 @import url("/src/assets/components/speech-bubble.css");
+@import url("/src/assets/components/arrow-rounded-button-link.css");
 /* nisa-fulluse */
 @import url("/src/assets/nisa-fulluse/layout.css");
 @import url("/src/assets/nisa-fulluse/common.css");
@@ -10,25 +11,3 @@
 @import url("/src/assets/nisa-fulluse/tips.css");
 @import url("/src/assets/nisa-fulluse/faq.css");
 @import url("/src/assets/nisa-fulluse/related-links.css");
-/* @import url("/src/assets/components/global-navigation.css"); */
-/* @import url("/src/assets/components/section.css");
-@import url("/src/assets/components/button.css");
-@import url("/src/assets/components/conversion-button.css");
-@import url("/src/assets/components/fixed-conversion-button.css");
-@import url("/src/assets/components/mv.css");
-@import url("/src/assets/components/title-with-speech-bubble.css");
-@import url("/src/assets/components/heading.css");
-@import url("/src/assets/components/label.css");
-@import url("/src/assets/components/note-list.css");
-@import url("/src/assets/components/border-box.css");
-@import url("/src/assets/components/two-columns.css");
-@import url("/src/assets/components/band-area.css");
-@import url("/src/assets/components/period-area.css");
-@import url("/src/assets/components/step-area.css");
-@import url("/src/assets/components/conversion-area.css");
-@import url("/src/assets/components/conversion-button-area.css");
-@import url("/src/assets/components/new-function.css");
-@import url("/src/assets/components/features-of-monex.css");
-@import url("/src/assets/components/campaign.css");
-@import url("/src/assets/components/step.css");
-@import url("/src/assets/components/keyframe.css"); */

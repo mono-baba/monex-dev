@@ -1,6 +1,8 @@
+import CommonHeader, { CommonHeaderProps } from "./CommonHeader"
+
 const Contents = () => {
   const getDataByNumber = (num: string) =>
-    featureHeaderData.find((item) => item.number === num)
+    CommonHeaderData.find((item) => item.number === num)
   const data01 = getDataByNumber("01")
   const data02 = getDataByNumber("02")
   const data03 = getDataByNumber("03")
@@ -10,7 +12,7 @@ const Contents = () => {
       <section className="features">
         <div className="inner">
           <section className="feature">
-            <FeatureHeader {...data01} />
+            <CommonHeader {...data01} />
             <div className="feature-body">
               <section>
                 <p className="lead">
@@ -89,7 +91,7 @@ const Contents = () => {
             </div>
           </section>
           <section className="feature">
-            <FeatureHeader {...data02} />
+            <CommonHeader {...data02} />
             <div className="feature-body">
               <p className="lead-small">
                 年内にNISA年間投資枠を利用するためには、受渡日が年内となるように買付注文する必要があります。
@@ -124,7 +126,7 @@ const Contents = () => {
             </div>
           </section>
           <section className="feature">
-            <FeatureHeader {...data03} />
+            <CommonHeader {...data03} />
             <div className="feature-body">
               <section>
                 <p className="lead-small">
@@ -180,9 +182,9 @@ const Contents = () => {
             <p className="lead">
               まずは
               <br />
-              現在のNISA投資額を確認してみましょう。
+              <strong>現在のNISA投資額</strong>を確認してみましょう。
             </p>
-            <a href="#dummy">現在のNISA投資額を確認</a>
+            <a href="#dummy" className="h-mt30-pc">現在のNISA投資額を確認</a>
           </div>
         </div>
       </section>
@@ -192,38 +194,8 @@ const Contents = () => {
 
 export default Contents
 
-interface FeatureHeaderProps {
-  number: string
-  title: React.ReactNode
-  img: string
-  description?: React.ReactNode
-}
-const FeatureHeader = (props: FeatureHeaderProps) => {
-  const { number, title, img, description } = props
-  return (
-    <div className="feature-header">
-      <div className="bg">
-        <h2 className="title">
-          <span>
-            NISAのおさらい<span className="number">{number}</span>
-          </span>
-          <strong>{title}</strong>
-        </h2>
-          {description && <p className="description">{description}</p>}
-      </div>
-      <img
-        src={img}
-        alt="小判猫"
-        className="img"
-        width={334}
-        height={460}
-        decoding="async"
-        loading="lazy"
-      />
-    </div>
-  )
-}
-const featureHeaderData: FeatureHeaderProps[] = [
+
+const CommonHeaderData: CommonHeaderProps[] = [
   {
     number: "01",
     title: (

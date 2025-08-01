@@ -1,20 +1,15 @@
+import CommonHeader from "./CommonHeader"
+
 const Tips = () => {
   return (
     <>
       <section className="tips">
         <div className="inner">
-          <h2 id="slider-title" className="title">
-            <span>枠をどう使う？</span>
-            <img
-              src="/image/feature/nisa-fulluse/img_title_tips.svg"
-              alt="NISAの活用ヒント"
-              className="img"
-              width={520}
-              height={68}
-              decoding="async"
-              loading="lazy"
-            />
-          </h2>
+          <CommonHeader
+            // number={<>枠をどう使う？</>}
+            title={<>NISAの<br />活用ヒント</>}
+            img="/image/feature/nisa-fulluse/img_kobanneko_feature-01.svg"
+          />
           <div
             className="h-mt80-pc slider-nav"
             role="tablist"

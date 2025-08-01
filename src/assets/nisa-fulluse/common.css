@@ -1,5 +1,6 @@
 main > section:not(.mv, .related-links) {
   background-color: var(--content-light-blue);
+  padding-inline: 120px;
 }
 main > section > .inner {
   margin-inline: auto;
@@ -8,4 +9,83 @@ main > section > .inner {
 
 .animation-spacing {
   margin-top: 400px;
+}
+
+.common-header {
+  display: flex;
+  justify-content: center;
+  padding-right: 10px;
+}
+  .common-header img {
+    margin-left: -60px;
+  }
+  .common-header .bg {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--black);
+    color: var(--white);
+    border-radius: 100%;
+    aspect-ratio: 1 / 1;
+    width: 500px;
+  }
+  .common-header .title {
+    display: inline-flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 2.4rem;
+    line-height: 1.25;
+  }
+    .common-header .title > span {
+      display: inline-flex;
+      flex-direction: column;
+    }
+      .common-header .title > span .number {
+        margin-top: 10px;
+        font-family: Filson Soft, var(--font-family);
+        font-size: 7.2rem;
+        line-height: 1;
+      }
+    .common-header .title > strong {
+      margin-top: 10px;
+      border-block: 4px solid var(--white);
+      padding-block: 6px;
+      font-size: 3.6rem;
+    }
+  .common-header .description {
+    margin-top: 24px;
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 1.5;
+  }
+
+details {
+  &::details-content {
+    transition:
+      height 0.4s,
+      opacity 0.4s,
+      content-visibility 0.4s allow-discrete;
+    height: 0;
+    opacity: 0;
+    overflow: clip;
+  }
+  &[open]::details-content {
+    opacity: 1;
+  }
+}
+@supports (interpolate-size: allow-keywords) {
+  :root {
+    interpolate-size: allow-keywords;
+  }
+  details[open]::details-content {
+    height: auto;
+  }
+}
+@supports not (interpolate-size: allow-keywords) {
+  details[open]::details-content {
+    height: 150px;
+    overflow-y: scroll;
+  }
 }

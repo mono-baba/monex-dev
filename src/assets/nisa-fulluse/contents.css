@@ -2,71 +2,21 @@
   .feature {
     padding-top: var(--section-spacing);
   }
-  .feature-header {
-    display: flex;
-    justify-content: center;
-    padding-right: 10px;
+  .lead {
+    text-align: center;
+    font-size: 3.2rem;
+    font-weight: var(--font-weight-bold);
+    line-height: 1.5;
   }
-    .feature-header img {
-      margin-left: -60px;
-    }
-    .feature-header .bg {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background-color: var(--black);
-      color: var(--white);
-      border-radius: 100%;
-      aspect-ratio: 1 / 1;
-      width: 500px;
-    }
-    .feature-header .title {
-      display: inline-flex;
-      flex-direction: column;
-      text-align: center;
-      font-size: 2.4rem;
-      line-height: 1.25;
-    }
-      .feature-header .title > span {
-        display: inline-flex;
-        flex-direction: column;
-      }
-        .feature-header .title > span .number {
-          margin-top: 10px;
-          font-family: Filson Soft, var(--font-family);
-          font-size: 7.2rem;
-          line-height: 1;
-        }
-      .feature-header .title > strong {
-        margin-top: 10px;
-        border-block: 4px solid var(--white);
-        padding-block: 6px;
-        font-size: 3.6rem;
-      }
-    .feature-header .description {
-      margin-top: 24px;
-      text-align: center;
-      font-size: 1.8rem;
-      line-height: 1.5;
-    }
+  .lead-small {
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 2;
+  }
   .feature-body {
     padding-top: 80px;
-    padding-inline: 120px;
   }
     .feature-body p:not([class]) {
-      font-size: 1.8rem;
-      line-height: 2;
-    }
-    .feature-body .lead {
-      text-align: center;
-      font-size: 3.2rem;
-      font-weight: var(--font-weight-bold);
-      line-height: 1.5;
-    }
-    .feature-body .lead-small {
-      text-align: center;
       font-size: 1.8rem;
       line-height: 2;
     }
@@ -216,6 +166,15 @@
           font-size: 1.4rem;
           line-height: 1.429;
         }
+  .feature-cta {
+    margin-top: var(--section-spacing);
+    margin-inline: auto;
+    padding: 60px 56px;
+    max-width: var(--content-width);
+    background-color: var(--text-bg-yellow);
+    border: 2px solid var(--black);
+    border-radius: 20px;
+  }
   a {
     display: flex;
     margin-inline: auto;

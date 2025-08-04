@@ -15,6 +15,7 @@ main > section > .inner {
   margin-top: 400px;
 }
 
+/* common-header */
 .common-header {
   display: flex;
   justify-content: center;
@@ -63,4 +64,49 @@ main > section > .inner {
     text-align: center;
     font-size: 1.8rem;
     line-height: 1.5;
+  }
+
+/* accordion */
+details {
+  --bg: var(--white);
+  --border-radius: 32px;
+
+  background-color: var(--bg);
+  border: 2px solid var(--black);
+  border-radius: var(--border-radius);
+}
+details summary {
+  cursor: pointer;
+  position: relative;
+  background-color: var(--bg);
+  border-radius: var(--border-radius);
+  padding: 10px;
+}
+  details summary::before,
+  details summary::after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 28px;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 2px;
+    z-index: 1;
+    background-color: var(--black);
+  }
+    details summary::after {
+      transform: translateY(-50%) rotate(90deg);
+      transition: transform 0.3s ease-in-out;
+    }
+    details[open] summary::after {
+      transform: translateY(-50%) rotate(180deg);
+    }
+
+.responsive-stack {
+  display: flex;
+  justify-content: space-between;
+}
+  .responsive-stack > * {
+    flex: 1;
   }

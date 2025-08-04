@@ -8,36 +8,6 @@
     max-width: var(--content-small-width);
     gap: 32px;
   }
-  .faq-list details {
-    background-color: var(--white);
-    border: 2px solid var(--black);
-    border-radius: 32px;
-  }
-  .faq-list details summary {
-    cursor: pointer;
-    position: relative;
-    padding: 10px;
-  }
-  .faq-list details summary::before,
-  .faq-list details summary::after {
-    display: block;
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: 28px;
-    transform: translateY(-50%);
-    width: 12px;
-    height: 2px;
-    z-index: 1;
-    background-color: var(--black);
-  }
-    .faq-list details summary::after {
-      transform: translateY(-50%) rotate(90deg);
-      transition: transform 0.3s ease-in-out;
-    }
-    .faq-list details[open] summary::after {
-      transform: translateY(-50%) rotate(180deg);
-    }
     .faq-list summary .question {
       font-family: Filson Soft, var(--font-family);
       background-color: var(--text-bg-yellow);

@@ -1,4 +1,8 @@
 :root {
+  --text-number: #fb3e25;
+  --text-stroke: #070707;
+  --text-bg-gray: #f7f7f7;
+  --text-bg-light-yellow: #fff9e7;
   --text-bg-yellow: #ffc417;
   --content-yellow: #ffc700;
   --content-light-blue: #33b0ff;
@@ -10,6 +14,23 @@
 }
 a {
   text-decoration: none;
+}
+a,
+button,
+summary {
+  transition: filter 0.2s ease, background-color 0.2s ease;
+}
+@media (hover: hover) {
+  a:hover,
+  button:hover,
+  summary:hover {
+    filter: brightness(0.88) contrast(1.10);
+  }
+}
+*:has(wbr) {
+  word-break: keep-all;
+  word-break: auto-phrase;
+  word-wrap: break-word;
 }
 summary::marker  {
   content: "";

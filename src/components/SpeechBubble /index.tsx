@@ -1,8 +1,7 @@
 import React from "react"
-import "./SpeechBubble.css"
 
 type SpeechBubbleProps = {
-  as?: "div" | "p"
+  as: "div" | "p"
   angle?: number
   thickness?: number
   children: React.ReactNode
@@ -11,7 +10,7 @@ type SpeechBubbleProps = {
 }
 
 const SpeechBubble: React.FC<SpeechBubbleProps> = ({
-  as = "div",
+  as = "p",
   angle = 20,
   thickness = 2,
   children,

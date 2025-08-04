@@ -54,14 +54,10 @@
           font-size: 1.6rem;
           padding-top: 6px;
         }
-    .feature-body .responsive-stack {
-      display: flex;
+    .feature-body .responsive-stack:has(figure + figure) {
       gap: 40px;
-      justify-content: space-between;
     }
-      .feature-body .responsive-stack > * {
-        flex: 1;
-      }
+
     .feature-body figure {
       display: flex;
       flex-direction: column;

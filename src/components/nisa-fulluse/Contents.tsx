@@ -123,7 +123,17 @@ const Contents = () => {
                   )
                 })}
               </ul>
-              <a href="#dummy" className="h-mt80-pc">各商品の注意事項はこちら</a>
+              <details className="h-mt80-pc">
+                <summary>各商品の注意事項はこちら</summary>
+                <div>
+                  <ul>
+                    <li>※1 ダミーテキスト</li>
+                    <li>※2 ダミーテキスト</li>
+                    <li>※3 ダミーテキスト</li>
+                    <li>※4 ダミーテキスト</li>
+                  </ul>
+                </div>
+              </details>
             </div>
           </section>
           <section className="feature">

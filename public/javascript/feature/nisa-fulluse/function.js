@@ -21,54 +21,67 @@ window.addEventListener('load', applyScale);
 document.addEventListener("DOMContentLoaded", () => {
   const topTabs = document.querySelectorAll('.slider-nav.top [role="tab"]');
   const bottomTabs = document.querySelectorAll('.slider-nav.bottom [role="tab"]');
-  const panels = document.querySelectorAll('.slider-panel');
-  const track = document.querySelector('.slider-track');
-  const wrapper = document.querySelector('.slider-wrapper');
-
-  const gap = 40; // CSS gap に合わせる
+  const panels = document.querySelectorAll(".slider-panel");
+  const track = document.querySelector(".slider-track");
+  const wrapper = document.querySelector(".slider-wrapper");
 
   let activeIndex = 0;
+
+  // gap を CSS から取得する関数
+  function getGap() {
+    const gapValue = getComputedStyle(track).gap || "0px";
+    return parseFloat(gapValue); // "40px" → 40
+  }
 
   function activateTab(index) {
     activeIndex = index;
 
-    // aria-selected 更新
-    topTabs.forEach((tab, i) => tab.setAttribute('aria-selected', i === index ? 'true' : 'false'));
-    bottomTabs.forEach((tab, i) => tab.setAttribute('aria-selected', i === index ? 'true' : 'false'));
-    panels.forEach((panel, i) => panel.setAttribute('aria-selected', i === index ? 'true' : 'false'));
+    // 上下のタブを aria-selected で同期
+    topTabs.forEach((tab, i) => {
+      tab.setAttribute("aria-selected", i === index ? "true" : "false");
+    });
+    bottomTabs.forEach((tab, i) => {
+      tab.setAttribute("aria-selected", i === index ? "true" : "false");
+    });
 
-    const panelWidth = panels[0].offsetWidth;     // 例: 992px
-    const containerWidth = wrapper.offsetWidth;  // 例: 1200px
+    // パネルの aria-selected 更新
+    panels.forEach((panel, i) => {
+      panel.setAttribute("aria-selected", i === index ? "true" : "false");
+    });
 
-    // パネルとcontainerの幅差を考慮した中央寄せ
-    const offset = (containerWidth - panelWidth) / 2 - index * (panelWidth + gap);
+    // gap を考慮して中央寄せ
+    const panelWidth = panels[0].offsetWidth;
+    const containerWidth = wrapper.offsetWidth;
+    const gap = getGap();
+    const offset =
+      (containerWidth - panelWidth) / 2 - (panelWidth + gap) * index;
 
     track.style.transform = `translateX(${offset}px)`;
-
-    topTabs[index].focus();
   }
 
+  // タブクリック（上下どちらも同期）
   function onClickTab(index) {
     activateTab(index);
   }
 
+  // キーボード操作（左右・上下矢印）
   function onKeyDownTab(e, index) {
     const maxIndex = topTabs.length - 1;
     let newIndex = null;
 
     switch (e.key) {
-      case 'ArrowRight':
-      case 'ArrowDown':
+      case "ArrowRight":
+      case "ArrowDown":
         newIndex = index === maxIndex ? 0 : index + 1;
         break;
-      case 'ArrowLeft':
-      case 'ArrowUp':
+      case "ArrowLeft":
+      case "ArrowUp":
         newIndex = index === 0 ? maxIndex : index - 1;
         break;
-      case 'Home':
+      case "Home":
         newIndex = 0;
         break;
-      case 'End':
+      case "End":
         newIndex = maxIndex;
         break;
       default:
@@ -79,18 +92,21 @@ document.addEventListener("DOMContentLoaded", () => {
     activateTab(newIndex);
   }
 
+  // イベント登録
   topTabs.forEach((tab, i) => {
-    tab.addEventListener('click', () => onClickTab(i));
-    tab.addEventListener('keydown', e => onKeyDownTab(e, i));
+    tab.addEventListener("click", () => onClickTab(i));
+    tab.addEventListener("keydown", (e) => onKeyDownTab(e, i));
   });
   bottomTabs.forEach((tab, i) => {
-    tab.addEventListener('click', () => onClickTab(i));
-    tab.addEventListener('keydown', e => onKeyDownTab(e, i));
+    tab.addEventListener("click", () => onClickTab(i));
+    tab.addEventListener("keydown", (e) => onKeyDownTab(e, i));
   });
 
+  // パネルクリック
   panels.forEach((panel, i) => {
-    panel.addEventListener('click', () => activateTab(i));
+    panel.addEventListener("click", () => activateTab(i));
   });
 
+  // 初期表示
   activateTab(0);
 });

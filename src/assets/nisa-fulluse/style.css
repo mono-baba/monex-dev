@@ -4,10 +4,11 @@
 @import url("/src/assets/components/speech-bubble.css");
 @import url("/src/assets/components/arrow-rounded-button-link.css");
 /* nisa-fulluse */
-@import url("/src/assets/nisa-fulluse/layout.css");
-@import url("/src/assets/nisa-fulluse/common.css");
-@import url("/src/assets/nisa-fulluse/mv.css");
-@import url("/src/assets/nisa-fulluse/contents.css");
-@import url("/src/assets/nisa-fulluse/tips.css");
-@import url("/src/assets/nisa-fulluse/faq.css");
-@import url("/src/assets/nisa-fulluse/related-links.css");
+@import url("/src/assets/nisa-fulluse/components/layout.css");
+@import url("/src/assets/nisa-fulluse/components/common.css");
+@import url("/src/assets/nisa-fulluse/components/mv.css");
+@import url("/src/assets/nisa-fulluse/components/mv.css");
+@import url("/src/assets/nisa-fulluse/components/contents.css");
+@import url("/src/assets/nisa-fulluse/components/tips.css");
+@import url("/src/assets/nisa-fulluse/components/faq.css");
+@import url("/src/assets/nisa-fulluse/components/related-links.css");

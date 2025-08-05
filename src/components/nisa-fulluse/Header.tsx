@@ -8,7 +8,7 @@ type NavigationItem = {
   subNavigation?: {
     label: string;
     link: string;
-    external?: boolean;
+    dataSlide?: string;
   }[];
 };
 
@@ -36,19 +36,23 @@ const navigationItems: NavigationItem[] = [
     subNavigation: [
       {
         label: "つみたて投信",
-        link: "#tips01"
+        link: "#tipsNav",
+        dataSlide: "tips01"
       },
       {
         label: "成長投信",
-        link: "#tips02"
+        link: "#tipsNav",
+        dataSlide: "tips02"
       },
       {
         label: "日本株",
-        link: "#tips03"
+        link: "#tipsNav",
+        dataSlide: "tips03"
       },
       {
         label: "外国株",
-        link: "#tips04"
+        link: "#tipsNav",
+        dataSlide: "tips04"
       },
     ]
   },
@@ -139,7 +143,11 @@ const Header = () => {
                     )}
                   </a>
                 ) : (
-                  <button type="button" id={item.id} className="label">
+                  <button
+                    type="button"
+                    id={item.id}
+                    className="label"
+                  >
                     {item.label}
                   </button>
                 )}
@@ -151,6 +159,7 @@ const Header = () => {
                         <a
                           href={sub.link}
                           className="link"
+                          {...(sub.dataSlide ? { 'data-slide': sub.dataSlide } : {})}
                         >
                           {sub.label}
                         </a>

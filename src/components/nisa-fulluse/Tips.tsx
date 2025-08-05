@@ -2,7 +2,7 @@ import CommonHeader from "./CommonHeader";
 
 const panels = [
   {
-    id: "slide1",
+    id: "tips01",
     label: "つみたて投信",
     content: (
       <>
@@ -77,17 +77,17 @@ const panels = [
     )
   },
   {
-    id: "slide2",
+    id: "tips02",
     label: "成長投信",
     content: <>スライド2の内容</>
   },
   {
-    id: "slide3",
+    id: "tips03",
     label: "日本株",
     content: <>スライド3の内容</>
   },
   {
-    id: "slide4",
+    id: "tips04",
     label: "外国株",
     content: <>スライド4の内容</>
   }
@@ -95,7 +95,10 @@ const panels = [
 
 const Tips = () => {
   const renderNav = (position: "top" | "bottom") => (
-    <div className={`slider-nav ${position}${position === "top" ? " h-mt80-pc" : ""}`} role="tablist" aria-labelledby="slider-title">
+    <div
+      id={position === "top" ? "tipsNav" : undefined}
+      className={`slider-nav ${position}${position === "top" ? " h-mt80-pc" : ""}`}
+      role="tablist" aria-labelledby="slider-title">
       {panels.map((panel, index) => (
         <button
           key={`${position}-${panel.id}`}

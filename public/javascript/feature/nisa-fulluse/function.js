@@ -65,17 +65,17 @@ document.addEventListener("DOMContentLoaded", () => {
     activeIndex = index;
 
     // 上下のタブを aria-selected で同期
-    topTabs.forEach((tab, i) => {
-      tab.setAttribute("aria-selected", i === index ? "true" : "false");
-    });
-    bottomTabs.forEach((tab, i) => {
-      tab.setAttribute("aria-selected", i === index ? "true" : "false");
-    });
+    topTabs.forEach((tab, i) =>
+      tab.setAttribute("aria-selected", i === index ? "true" : "false")
+    );
+    bottomTabs.forEach((tab, i) =>
+      tab.setAttribute("aria-selected", i === index ? "true" : "false")
+    );
 
     // パネルの aria-selected 更新
-    panels.forEach((panel, i) => {
-      panel.setAttribute("aria-selected", i === index ? "true" : "false");
-    });
+    panels.forEach((panel, i) =>
+      panel.setAttribute("aria-selected", i === index ? "true" : "false")
+    );
 
     // gap を考慮して中央寄せ
     const panelWidth = panels[0].offsetWidth;
@@ -133,6 +133,29 @@ document.addEventListener("DOMContentLoaded", () => {
   // パネルクリック
   panels.forEach((panel, i) => {
     panel.addEventListener("click", () => activateTab(i));
+  });
+
+  // 指定 ID のパネルを中央寄せ
+  function activateTabById(id) {
+    const index = Array.from(panels).findIndex(
+      (panel) => panel.id === id
+    );
+    if (index !== -1) {
+      activateTab(index);
+    }
+  }
+
+  // data-slide を持つリンククリックで横スクロール
+  document.querySelectorAll("[data-slide]").forEach((link) => {
+    link.addEventListener("click", (e) => {
+      const targetSlide = link.getAttribute("data-slide");
+      if (!targetSlide) return;
+
+      // アンカーの縦スクロール後に横スクロール
+      setTimeout(() => {
+        activateTabById(targetSlide);
+      }, 400); // 縦スクロール完了待ち
+    });
   });
 
   // 初期表示

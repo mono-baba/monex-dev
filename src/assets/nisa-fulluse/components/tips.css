@@ -245,3 +245,6 @@
   /* 日本株 */
   /* 外国株 */
 }
+#tipsNav {
+  scroll-margin-top: 3rem;
+}

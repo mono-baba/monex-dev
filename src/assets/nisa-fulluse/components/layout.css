@@ -11,6 +11,7 @@
   --content-small-width: 992px;
   --line-height-tight: 1.333;
   --section-spacing: 160px;
+  --z-index-header: 100;
 }
 a {
   text-decoration: none;
@@ -41,10 +42,11 @@ summary::-webkit-details-marker {
 
 /* 全体縮小 */
 #scale-wrapper {
+  position: relative;
   @media screen and (max-width: 1440px) {
     transform-origin: top left;
     width: var(--content-max-width);
-    margin: 0 auto;
+    /* margin: 0 auto; */
   }
 }
 

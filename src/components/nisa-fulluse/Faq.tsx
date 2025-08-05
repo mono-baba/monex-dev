@@ -3,7 +3,7 @@ import CommonHeader from "./CommonHeader"
 const Faq = () => {
   return (
     <>
-      <section className="faq">
+      <section id="faq" className="faq">
         <div className="inner">
           <CommonHeader
             title="よくある質問"

@@ -95,7 +95,7 @@ const panels = [
 
 const Tips = () => {
   const renderNav = (position: "top" | "bottom") => (
-    <div className={`slider-nav ${position}`} role="tablist" aria-labelledby="slider-title">
+    <div className={`slider-nav ${position}${position === "top" ? " h-mt80-pc" : ""}`} role="tablist" aria-labelledby="slider-title">
       {panels.map((panel, index) => (
         <button
           key={`${position}-${panel.id}`}
@@ -111,7 +111,7 @@ const Tips = () => {
   );
 
   return (
-    <section className="tips">
+    <section id="tips" className="tips">
       <div className="inner">
         <CommonHeader
           title={<>NISAの<br />活用ヒント</>}
@@ -147,4 +147,3 @@ const Tips = () => {
 };
 
 export default Tips;
-

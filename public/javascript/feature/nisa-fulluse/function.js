@@ -16,6 +16,34 @@ function applyScale() {
 window.addEventListener('resize', applyScale);
 window.addEventListener('load', applyScale);
 
+// グローバルナビゲーション
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleButtons = document.querySelectorAll(".global-navigation .label");
+
+  toggleButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const parentItem = btn.closest(".item");
+      const subNav = parentItem.querySelector(".sub-navigation");
+
+      if (!subNav) return; // サブメニューがない場合は何もしない
+
+      // 他を閉じる
+      document.querySelectorAll(".sub-navigation.is-open").forEach((openNav) => {
+        if (openNav !== subNav) {
+          openNav.classList.remove("is-open");
+          openNav.previousElementSibling?.classList.remove("open");
+        }
+      });
+
+      // 開閉切り替え
+      subNav.classList.toggle("is-open");
+      btn.classList.toggle("open");
+    });
+  });
+});
+
+
+
 
 // スライダー
 document.addEventListener("DOMContentLoaded", () => {

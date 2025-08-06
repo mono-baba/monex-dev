@@ -60,27 +60,43 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   const pathLength = path.getTotalLength();
-  const speedMultiplier = 2; // スクロール速度倍率
 
+  // パスの横の最大・最小Xを取得
+  let minX = Infinity;
+  let maxX = -Infinity;
+  const sampleCount = 1000; // サンプリング数を増やすほど精度UP
+  for (let i = 0; i <= sampleCount; i++) {
+    const point = path.getPointAtLength((pathLength * i) / sampleCount);
+    if (point.x < minX) minX = point.x;
+    if (point.x > maxX) maxX = point.x;
+  }
+
+  const horizontalRange = maxX - minX;
+  const threshold = horizontalRange * 0.15; // 横幅15%
+
+  const speedMultiplier = 2;
+
+  let progressDistance = 0;
   let lastScrollY = window.scrollY;
-  let progressDistance = 0; // パス上の距離
+  let direction = 1; // 進行方向（距離増減に掛ける）
 
   function updateCatPosition() {
     const rect = animationWrapper.getBoundingClientRect();
     const windowHeight = window.innerHeight;
 
-    // 開始判定：セクション上端が画面中央を超えたら動く
     if (rect.top > windowHeight / 2) {
-      // まだ画面中央より下なら動かさずスタート位置に固定
       progressDistance = 0;
+      direction = 1;
     }
 
-    // 位置更新（ループ対応）
-    let distanceOnPath = progressDistance % pathLength;
-    if (distanceOnPath < 0) distanceOnPath += pathLength;
+    // 距離制限
+    if (progressDistance < 0) progressDistance = 0;
+    if (progressDistance > pathLength) progressDistance = pathLength;
 
-    const point = path.getPointAtLength(distanceOnPath);
+    // パス上の点を取得
+    const point = path.getPointAtLength(progressDistance);
 
+    // パスのtransform補正
     const transformAttr = path.getAttribute("transform");
     let offsetX = 0, offsetY = 0;
     if (transformAttr) {
@@ -103,7 +119,13 @@ window.addEventListener("DOMContentLoaded", () => {
     const left = screenPoint.x - wrapperRect.left;
     const top = screenPoint.y - wrapperRect.top;
 
-    // 猫画像の高さを取得し、縦の中央に合わせる
+    // 左右反転判定（X座標ベース）
+    if (point.x <= minX + threshold) {
+      cat.style.transform = "scaleX(1)"; // 右向き
+    } else if (point.x >= maxX - threshold) {
+      cat.style.transform = "scaleX(-1)"; // 左向き
+    }
+
     const catHeight = cat.offsetHeight;
 
     cat.style.left = `${left}px`;
@@ -117,16 +139,9 @@ window.addEventListener("DOMContentLoaded", () => {
 
     const deltaY = currentScrollY - lastScrollY;
 
-    // スクロール方向で左右反転切替
-    if (deltaY > 0) {
-      cat.style.transform = "scaleX(1)";  // 右向き（元の向き）
-    } else if (deltaY < 0) {
-      cat.style.transform = "scaleX(-1)"; // 左向き（反転）
-    }
-
-    // セクション上端が画面中央以下の時だけ距離を進める
     if (rect.top <= windowHeight / 2) {
-      progressDistance += deltaY * speedMultiplier;
+      progressDistance += deltaY * speedMultiplier * direction;
+      // 端の折り返し処理をここでしないので方向は固定
     }
 
     lastScrollY = currentScrollY;
@@ -139,15 +154,16 @@ window.addEventListener("DOMContentLoaded", () => {
 
   window.addEventListener("scroll", onScroll);
   window.addEventListener("resize", () => {
-    // 必要ならリサイズ対応
+    // 必要なら対応
   });
 
-  // 初期化
   lastScrollY = window.scrollY;
   progressDistance = 0;
+  direction = 1;
 
   loop();
 });
+
 
 
 

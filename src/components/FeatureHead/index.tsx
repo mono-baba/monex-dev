@@ -51,7 +51,7 @@ const FeatureHead = ({
       />
       <script
         type="text/javascript"
-        src="/javascript/js2_8/common/jquery-3.4.1.min.js"
+        src="/javascript/js2_8/common/jquery-3.7.1.min.js"
       ></script>
       <script
         type="text/javascript"

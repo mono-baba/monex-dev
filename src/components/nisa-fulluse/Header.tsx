@@ -147,6 +147,8 @@ const Header = () => {
                     type="button"
                     id={item.id}
                     className="label"
+                    aria-haspopup="true"
+                    aria-expanded="false"
                   >
                     {item.label}
                   </button>

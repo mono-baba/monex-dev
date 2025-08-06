@@ -1,49 +1,52 @@
 // 画面幅固定縮小
-function applyScale() {
-  const wrapper = document.getElementById('scale-wrapper');
-  const vw = window.innerWidth;
+// function applyScale() {
+//   const wrapper = document.getElementById('scale-wrapper');
+//   const vw = window.innerWidth;
 
-  if (vw < 1440) {
-    const scale = vw / 1440;
-    wrapper.style.transform = `scale(${scale})`;
-    wrapper.style.height = `${document.body.scrollHeight * scale}px`; // アニメーションや固定背景対応
-  } else {
-    wrapper.style.transform = '';
-    wrapper.style.height = '';
-  }
-}
+//   if (vw < 1440) {
+//     const scale = vw / 1440;
+//     wrapper.style.transform = `scale(${scale})`;
+//     wrapper.style.height = `${document.body.scrollHeight * scale}px`; // アニメーションや固定背景対応
+//   } else {
+//     wrapper.style.transform = '';
+//     wrapper.style.height = '';
+//   }
+// }
 
-window.addEventListener('resize', applyScale);
-window.addEventListener('load', applyScale);
+// window.addEventListener('resize', applyScale);
+// window.addEventListener('load', applyScale);
 
 // グローバルナビゲーション
 document.addEventListener("DOMContentLoaded", () => {
-  const toggleButtons = document.querySelectorAll(".global-navigation .label");
+  const navButtons = document.querySelectorAll(".global-navigation .label, .global-navigation .link");
 
-  toggleButtons.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const parentItem = btn.closest(".item");
-      const subNav = parentItem.querySelector(".sub-navigation");
+  navButtons.forEach((btn) => {
+    const subNav = btn.nextElementSibling;
+    if (!subNav || !subNav.classList.contains("sub-navigation")) return;
 
-      if (!subNav) return; // サブメニューがない場合は何もしない
+    // PC: hoverで開閉（他を閉じないので複数開ける）
+    btn.addEventListener("mouseenter", () => {
+      if (window.matchMedia("(min-width: 769px)").matches) {
+        btn.setAttribute("aria-expanded", "true");
+      }
+    });
 
-      // 他を閉じる
-      document.querySelectorAll(".sub-navigation.is-open").forEach((openNav) => {
-        if (openNav !== subNav) {
-          openNav.classList.remove("is-open");
-          openNav.previousElementSibling?.classList.remove("open");
-        }
-      });
+    // PC: メニュー外に出たら閉じる
+    btn.parentElement.addEventListener("mouseleave", () => {
+      if (window.matchMedia("(min-width: 769px)").matches) {
+        btn.setAttribute("aria-expanded", "false");
+      }
+    });
 
-      // 開閉切り替え
-      subNav.classList.toggle("is-open");
-      btn.classList.toggle("open");
+    // モバイル: クリックでトグル
+    btn.addEventListener("click", (e) => {
+      if (!window.matchMedia("(max-width: 768px)").matches) return;
+      e.preventDefault();
+      const expanded = btn.getAttribute("aria-expanded") === "true";
+      btn.setAttribute("aria-expanded", String(!expanded));
     });
   });
 });
-
-
-
 
 // スライダー
 document.addEventListener("DOMContentLoaded", () => {

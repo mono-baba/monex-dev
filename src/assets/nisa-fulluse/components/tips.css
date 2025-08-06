@@ -246,5 +246,5 @@
   /* 外国株 */
 }
 #tipsNav {
-  scroll-margin-top: 3rem;
+  scroll-margin-top: calc(3rem + 64px); /* 余白 + header */
 }

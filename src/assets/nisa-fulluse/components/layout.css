@@ -46,6 +46,7 @@ summary::-webkit-details-marker {
 /* 全体縮小 */
 #scale-wrapper {
   position: relative;
+  overflow-x: hidden;
   @media screen and (max-width: 1440px) {
     transform-origin: top left;
     width: var(--content-max-width);

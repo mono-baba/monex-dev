@@ -103,14 +103,29 @@
     padding: 0;
     max-height: 0;
     opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
     transition: all 0.3s ease;
     width: 100%;
   }
 
-  .sub-navigation.is-open {
+  /* モバイル・PC共通：aria-expanded=trueで開く */
+  .label[aria-expanded="true"] + .sub-navigation {
+    overflow: auto;
     max-height: 500px;
     opacity: 1;
   }
+
+  @media (hover: hover) {
+    .item:hover > .sub-navigation,
+    .item:focus-within > .sub-navigation {
+      overflow: auto;
+      max-height: 500px;
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+
   .sub-navigation > .item > .link {
     display: inline-block;
     background-color: var(--white);

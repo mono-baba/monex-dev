@@ -202,7 +202,7 @@ const Contents = () => {
                     </tr>
                   </tbody>
                 </table>
-                <div className="animation-spacing responsive-stack">
+                <div className="annual-limit-description animation-spacing responsive-stack">
                   <div>
                     <p>
                       年間投資枠はつみたて投資枠で120万円、成長投資枠で240万円の合計360万円です。

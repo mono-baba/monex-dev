@@ -276,6 +276,10 @@
     }
   }
 
+  .annual-limit-description {
+    gap: 48px;
+  }
+
 
   .feature-cta {
     display: flex;

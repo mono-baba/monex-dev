@@ -112,9 +112,17 @@ window.addEventListener("DOMContentLoaded", () => {
     const rect = animationWrapper.getBoundingClientRect();
     const windowHeight = window.innerHeight;
 
+    const deltaY = currentScrollY - lastScrollY;
+
+    // スクロール方向で左右反転切替
+    if (deltaY > 0) {
+      cat.style.transform = "scaleX(1)";  // 右向き（元の向き）
+    } else if (deltaY < 0) {
+      cat.style.transform = "scaleX(-1)"; // 左向き（反転）
+    }
+
     // セクション上端が画面中央以下の時だけ距離を進める
     if (rect.top <= windowHeight / 2) {
-      const deltaY = currentScrollY - lastScrollY;
       progressDistance += deltaY * speedMultiplier;
     }
 

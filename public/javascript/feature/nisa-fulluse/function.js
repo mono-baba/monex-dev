@@ -126,9 +126,10 @@ window.addEventListener("DOMContentLoaded", () => {
       cat.style.transform = "scaleX(-1)"; // 左向き
     }
 
+    const catWidth = cat.offsetWidth;
     const catHeight = cat.offsetHeight;
 
-    cat.style.left = `${left}px`;
+    cat.style.left = `${left - catWidth / 2}px`;
     cat.style.top = `${top - catHeight / 2}px`;
   }
 

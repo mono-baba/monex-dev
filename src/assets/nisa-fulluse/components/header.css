@@ -124,6 +124,9 @@
       opacity: 1;
       pointer-events: auto;
     }
+    .item:hover .label {
+      pointer-events: none;
+    }
   }
 
   .sub-navigation > .item > .link {

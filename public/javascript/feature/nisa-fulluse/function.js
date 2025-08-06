@@ -48,6 +48,64 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// パスアニメーション
+window.addEventListener("DOMContentLoaded", () => {
+  const path = document.getElementById("animation_path_01");
+  const cat = document.querySelector(".cat-walk");
+  const animationWrapper = document.querySelector(".animation-wrapper");
+
+  if (!path || !cat || !animationWrapper) {
+    console.error("要素が見つかりません");
+    return;
+  }
+
+  const pathLength = path.getTotalLength();
+
+  function updatePosition() {
+    const rect = animationWrapper.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    const scrollY = windowHeight - rect.top;
+    let progress = scrollY / (windowHeight + rect.height);
+    progress = Math.min(Math.max(progress, 0), 1);
+
+    console.log("progress:", progress.toFixed(3), "rect.top:", rect.top.toFixed(1), "scrollY:", scrollY.toFixed(1));
+
+    const point = path.getPointAtLength(progress * pathLength);
+
+    const transformAttr = path.getAttribute("transform");
+    let offsetX = 0, offsetY = 0;
+    if (transformAttr) {
+      const match = /translate\((-?\d+\.?\d*)\s+(-?\d+\.?\d*)\)/.exec(transformAttr);
+      if (match) {
+        offsetX = parseFloat(match[1]);
+        offsetY = parseFloat(match[2]);
+      }
+    }
+
+    const svg = path.ownerSVGElement;
+    const matrix = svg.getScreenCTM();
+
+    const svgPoint = svg.createSVGPoint();
+    svgPoint.x = point.x + offsetX;
+    svgPoint.y = point.y + offsetY;
+    const screenPoint = svgPoint.matrixTransform(matrix);
+
+    const wrapperRect = animationWrapper.getBoundingClientRect();
+    const left = screenPoint.x - wrapperRect.left;
+    const top = screenPoint.y - wrapperRect.top;
+
+    cat.style.left = `${left}px`;
+    cat.style.top = `${top}px`;
+  }
+
+  window.addEventListener("scroll", updatePosition);
+  window.addEventListener("resize", updatePosition);
+  setTimeout(updatePosition, 100);
+});
+
+
+
 // スライダー
 document.addEventListener("DOMContentLoaded", () => {
   const topTabs = document.querySelectorAll('.slider-nav.top [role="tab"]');

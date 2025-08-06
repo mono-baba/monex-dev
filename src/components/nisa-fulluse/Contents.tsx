@@ -11,6 +11,14 @@ const Contents = () => {
   return (
     <>
       <section className="features">
+        <div className="animation-layer">
+          <div className="animation-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" width="2121.686" height="3110.005" viewBox="0 0 2121.686 3110.005">
+              <path id="animation_path_01" d="M10844.688,2239.808s1668.591,315.748,1666.191,982.278-1495.61,182.844-1653.97,743.4,50.064,1219.077,1916.518,1063.9" transform="translate(-10664.171 -2092.424)" fill="none" stroke="#6cc6ff" stroke-width="300"/>
+            </svg>
+            <img src="/image/feature/nisa-fulluse/animation_nisa-neko_walk_500.gif" className="cat-walk" width={160} height={180} decoding="async" loading="lazy" alt="歩いている猫" />
+          </div>
+        </div>
         <div className="inner">
           <section id="feature01" className="feature">
             <CommonHeader {...data01} />

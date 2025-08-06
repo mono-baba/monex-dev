@@ -1,7 +1,10 @@
 main > section:not(.mv, .related-links) {
   background-color: var(--content-light-blue);
-  padding-inline: 120px;
+  z-index: var(--z-index-content-bg);
 }
+  main > section:not(.mv, .related-links) .inner {
+    padding-inline: 120px;
+  }
 main > section > .inner {
   margin-inline: auto;
   max-width: var(--content-max-width);

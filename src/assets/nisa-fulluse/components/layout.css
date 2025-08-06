@@ -15,6 +15,9 @@
   --line-height-tight: 1.333;
   --section-spacing: 160px;
   --z-index-header: 100;
+  --z-index-animation-cat: 0;
+  --z-index-animation-layer: -10;
+  --z-index-content-bg: -100;
 }
 a {
   text-decoration: none;

@@ -162,6 +162,121 @@
           font-size: 1.4rem;
           line-height: 1.429;
         }
+
+  /* 個別スタイル */
+  /* NISAのおさらい03 NISAの投資限度額 */
+  .nisa-overview-table {
+    --table-border-radius: 20px;
+    --border-table-primary: 2px solid var(--black);
+    --border-table-secondary: 1px solid var(--content-gray);
+    --table-tbody-th-width: 400px;
+
+    table-layout: fixed;
+    width: 100%;
+
+    thead {
+      width: 100%;
+    }
+      thead th {
+        background-color: var(--content-green);
+        color: var(--white);
+        padding: 45px 38px 5px;
+        font-size: 1.8rem;
+        font-weight: var(--font-weight-bold);
+      }
+      thead th:first-child {
+        background-color: transparent;
+        width: var(--table-tbody-th-width);
+      }
+      thead th:not(:first-child) {
+        width: calc((100% - var(--table-tbody-th-width)) / var(--col-count));
+      }
+      thead th:nth-of-type(2) {
+        position: relative;
+        border-top-left-radius: var(--table-border-radius);
+        border-top: var(--border-table-primary);
+        border-left: var(--border-table-primary);
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          width: 1px;
+          height: 100%;
+          background: var(--content-gray);
+        }
+      }
+      thead th:last-of-type {
+        border-top: var(--border-table-primary);
+        border-right: var(--border-table-primary);
+        border-top-right-radius: var(--table-border-radius);
+      }
+    tbody {
+      border: var(--border-table-primary);
+    }
+      tbody th,
+      tbody td {
+        padding: 20px 40px;
+        font-size: 1.8rem;
+        border-right: var(--border-table-secondary);
+        border-bottom: var(--border-table-secondary);
+      }
+        tbody th:last-of-type {
+          border-right: none;
+        }
+        tbody tr:first-of-type th,
+        tbody tr:first-of-type td {
+          border-top: var(--border-table-primary);
+        }
+        tbody tr:last-of-type th,
+        tbody tr:last-of-type td {
+          border-bottom: var(--border-table-primary);
+        }
+        tbody tr th:first-of-type,
+        tbody tr td:first-of-type {
+          border-left: var(--border-table-primary);
+        }
+      tbody th {
+        background-color: var(--white);
+        font-weight: var(--font-weight-bold);
+      }
+        tbody tr:first-of-type th:first-of-type {
+          border-top-left-radius: var(--table-border-radius);
+        }
+      tbody td {
+        background-color: var(--content-light-green);
+      }
+        tbody td strong {
+          color: var(--content-green);
+          font-weight: var(--font-weight-bold);
+        }
+        tbody td .small {
+          font-size: 1.2rem;
+          margin-left: 16px;
+        }
+        tbody tr:last-of-type th:first-of-type {
+          border-bottom-left-radius: var(--table-border-radius);
+        }
+        tbody tr:last-of-type td:last-of-type {
+          border-bottom-right-radius: var(--table-border-radius);
+        }
+        tbody tr td:last-of-type {
+          border-right: var(--border-table-primary);
+        }
+    /* 個別調整 */
+    tbody tr th.border-left-secondary {
+      border-left: none;
+    }
+    tbody td.merged-cell {
+      border-bottom: none;
+    }
+    tbody td.limit-growth {
+      border-top: var(--border-table-secondary);
+    }
+  }
+
+
   .feature-cta {
     display: flex;
     justify-content: space-between;

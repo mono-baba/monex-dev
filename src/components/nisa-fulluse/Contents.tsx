@@ -12,7 +12,7 @@ const Contents = () => {
     <>
       <section className="features">
         <div className="inner">
-          <section className="feature">
+          <section id="feature01" className="feature">
             <CommonHeader {...data01} />
             <div className="feature-body">
               <section>
@@ -91,7 +91,7 @@ const Contents = () => {
               </section>
             </div>
           </section>
-          <section className="feature">
+          <section id="feature02" className="feature">
             <CommonHeader {...data02} />
             <div className="feature-body">
               <p className="lead-small">
@@ -136,7 +136,7 @@ const Contents = () => {
               </details>
             </div>
           </section>
-          <section className="feature">
+          <section id="feature03" className="feature">
             <CommonHeader {...data03} />
             <div className="feature-body">
               <section>
@@ -147,7 +147,61 @@ const Contents = () => {
                   <br />
                   この2つの枠は買付方法、投資対象商品によって分けられます。
                 </p>
-                <table>テーブル</table>
+                <table className="h-mt80-pc nisa-overview-table">
+                  <thead style={{ '--col-count': 2 } as React.CSSProperties}>
+                    <tr>
+                      <th scope="col" colSpan={2}></th>
+                      <th scope="col">つみたて投資枠</th>
+                      <th scope="col">成長投資枠</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row" colSpan={2}>制度の併用</th>
+                      <td colSpan={2}><strong>併用可能</strong></td>
+                    </tr>
+                    <tr>
+                      <th scope="row" rowSpan={4}>投資枠</th>
+                      <th rowSpan={2}>年間投資枠</th>
+                      <td colSpan={2}><strong>あわせて360万円</strong></td>
+                    </tr>
+                    <tr>
+                      <td><strong>120万円</strong></td>
+                      <td><strong>240万円</strong></td>
+                    </tr>
+                    <tr>
+                      <th className="border-left-secondary" scope="row" rowSpan={2}>非課税保有限度額</th>
+                      <td className="merged-cell" colSpan={2} id="limit-main">
+                        <strong>
+                          1,800万円
+                          <span className="small">売却することで買付額分の枠の再利用が可能</span>
+                        </strong>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td headers="limit-main"></td>
+                      <td className="limit-growth">うち成長投資枠 1,200万円</td>
+                    </tr>
+                    <tr>
+                      <th scope="row" colSpan={2}>非課税期間</th>
+                      <td colSpan={2}><strong>無制限</strong></td>
+                    </tr>
+                    <tr>
+                      <th scope="row" colSpan={2}>対象年齢</th>
+                      <td colSpan={2}>18歳以上の成人</td>
+                    </tr>
+                    <tr>
+                      <th scope="row" colSpan={2}>買付方法</th>
+                      <td>積立</td>
+                      <td>スポット・積立</td>
+                    </tr>
+                    <tr>
+                      <th scope="row" colSpan={2}>対象商品</th>
+                      <td>一定の基準を満たした投資信託</td>
+                      <td>株式・投資信託・ETF</td>
+                    </tr>
+                  </tbody>
+                </table>
                 <div className="animation-spacing responsive-stack">
                   <div>
                     <p>

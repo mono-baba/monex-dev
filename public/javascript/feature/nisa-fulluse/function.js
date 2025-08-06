@@ -65,8 +65,10 @@ window.addEventListener("DOMContentLoaded", () => {
     const rect = animationWrapper.getBoundingClientRect();
     const windowHeight = window.innerHeight;
 
-    const scrollY = windowHeight - rect.top;
-    let progress = scrollY / (windowHeight + rect.height);
+    const triggerPoint = windowHeight / 2; // 画面中央
+
+    const scrollY = triggerPoint - rect.top;
+    let progress = scrollY / (rect.height + triggerPoint);
     progress = Math.min(Math.max(progress, 0), 1);
 
     console.log("progress:", progress.toFixed(3), "rect.top:", rect.top.toFixed(1), "scrollY:", scrollY.toFixed(1));

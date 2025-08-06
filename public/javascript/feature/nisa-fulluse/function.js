@@ -61,19 +61,25 @@ window.addEventListener("DOMContentLoaded", () => {
 
   const pathLength = path.getTotalLength();
 
-  function updatePosition() {
+  let lastScrollY = window.scrollY;
+  let progressDistance = 0; // パス上の距離
+  const speedMultiplier = 2; // スクロール速度倍率
+
+  function updateCatPosition() {
     const rect = animationWrapper.getBoundingClientRect();
     const windowHeight = window.innerHeight;
 
-    const triggerPoint = windowHeight / 2; // 画面中央
+    // 開始判定：セクション上端が画面中央を超えたら動く
+    if (rect.top > windowHeight / 2) {
+      // まだ画面中央より下なら動かさずスタート位置に固定
+      progressDistance = 0;
+    }
 
-    const scrollY = triggerPoint - rect.top;
-    let progress = scrollY / (rect.height + triggerPoint);
-    progress = Math.min(Math.max(progress, 0), 1);
+    // 位置更新（ループ対応）
+    let distanceOnPath = progressDistance % pathLength;
+    if (distanceOnPath < 0) distanceOnPath += pathLength;
 
-    console.log("progress:", progress.toFixed(3), "rect.top:", rect.top.toFixed(1), "scrollY:", scrollY.toFixed(1));
-
-    const point = path.getPointAtLength(progress * pathLength);
+    const point = path.getPointAtLength(distanceOnPath);
 
     const transformAttr = path.getAttribute("transform");
     let offsetX = 0, offsetY = 0;
@@ -101,9 +107,35 @@ window.addEventListener("DOMContentLoaded", () => {
     cat.style.top = `${top}px`;
   }
 
-  window.addEventListener("scroll", updatePosition);
-  window.addEventListener("resize", updatePosition);
-  setTimeout(updatePosition, 100);
+  function onScroll() {
+    const currentScrollY = window.scrollY;
+    const rect = animationWrapper.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    // セクション上端が画面中央以下の時だけ距離を進める
+    if (rect.top <= windowHeight / 2) {
+      const deltaY = currentScrollY - lastScrollY;
+      progressDistance += deltaY * speedMultiplier;
+    }
+
+    lastScrollY = currentScrollY;
+  }
+
+  function loop() {
+    updateCatPosition();
+    requestAnimationFrame(loop);
+  }
+
+  window.addEventListener("scroll", onScroll);
+  window.addEventListener("resize", () => {
+    // 必要ならリサイズ対応
+  });
+
+  // 初期化
+  lastScrollY = window.scrollY;
+  progressDistance = 0;
+
+  loop();
 });
 
 

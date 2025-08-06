@@ -60,10 +60,10 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   const pathLength = path.getTotalLength();
+  const speedMultiplier = 2; // スクロール速度倍率
 
   let lastScrollY = window.scrollY;
   let progressDistance = 0; // パス上の距離
-  const speedMultiplier = 2; // スクロール速度倍率
 
   function updateCatPosition() {
     const rect = animationWrapper.getBoundingClientRect();
@@ -103,8 +103,11 @@ window.addEventListener("DOMContentLoaded", () => {
     const left = screenPoint.x - wrapperRect.left;
     const top = screenPoint.y - wrapperRect.top;
 
+    // 猫画像の高さを取得し、縦の中央に合わせる
+    const catHeight = cat.offsetHeight;
+
     cat.style.left = `${left}px`;
-    cat.style.top = `${top}px`;
+    cat.style.top = `${top - catHeight / 2}px`;
   }
 
   function onScroll() {

@@ -1,0 +1,32 @@
+.arrow-rounded-button-link {
+  position: relative;
+  display: inline-flex;
+  margin-inline: auto;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white);
+  color: var(--black);
+  border: 3px solid var(--black);
+  min-width: 320px;
+  width: fit-content;
+  min-height: 64px;
+  height: fit-content;
+  border-radius: 100px;
+  padding: 12px 40px;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: var(--font-weight-bold);
+  line-height: 1.143;
+}
+.arrow-rounded-button-link::after {
+  content: "";
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 9px solid transparent;
+  border-bottom: 9px solid transparent;
+  border-left: 15px solid var(--black);
+}

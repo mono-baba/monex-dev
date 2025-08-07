@@ -1,0 +1,138 @@
+.header {
+  --header-height: 64px;
+
+  position: fixed;
+  top: 0;
+  inset-inline: 0;
+  background-color: var(--yellow);
+  z-index: var(--z-index-header);
+  border-bottom: 1px solid var(--black);
+  .inner {
+    max-width: var(--content-max-width);
+    display: flex;
+    justify-content: center;
+    margin-inline: auto;
+  }
+
+  .logo {
+    flex: auto;
+    @media screen and (min-width: 1441px) {
+      border-left: 1px solid var(--black);
+    }
+  }
+    .logo .link {
+      display: inline-block;
+      background-color: var(--yellow);
+      max-width: 446px;
+      width: 100%;
+      height: var(--header-height);
+      padding: 14px 30px;
+    }
+      .logo .link svg {
+        width: auto;
+        height: 36px;
+      }
+
+  .global-navigation {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+    .global-navigation > .item {
+      position: relative;
+      width: fit-content;
+      border-inline: 0.5px solid var(--black);
+    }
+      .global-navigation > .item:first-of-type {
+        border-left-width: 1px;
+      }
+        .global-navigation .item:has([href*="#feature"]) > .label::before  {
+          display: inline-block;
+          content: url(/image/feature/nisa-fulluse/icon_features.svg);
+          padding-right: 8px;
+          vertical-align: -6px;
+        }
+        .global-navigation .item:has([href*="#tips"]) > .label::before  {
+          display: inline-block;
+          content: url(/image/feature/nisa-fulluse/icon_tips.svg);
+          padding-right: 8px;
+          vertical-align: -6px;
+        }
+        .global-navigation .item:has([href="#faq"]) > .link::before  {
+          display: inline-block;
+          content: url(/image/feature/nisa-fulluse/icon_faq.svg);
+          padding-right: 8px;
+          vertical-align: -6px;
+        }
+        .global-navigation .item > .link#corporate  {
+          font-size: 1.2rem;
+          line-height: 1.5;
+          padding-block: 15px;
+        }
+          .global-navigation .item > .link#corporate > img  {
+            margin-left: 4px;
+            vertical-align: text-bottom;
+          }
+        .global-navigation .item:has([href="#dummy-kakunin"]) a  {
+          background-color: var(--black);
+          color: var(--white);
+          background-image: url(/image/feature/nisa-fulluse/icon_features.svg);
+        }
+    .global-navigation .link,
+    .global-navigation .label  {
+      display: inline-block;
+      align-content: center;
+      background-color: var(--yellow);
+      padding: 20px 30px;
+      color: var(--black);
+      font-size: 1.4rem;
+      font-weight: var(--font-weight-bold);
+      line-height: 1;
+      height: var(--header-height);
+    }
+    .global-navigation > .item > .link,
+    .global-navigation > .item > .label  {
+      height: var(--header-height);
+    }
+
+  .sub-navigation {
+    position: absolute;
+    top: calc(100% + 1px);
+    margin: 0;
+    padding: 0;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    width: 100%;
+  }
+
+  /* モバイル・PC共通：aria-expanded=trueで開く */
+  .label[aria-expanded="true"] + .sub-navigation {
+    overflow: auto;
+    max-height: 500px;
+    opacity: 1;
+  }
+
+  @media (hover: hover) {
+    .item:hover > .sub-navigation,
+    .item:focus-within > .sub-navigation {
+      overflow: auto;
+      max-height: 500px;
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .item:hover .label {
+      pointer-events: none;
+    }
+  }
+
+  .sub-navigation > .item > .link {
+    display: inline-block;
+    background-color: var(--white);
+    width: 100%;
+    padding: 0.5rem 1rem;
+  }
+}

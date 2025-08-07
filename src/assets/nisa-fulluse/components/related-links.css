@@ -1,16 +1,13 @@
 .related-links {
-  /* height: clamp(350px, 41.28vw, 611px); */
   background-color: var(--content-yellow);
   @media screen and (max-width: 767px) {
-    /* height: 550px; */
   }
   .inner {
     position: relative;
-    aspect-ratio: 1440 / 810;
+    aspect-ratio: 1440 / 746;
     width: 100%;
-    @media screen and (max-width: 1440px) {
-      width: 100vw;
-    }
+    background-image: url(/image/feature/nisa-fulluse/img_kobanneko_related-links.svg);
+    background-size: contain;
   }
   .title {
     position: relative;
@@ -20,13 +17,8 @@
     margin-left: auto;
     writing-mode: vertical-rl;
     text-orientation: upright;
-    text-decoration: underline;
-    text-decoration-thickness: 4px;
-    text-underline-offset: 6px;
     font-size: 4.7rem;
     font-weight: var(--font-weight-bold);
-    @media screen and (max-width: 767px) {
-    }
   }
   .img {
     position: absolute;
@@ -37,17 +29,10 @@
       width: 100vw;
     }
   }
-  .related-link {
+  .arrow-rounded-button-link {
     position: absolute;
-    margin: auto;
-    left: 0;
-    top: calc(50% - 180px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--white);
-    border-radius: 100%;
-    aspect-ratio: 1 / 1;
-    width: 360px;
+    right: 120px;
+    bottom: 120px;
+    padding-right: 60px;
   }
 }

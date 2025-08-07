@@ -1,0 +1,250 @@
+.tips {
+  padding-top: var(--section-spacing);
+
+  .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .slider-nav {
+    --slider-nav-button-bg: var(--white);
+    --slider-nav-button-border-radius: 10px;
+
+    display: flex;
+    border: 1px solid var(--black);
+    border-radius: var(--slider-nav-button-border-radius);
+  }
+  .slider-nav button {
+    background-color: var(--slider-nav-button-bg);
+    width: 100%;
+    padding: 25px;
+    border: 1px solid var(--black);
+    font-size: 1.8rem;
+    font-weight: var(--font-weight-bold);
+  }
+    .slider-nav button:first-child {
+      border-top-left-radius: var(--slider-nav-button-border-radius);
+      border-bottom-left-radius: var(--slider-nav-button-border-radius);
+    }
+    .slider-nav button:last-child {
+      border-top-right-radius: var(--slider-nav-button-border-radius);
+      border-bottom-right-radius: var(--slider-nav-button-border-radius);
+    }
+    .slider-nav button[aria-selected="true"] {
+      --slider-nav-button-bg: var(--text-bg-yellow);
+      --border-width: 2px;
+      --tail-width: 24px;
+      --tail-height: 18px;
+
+      pointer-events: none;
+      position: relative;
+    }
+      .slider-nav button[aria-selected="true"]::before,
+      .slider-nav button[aria-selected="true"]::after {
+        content: "";
+        position: absolute;
+        inset-inline: 0;
+        top: 100%;
+        border-style: solid;
+        margin-inline: auto;
+        width: 0px;
+        height: 0px;
+      }
+      .slider-nav button[aria-selected="true"]:before {
+        border-width: 20px 14px 0 14px;
+        border-color: var(--black) transparent transparent;
+      }
+      .slider-nav button[aria-selected="true"]:after {
+        border-width: 18px 12px 0 12px;
+        border-color: var(--slider-nav-button-bg) transparent transparent;
+        top: calc(100% - 1px);
+      }
+      .slider-nav.bottom button[aria-selected="true"]::before,
+      .slider-nav.bottom button[aria-selected="true"]::after {
+        inset-block: 0;
+        transform: translateY(-100%);
+      }
+      .slider-nav.bottom button[aria-selected="true"]::before {
+        border-width: 0 14px 20px 14px;
+        border-color: transparent transparent var(--black);
+      }
+      .slider-nav.bottom button[aria-selected="true"]::after {
+        border-width: 0 12px 18px 12px;
+        border-color: transparent transparent var(--slider-nav-button-bg);
+        transform: translateY(calc(-100% + 1px));
+      }
+    .slider-track [role="tabpanel"] {
+      margin-block: 48px;
+      margin-inline: auto;
+      padding: 40px;
+      max-width: var(--content-small-width);
+      background-color: var(--white);
+      border: 2px solid var(--black);
+      border-radius: 50px;
+    }
+
+    .slider-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 1200px; /* コンテンツ幅 */
+      margin: 0 auto;
+      /* overflow: hidden; */
+    }
+
+    .slider-track {
+      display: flex;
+      gap: 40px;
+      transition: transform 0.5s ease;
+      will-change: transform;
+    }
+
+    .slider-panel {
+      flex: 0 0 992px; /* パネル幅固定 */
+      max-width: 992px;
+      margin: 0 auto;
+    }
+
+
+
+
+
+    .slider-track h3 {
+      font-size: 4rem;
+      line-height: 1.5;
+      margin-bottom: 1em;
+    }
+    .slider-track section:has(> h4) {
+      margin-top: 48px;
+    }
+    .slider-track h4 {
+      font-size: 2.4rem;
+      line-height: 1.5;
+      border-left: 4px solid var(--content-light-blue);
+      margin-bottom: 1em;
+      padding-left: 16px;
+    }
+      .slider-track h4 .small {
+        font-size: 2rem;
+      }
+
+  /* General purpose */
+  .speech-bubble-surrounded {
+    --bg: #058071;
+
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    background-color: var(--bg);
+    border: 1px solid var(--white);
+    border-radius: 100px;
+    width: fit-content;
+    min-width: 420px;
+    min-height: 77px;
+    line-height: 1.5;
+  }
+    .speech-bubble-surrounded::after {
+      content: "";
+      position: absolute;
+      bottom: -15px;
+      inset-inline: 0;
+      margin-inline: auto;
+      display: block;
+      width: 0px;
+      height: 0px;
+      border-style: solid;
+      border-width: 16px 16px 0 0;
+      border-color: var(--bg) transparent transparent transparent;
+    }
+  .responsive-stack:has(.speech-bubble-surrounded + .speech-bubble-surrounded) {
+    gap: 24px;
+    padding-bottom: 16px;
+  }
+
+  .formula {
+    display: flex;
+    gap: 16px;
+  }
+    .formula .number {
+      color: var(--text-number);
+      font-family: Filson Soft, var(--font-family);
+      font-size: 4.8rem;
+      font-weight: var(--font-weight-bold);
+      text-stroke: 3.5px var(--text-stroke);
+      -webkit-text-stroke: 3.5px var(--text-stroke);
+      paint-order: stroke;
+    }
+
+  .bg-rounded {
+    background-color: var(--bg);
+    border-radius: 10px;
+    padding: 24px;
+  }
+    .bg-rounded.gray {
+      --bg: var(--text-bg-gray);
+    }
+    .bg-rounded.light-yellow {
+      --bg: var(--text-bg-light-yellow);
+    }
+
+  .bullet-list {
+    padding-left: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+    .bullet-list li {
+      list-style-type: disc;
+      line-height: 1.5;
+    }
+      .bullet-list li::marker {
+        color: var(--content-light-blue);
+      }
+
+  /* tab固有のstyle */
+  /* つみたて投信 */
+    .tsumitate-overview .bg-rounded {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+    }
+      .tsumitate-overview ul,
+      .tsumitate-overview .bg-rounded p:has(strong) {
+        flex: 1;
+      }
+      .tsumitate-overview .bg-rounded p:has(strong) {
+        text-align: center;
+        font-size: 1.8rem;
+        padding-right: 16px;
+      }
+    .tsumitate-usage > .responsive-stack {
+      gap: 6px;
+    }
+      .tsumitate-usage > .responsive-stack > .bg-rounded {
+        padding-inline: 70px;
+      }
+      .tsumitate-usage > .responsive-stack > .bg-rounded figure {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 10px;
+        }
+          .tsumitate-usage > .responsive-stack > .bg-rounded figure figcaption {
+            text-align: center;
+            font-size: 1.4rem;
+            line-height: 1.5;
+          }
+      .tsumitate-usage > .responsive-stack > img {
+        flex: 0;
+      }
+
+  /* 成長投信 */
+  /* 日本株 */
+  /* 外国株 */
+}
+#tipsNav {
+  scroll-margin-top: calc(3rem + 64px); /* 余白 + header */
+}

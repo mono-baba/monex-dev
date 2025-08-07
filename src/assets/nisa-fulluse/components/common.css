@@ -1,0 +1,115 @@
+main > section:not(.mv, .related-links) {
+  background-color: var(--content-light-blue);
+  z-index: var(--z-index-content-bg);
+}
+  main > section:not(.mv, .related-links) .inner {
+    padding-inline: 120px;
+  }
+main > section > .inner {
+  margin-inline: auto;
+  max-width: var(--content-max-width);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.animation-spacing {
+  margin-top: 400px;
+}
+
+/* common-header */
+.common-header {
+  display: flex;
+  justify-content: center;
+  padding-right: 10px;
+}
+  .common-header img {
+    margin-left: -60px;
+  }
+  .common-header .bg {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--black);
+    color: var(--white);
+    border-radius: 100%;
+    aspect-ratio: 1 / 1;
+    width: 500px;
+  }
+  .common-header .title {
+    display: inline-flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 2.4rem;
+    line-height: 1.25;
+  }
+    .common-header .title > span {
+      display: inline-flex;
+      flex-direction: column;
+    }
+      .common-header .title > span .number {
+        margin-top: 10px;
+        font-family: Filson Soft, var(--font-family);
+        font-size: 7.2rem;
+        line-height: 1;
+      }
+    .common-header .title > strong {
+      margin-top: 10px;
+      border-block: 4px solid var(--white);
+      padding-block: 6px;
+      font-size: 3.6rem;
+    }
+  .common-header .description {
+    margin-top: 24px;
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 1.5;
+  }
+
+/* accordion */
+details {
+  --bg: var(--white);
+  --border-radius: 32px;
+
+  background-color: var(--bg);
+  border: 2px solid var(--black);
+  border-radius: var(--border-radius);
+}
+details summary {
+  cursor: pointer;
+  position: relative;
+  background-color: var(--bg);
+  border-radius: var(--border-radius);
+  padding: 10px;
+}
+  details summary::before,
+  details summary::after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 28px;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 2px;
+    z-index: 1;
+    background-color: var(--black);
+  }
+    details summary::after {
+      transform: translateY(-50%) rotate(90deg);
+      transition: transform 0.3s ease-in-out;
+    }
+    details[open] summary::after {
+      transform: translateY(-50%) rotate(180deg);
+    }
+
+.responsive-stack {
+  display: flex;
+  justify-content: space-between;
+}
+  .responsive-stack > * {
+    flex: 1;
+  }

@@ -1,0 +1,305 @@
+.features {
+  .feature {
+    padding-top: var(--section-spacing);
+  }
+  .lead {
+    text-align: center;
+    font-size: 3.2rem;
+    font-weight: var(--font-weight-bold);
+    line-height: 1.5;
+  }
+  .lead-small {
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 2;
+  }
+  .feature-body {
+    padding-top: 80px;
+  }
+    .feature-body p:not([class]) {
+      font-size: 1.8rem;
+      line-height: 2;
+    }
+    .feature-body .border-box {
+      position: relative;
+      background-color: var(--white);
+      border: 2px solid var(--black);
+      border-radius: 20px;
+      padding: 40px;
+    }
+    .feature-body .border-box:has(.heading) {
+      margin-top: 68px;
+      padding: 60px 40px 40px;
+    }
+      .feature-body .border-box .heading {
+        position: absolute;
+        top: 0;
+        transform: translateY(-50%);
+        inset-inline: 0;
+        margin-inline: auto;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: fit-content;
+        min-width: 400px;
+        min-height: 56px;
+        border: 2px solid var(--black);
+        border-radius: 100px;
+        padding: 8px;
+        font-size: 2.4rem;
+        line-height: 1.667;
+        background-color: var(--text-bg-yellow);
+      }
+        .feature-body .border-box .heading span {
+          font-size: 1.6rem;
+          padding-top: 6px;
+        }
+    .feature-body .responsive-stack:has(figure + figure) {
+      gap: 40px;
+    }
+
+    .feature-body figure {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      justify-content: space-between;
+    }
+    .feature-body .figure-responsive-stack {
+      flex-direction: row;
+    }
+    .feature-body .highlight-title {
+      display: inline;
+      background-color: var(--black);
+      color: var(--white);
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+      padding: 5px 12px;
+      font-size: 1.8rem;
+      line-height: 2.222;
+    }
+    .feature-body .deadline-list {
+      margin-top: 80px;
+      display: flex;
+      gap: 48px;
+    }
+      .feature-body .deadline-list li {
+        flex: 1;
+      }
+    .feature-body .deadline-article {
+      position: relative;
+      background-color: var(--white);
+      border: 2px solid var(--black);
+      border-radius: 20px;
+      padding: 22px 22px 38px;
+      height: 100%;
+    }
+      .feature-body .deadline-article .date {
+        position: absolute;
+        top: -20px;
+        left: -20px;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--text-bg-yellow);
+        border: 2px solid var(--black);
+        border-radius: 100%;
+        aspect-ratio: 1 / 1;
+        width: 120px;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: var(--font-weight-bold);
+        line-height: 1.35;
+      }
+        .feature-body .deadline-article .date:has(.small) time {
+          margin-top: 2px;
+        }
+        .feature-body .deadline-article .date .weekday {
+          margin-left: 0.2em;
+        }
+        .feature-body .deadline-article .date .small {
+          font-size: 1.4rem;
+          line-height: 1.35;
+          display: inline-block;
+        }
+          .feature-body .deadline-article .date .weekday.offset-y {
+            vertical-align: 2px;
+          }
+          .feature-body .deadline-article .date .small.offset-y:not(.weekday) {
+            vertical-align: 3px;
+          }
+      .feature-body .deadline-article img {
+        width: 100%;
+      }
+      .feature-body .deadline-article .title {
+        margin-block: 16px;
+        font-size: 2.4rem;
+      }
+        .feature-body .deadline-article .title sup {
+          font-size: 1.2rem;
+          vertical-align: 0.5em;
+        }
+      .feature-body .deadline-article p {
+        font-size: 1.4rem;
+      }
+      .feature-body .deadline-article .details {
+        margin-top: 24px;
+      }
+        .feature-body .deadline-article .details dt {
+          font-size: 1.4rem;
+          font-weight: var(--font-weight-bold);
+          line-height: 1.929;
+          border-left: 4px solid var(--content-light-blue);
+          padding-left: 8px;
+        }
+          .feature-body .deadline-article .details dt sup {
+            font-size: 1.2rem;
+          }
+        .feature-body .deadline-article .details dt + dd {
+          margin-top: 10px;
+        }
+        .feature-body .deadline-article .details dd {
+          font-size: 1.4rem;
+          line-height: 1.429;
+        }
+
+  /* 個別スタイル */
+  /* NISAのおさらい03 NISAの投資限度額 */
+  .nisa-overview-table {
+    --table-border-radius: 20px;
+    --border-table-primary: 2px solid var(--black);
+    --border-table-secondary: 1px solid var(--content-gray);
+    --table-tbody-th-width: 400px;
+
+    table-layout: fixed;
+    width: 100%;
+
+    thead {
+      width: 100%;
+    }
+      thead th {
+        background-color: var(--content-green);
+        color: var(--white);
+        padding: 45px 38px 5px;
+        font-size: 1.8rem;
+        font-weight: var(--font-weight-bold);
+      }
+      thead th:first-child {
+        background-color: transparent;
+        width: var(--table-tbody-th-width);
+      }
+      thead th:not(:first-child) {
+        width: calc((100% - var(--table-tbody-th-width)) / var(--col-count));
+      }
+      thead th:nth-of-type(2) {
+        position: relative;
+        border-top-left-radius: var(--table-border-radius);
+        border-top: var(--border-table-primary);
+        border-left: var(--border-table-primary);
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          width: 1px;
+          height: 100%;
+          background: var(--content-gray);
+        }
+      }
+      thead th:last-of-type {
+        border-top: var(--border-table-primary);
+        border-right: var(--border-table-primary);
+        border-top-right-radius: var(--table-border-radius);
+      }
+    tbody {
+      border: var(--border-table-primary);
+    }
+      tbody th,
+      tbody td {
+        padding: 20px 40px;
+        font-size: 1.8rem;
+        border-right: var(--border-table-secondary);
+        border-bottom: var(--border-table-secondary);
+      }
+        tbody th:last-of-type {
+          border-right: none;
+        }
+        tbody tr:first-of-type th,
+        tbody tr:first-of-type td {
+          border-top: var(--border-table-primary);
+        }
+        tbody tr:last-of-type th,
+        tbody tr:last-of-type td {
+          border-bottom: var(--border-table-primary);
+        }
+        tbody tr th:first-of-type,
+        tbody tr td:first-of-type {
+          border-left: var(--border-table-primary);
+        }
+      tbody th {
+        background-color: var(--white);
+        font-weight: var(--font-weight-bold);
+      }
+        tbody tr:first-of-type th:first-of-type {
+          border-top-left-radius: var(--table-border-radius);
+        }
+      tbody td {
+        background-color: var(--content-light-green);
+      }
+        tbody td strong {
+          color: var(--content-green);
+          font-weight: var(--font-weight-bold);
+        }
+        tbody td .small {
+          font-size: 1.2rem;
+          margin-left: 16px;
+        }
+        tbody tr:last-of-type th:first-of-type {
+          border-bottom-left-radius: var(--table-border-radius);
+        }
+        tbody tr:last-of-type td:last-of-type {
+          border-bottom-right-radius: var(--table-border-radius);
+        }
+        tbody tr td:last-of-type {
+          border-right: var(--border-table-primary);
+        }
+    /* 個別調整 */
+    tbody tr th.border-left-secondary {
+      border-left: none;
+    }
+    tbody td.merged-cell {
+      border-bottom: none;
+    }
+    tbody td.limit-growth {
+      border-top: var(--border-table-secondary);
+    }
+  }
+
+  .annual-limit-description {
+    gap: 48px;
+  }
+
+
+  .feature-cta {
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--section-spacing);
+    margin-inline: auto;
+    padding: 60px 56px;
+    background-color: var(--text-bg-yellow);
+    border: 2px solid var(--black);
+    border-radius: 20px;
+  }
+    .feature-cta > div {
+      padding-left: 36px;
+    }
+    .feature-cta .arrow-rounded-button-link {
+      min-width: 464px;
+      font-size: 2.8rem;
+      margin-left: 32px;
+    }
+    .feature-cta .arrow-rounded-button-link::after {
+      right: 20px;
+    }
+}

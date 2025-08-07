@@ -1,0 +1,91 @@
+:root {
+  --text-number: #fb3e25;
+  --text-stroke: #070707;
+  --text-bg-gray: #f7f7f7;
+  --text-bg-light-yellow: #fff9e7;
+  --text-bg-yellow: #ffc417;
+  --content-yellow: #ffc700;
+  --content-gray: #ccc;
+  --content-green: #078071;
+  --content-light-green: #f2f9f8;
+  --content-light-blue: #33b0ff;
+  --content-max-width: 1440px;
+  --content-width: 1200px;
+  --content-small-width: 992px;
+  --line-height-tight: 1.333;
+  --section-spacing: 160px;
+  --z-index-header: 100;
+  --z-index-mv-title: 1;
+  --z-index-scale-wrapper: 0;
+  --z-index-animation-cat: 0;
+  --z-index-animation-layer: -10;
+  --z-index-content-bg: -100;
+}
+a {
+  text-decoration: none;
+}
+a,
+button,
+summary {
+  transition: filter 0.2s ease, background-color 0.2s ease;
+}
+@media (hover: hover) {
+  a:hover,
+  button:hover,
+  summary:hover {
+    filter: brightness(0.88) contrast(1.10);
+  }
+}
+*:has(wbr) {
+  word-break: keep-all;
+  word-break: auto-phrase;
+  word-wrap: break-word;
+}
+summary::marker  {
+  content: "";
+}
+summary::-webkit-details-marker {
+  display: none;
+}
+
+/* 全体縮小 */
+#scale-wrapper {
+  position: relative;
+  overflow-x: hidden;
+  z-index: var(--z-index-scale-wrapper);
+  @media screen and (max-width: 1440px) {
+    transform-origin: top left;
+    width: var(--content-max-width);
+    /* margin: 0 auto; */
+  }
+}
+
+/* summary details アコーディオンアニメーション */
+details {
+  &::details-content {
+    transition:
+      height 0.4s,
+      opacity 0.4s,
+      content-visibility 0.4s allow-discrete;
+    height: 0;
+    opacity: 0;
+    overflow: clip;
+  }
+  &[open]::details-content {
+    opacity: 1;
+  }
+}
+@supports (interpolate-size: allow-keywords) {
+  :root {
+    interpolate-size: allow-keywords;
+  }
+  details[open]::details-content {
+    height: auto;
+  }
+}
+@supports not (interpolate-size: allow-keywords) {
+  details[open]::details-content {
+    height: 150px;
+    overflow-y: scroll;
+  }
+}

@@ -1,9 +1,5 @@
 .mv {
-  /* height: clamp(350px, 41.28vw, 611px); */
   background-color: var(--content-yellow);
-  @media screen and (max-width: 767px) {
-    /* height: 550px; */
-  }
   .inner {
     position: relative;
     width: 100%;
@@ -13,10 +9,10 @@
     }
   }
   .title {
-    position: relative;
-    z-index: 1;
-    padding-top: 98px;
-    padding-right: 196px;
+    position: absolute;
+    right: 13.61%;
+    bottom: 30.56%;
+    z-index: var(--z-index-mv-title);
     margin-left: auto;
     writing-mode: vertical-rl;
     text-orientation: upright;
@@ -36,8 +32,8 @@
   .mv-character .speech-bubble {
     position: absolute;
     z-index: 1;
-    top: 152.3px;
-    left: 167.2px;
+    bottom: 337px; /* 47px + 337px */
+    left: 230px; /* 62px + 167.2px */
     text-align: center;
     transform: rotate(-30deg);
     font-size: 3rem;
